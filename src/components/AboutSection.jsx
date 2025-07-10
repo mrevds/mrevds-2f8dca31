@@ -80,19 +80,18 @@ const AboutSection = () => {
                   transition={{ duration: 0.6, delay: 0.7 }}
                 >
                   Основной стек — Go и PostgreSQL. Люблю решать сложные технические задачи 
-                  и постоянно изучаю новые технологии для повышения эффективности разработки.
+                  и оптимизировать производительность систем.
                 </motion.p>
-
-                <motion.div
-                  className="pt-4 border-t border-violet-100"
+                
+                <motion.p 
+                  className="text-lg text-slate-700 leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.9 }}
                 >
-                  <p className="text-violet-600 font-medium">
-                    "Чистый код — это не роскошь, а необходимость"
-                  </p>
-                </motion.div>
+                  Постоянно изучаю новые технологии и подходы в разработке, 
+                  активно решаю алгоритмические задачи на LeetCode.
+                </motion.p>
               </div>
             </div>
           </motion.div>

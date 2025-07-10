@@ -14,7 +14,7 @@ const Navigation = () => {
     { icon: Mail, label: "Контакты", href: "#contact" },
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href) => {
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
