@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Server, Terminal, Database, Api } from "lucide-react";
+import { ExternalLink, Github, Server, Terminal, Database, Globe } from "lucide-react";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
@@ -42,7 +42,7 @@ const ProjectsSection = () => {
       description: "Шлюз для маршрутизации запросов между микросервисами с функциями балансировки нагрузки, кэширования и мониторинга.",
       github: "#",
       demo: "#",
-      icon: Api,
+      icon: Globe,
       tech: ["Go", "Redis", "Docker", "Load Balancing"],
       gradient: "from-orange-500 to-red-500"
     }
