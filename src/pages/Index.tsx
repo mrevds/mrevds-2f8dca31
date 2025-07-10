@@ -1,20 +1,24 @@
 
 import Header from "@/components/Header";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-violet-50/30 to-emerald-50/20">
+      <Navigation />
+      <div className="ml-0 lg:ml-20">
+        <Header />
+        <div className="space-y-0">
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ContactSection />
+        </div>
+      </div>
     </div>
   );
 };
