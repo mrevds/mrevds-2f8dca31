@@ -5,7 +5,7 @@ import { Code2 } from "lucide-react";
 const Footer = () => {
   return (
     <motion.footer 
-      className="py-8 px-6 border-t border-gray-200 bg-white"
+      className="py-8 px-6 border-t border-primary/10 bg-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.8 }}
@@ -17,12 +17,12 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          <Code2 className="w-4 h-4 text-blue-600" />
-          <span className="text-gray-600 text-sm">Backend Developer</span>
+          <Code2 className="w-4 h-4 text-primary" />
+          <span className="text-muted-foreground text-sm">Backend Developer</span>
         </motion.div>
 
         <motion.p 
-          className="text-gray-500 text-sm"
+          className="text-muted-foreground text-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}

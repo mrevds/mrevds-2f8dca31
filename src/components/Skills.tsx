@@ -21,17 +21,17 @@ const Skills = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 px-6 bg-gray-50">
+    <section ref={ref} className="py-20 px-6 bg-gradient-to-br from-purple-50/30 to-emerald-50/20">
       <div className="max-w-4xl mx-auto">
         <motion.h2 
-          className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center relative"
+          className="text-3xl md:text-4xl font-light text-foreground mb-12 text-center relative"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
           Навыки
           <motion.div
-            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-blue-600"
+            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-primary"
             initial={{ width: 0 }}
             animate={isInView ? { width: 48 } : { width: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -53,16 +53,16 @@ const Skills = () => {
               transition={{ duration: 0.5, delay: 0.1 * index }}
               whileHover={{ y: -4 }}
             >
-              <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300 relative overflow-hidden">
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-primary/10 hover:shadow-lg hover:border-primary/20 transition-all duration-300 relative overflow-hidden">
                 <motion.div
-                  className="absolute top-0 left-0 h-1 bg-blue-600"
+                  className="absolute top-0 left-0 h-1 bg-gradient-to-r from-primary to-accent rounded-t-xl"
                   initial={{ width: 0 }}
                   animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
                   transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
                 />
                 <Badge 
                   variant="outline" 
-                  className="w-full justify-center border-transparent bg-transparent text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                  className="w-full justify-center border-transparent bg-transparent text-foreground hover:bg-primary/5 hover:text-primary transition-colors"
                 >
                   {skill.name}
                 </Badge>

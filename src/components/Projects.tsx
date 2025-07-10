@@ -33,14 +33,14 @@ const Projects = () => {
     <section ref={ref} className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.h2 
-          className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center relative"
+          className="text-3xl md:text-4xl font-light text-foreground mb-12 text-center relative"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
           Проекты
           <motion.div
-            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-blue-600"
+            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-accent"
             initial={{ width: 0 }}
             animate={isInView ? { width: 48 } : { width: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -56,13 +56,13 @@ const Projects = () => {
               transition={{ duration: 0.7, delay: 0.2 * index }}
               whileHover={{ y: -8 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 border-gray-200 hover:border-blue-200">
+              <Card className="h-full hover:shadow-xl transition-all duration-300 border-primary/10 hover:border-primary/20 bg-white">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 bg-blue-100 rounded-lg">
-                      <project.icon className="w-5 h-5 text-blue-600" />
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <project.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <CardTitle className="text-xl font-medium text-gray-900">
+                    <CardTitle className="text-xl font-medium text-foreground">
                       {project.title}
                     </CardTitle>
                   </div>
@@ -71,7 +71,7 @@ const Projects = () => {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200"
+                        className="px-2 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20"
                       >
                         {tech}
                       </span>
@@ -80,7 +80,7 @@ const Projects = () => {
                 </CardHeader>
 
                 <CardContent>
-                  <CardDescription className="text-gray-600 mb-6 leading-relaxed">
+                  <CardDescription className="text-muted-foreground mb-6 leading-relaxed">
                     {project.description}
                   </CardDescription>
                   
@@ -88,7 +88,7 @@ const Projects = () => {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="hover:bg-gray-50"
+                      className="hover:bg-muted border-primary/20"
                       asChild
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -99,7 +99,7 @@ const Projects = () => {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="hover:bg-blue-50 border-blue-200 text-blue-700"
+                      className="hover:bg-accent/5 border-accent/20 text-accent hover:text-accent"
                       asChild
                     >
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
