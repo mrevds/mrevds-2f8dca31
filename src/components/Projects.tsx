@@ -30,7 +30,7 @@ const Projects = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 px-6 relative">
+    <section ref={ref} className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.h2 
           className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center relative"
@@ -40,55 +40,41 @@ const Projects = () => {
         >
           Проекты
           <motion.div
-            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-blue-600 to-blue-400"
+            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-blue-600"
             initial={{ width: 0 }}
-            animate={isInView ? { width: 64 } : { width: 0 }}
+            animate={isInView ? { width: 48 } : { width: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           />
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 50, rotateX: 10 }}
-              animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 50, rotateX: 10 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.7, delay: 0.2 * index }}
-              whileHover={{ y: -8, rotateX: -2 }}
-              className="perspective-1000"
+              whileHover={{ y: -8 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 group border-gray-200 hover:border-blue-200 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
-                <motion.div
-                  className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 origin-left"
-                  initial={{ scaleX: 0 }}
-                  animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 + index * 0.2 }}
-                />
-                
-                <CardHeader className="relative">
-                  <div className="flex items-center gap-3 mb-2">
-                    <motion.div
-                      className="p-2 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors"
-                      whileHover={{ rotate: 5, scale: 1.1 }}
-                    >
+              <Card className="h-full hover:shadow-xl transition-all duration-300 border-gray-200 hover:border-blue-200">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 bg-blue-100 rounded-lg">
                       <project.icon className="w-5 h-5 text-blue-600" />
-                    </motion.div>
-                    <CardTitle className="text-xl font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                    </div>
+                    <CardTitle className="text-xl font-medium text-gray-900">
                       {project.title}
                     </CardTitle>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIndex) => (
-                      <motion.span
+                    {project.tech.map((tech) => (
+                      <span
                         key={tech}
                         className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200"
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-                        transition={{ duration: 0.3, delay: 0.8 + index * 0.2 + techIndex * 0.1 }}
                       >
                         {tech}
-                      </motion.span>
+                      </span>
                     ))}
                   </div>
                 </CardHeader>
@@ -102,7 +88,7 @@ const Projects = () => {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="hover:bg-gray-50 transition-all duration-200 hover:scale-105"
+                      className="hover:bg-gray-50"
                       asChild
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -113,7 +99,7 @@ const Projects = () => {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="hover:bg-blue-50 border-blue-200 text-blue-700 hover:border-blue-300 transition-all duration-200 hover:scale-105"
+                      className="hover:bg-blue-50 border-blue-200 text-blue-700"
                       asChild
                     >
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
