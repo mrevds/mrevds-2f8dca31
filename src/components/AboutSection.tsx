@@ -9,9 +9,9 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: Coffee, label: "Проектов", value: "15+" },
-    { icon: Clock, label: "Опыт", value: "2 года" },
-    { icon: Target, label: "Решено задач", value: "70+" },
+    { icon: Coffee, label: "Проектов", value: "2" },
+    { icon: Clock, label: "Комерческий опыт", value: "не имеется" },
+    { icon: Target, label: "Leetcode rank", value: "<1m" },
   ];
 
   return (
@@ -83,16 +83,16 @@ const AboutSection = () => {
                   и постоянно изучаю новые технологии для повышения эффективности разработки.
                 </motion.p>
 
-                <motion.div
-                  className="pt-4 border-t border-violet-100"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: 0.9 }}
-                >
-                  <p className="text-violet-600 font-medium">
-                    "Чистый код — это не роскошь, а необходимость"
-                  </p>
-                </motion.div>
+                {/*<motion.div*/}
+                {/*  className="pt-4 border-t border-violet-100"*/}
+                {/*  initial={{ opacity: 0, y: 20 }}*/}
+                {/*  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}*/}
+                {/*  transition={{ duration: 0.6, delay: 0.9 }}*/}
+                {/*>*/}
+                {/*  <p className="text-violet-600 font-medium">*/}
+                {/*    "Чистый код — это не роскошь, а необходимость"*/}
+                {/*  </p>*/}
+                {/*</motion.div>*/}
               </div>
             </div>
           </motion.div>

@@ -117,7 +117,7 @@ const Header = () => {
             />
             <Avatar className="w-80 h-80 border-8 border-white shadow-2xl ring-4 ring-violet-100 relative z-10">
               <AvatarImage 
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=face" 
+                src="https://i.pinimg.com/736x/03/e7/bf/03e7bf93b32051e3a2a404ee8e2d99fc.jpg"
                 alt="Denis" 
                 className="object-cover"
               />

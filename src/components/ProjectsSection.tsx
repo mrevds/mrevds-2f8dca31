@@ -12,40 +12,40 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "REST API сервис",
-      description: "Микросервис на Go с использованием Gin фреймворка и PostgreSQL. Реализация CRUD операций, middleware для аутентификации и JWT токены.",
+      description: "Вебсервис на Go с использованием Gin фреймворка и PostgreSQL. Реализация CRUD операций, middleware для аутентификации и JWT токены.",
       github: "#",
       demo: "#",
       icon: Server,
-      tech: ["Go", "Gin", "PostgreSQL", "JWT"],
+      tech: ["Go", "Gin", "PostgreSQL", "JWT", "Docker", "GORM"],
       gradient: "from-blue-500 to-purple-500"
-    },
-    {
-      title: "CLI утилита",
-      description: "Инструмент командной строки для автоматизации развертывания. Написан на Go с использованием Cobra библиотеки и поддержкой конфигурационных файлов.",
-      github: "#",
-      demo: "#",
-      icon: Terminal,
-      tech: ["Go", "Cobra", "CLI", "YAML"],
-      gradient: "from-green-500 to-cyan-500"
-    },
-    {
-      title: "Database Migration Tool",
-      description: "Система миграций базы данных с поддержкой версионирования схемы, откатов и валидации изменений для PostgreSQL.",
-      github: "#",
-      demo: "#",
-      icon: Database,
-      tech: ["Go", "PostgreSQL", "Migrations"],
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "API Gateway",
-      description: "Шлюз для маршрутизации запросов между микросервисами с функциями балансировки нагрузки, кэширования и мониторинга.",
-      github: "#",
-      demo: "#",
-      icon: Globe,
-      tech: ["Go", "Redis", "Docker", "Load Balancing"],
-      gradient: "from-orange-500 to-red-500"
     }
+    // {
+    //   title: "CLI утилита",
+    //   description: "Инструмент командной строки для автоматизации развертывания. Написан на Go с использованием Cobra библиотеки и поддержкой конфигурационных файлов.",
+    //   github: "#",
+    //   demo: "#",
+    //   icon: Terminal,
+    //   tech: ["Go", "Cobra", "CLI", "YAML"],
+    //   gradient: "from-green-500 to-cyan-500"
+    // },
+    // {
+    //   title: "Database Migration Tool",
+    //   description: "Система миграций базы данных с поддержкой версионирования схемы, откатов и валидации изменений для PostgreSQL.",
+    //   github: "#",
+    //   demo: "#",
+    //   icon: Database,
+    //   tech: ["Go", "PostgreSQL", "Migrations"],
+    //   gradient: "from-purple-500 to-pink-500"
+    // },
+    // {
+    //   title: "API Gateway",
+    //   description: "Шлюз для маршрутизации запросов между микросервисами с функциями балансировки нагрузки, кэширования и мониторинга.",
+    //   github: "#",
+    //   demo: "#",
+    //   icon: Globe,
+    //   tech: ["Go", "Redis", "Docker", "Load Balancing"],
+    //   gradient: "from-orange-500 to-red-500"
+    // }
   ];
 
   return (

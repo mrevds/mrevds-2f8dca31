@@ -13,30 +13,9 @@ const ContactSection = () => {
     {
       icon: MessageCircle,
       label: "Telegram",
-      value: "@your_telegram",
-      href: "https://t.me/your_telegram",
+      value: "@mrevds",
+      href: "https://t.me/mrevds",
       color: "from-blue-400 to-blue-600"
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
-      color: "from-violet-400 to-violet-600"
-    },
-    {
-      icon: Phone,
-      label: "Телефон",
-      value: "+7 (xxx) xxx-xx-xx",
-      href: "tel:+7xxxxxxxxxx",
-      color: "from-emerald-400 to-emerald-600"
-    },
-    {
-      icon: MapPin,
-      label: "Локация",
-      value: "Россия",
-      href: "#",
-      color: "from-orange-400 to-orange-600"
     }
   ];
 
@@ -50,11 +29,10 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
-            Свяжитесь со мной
+            Контакты
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Готов к обсуждению новых проектов и интересных задач. 
-            Выберите удобный способ связи!
+            Готов к обсуждению новых проектов и интересных задач.
           </p>
         </motion.div>
 
@@ -89,30 +67,30 @@ const ContactSection = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <motion.div
-          className="text-center bg-white p-8 rounded-2xl shadow-lg border border-violet-100"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <h3 className="text-2xl font-semibold text-slate-800 mb-4">
-            Есть интересный проект?
-          </h3>
-          <p className="text-slate-600 mb-6 max-w-md mx-auto">
-            Буду рад обсудить детали и предложить лучшие технические решения
-          </p>
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-violet-600 to-emerald-600 hover:from-violet-700 hover:to-emerald-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-            asChild
-          >
-            <a href="mailto:your.email@example.com">
-              <Mail className="w-5 h-5 mr-2" />
-              Написать письмо
-            </a>
-          </Button>
-        </motion.div>
+        {/*/!* CTA Section *!/*/}
+        {/*<motion.div*/}
+        {/*  className="text-center bg-white p-8 rounded-2xl shadow-lg border border-violet-100"*/}
+        {/*  initial={{ opacity: 0, y: 30 }}*/}
+        {/*  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}*/}
+        {/*  transition={{ duration: 0.6, delay: 0.5 }}*/}
+        {/*>*/}
+        {/*  <h3 className="text-2xl font-semibold text-slate-800 mb-4">*/}
+        {/*    Есть интересный проект?*/}
+        {/*  </h3>*/}
+        {/*  <p className="text-slate-600 mb-6 max-w-md mx-auto">*/}
+        {/*    Буду рад обсудить детали и предложить лучшие технические решения*/}
+        {/*  </p>*/}
+        {/*  <Button */}
+        {/*    size="lg" */}
+        {/*    className="bg-gradient-to-r from-violet-600 to-emerald-600 hover:from-violet-700 hover:to-emerald-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"*/}
+        {/*    asChild*/}
+        {/*  >*/}
+        {/*    <a href="mailto:your.email@example.com">*/}
+        {/*      <Mail className="w-5 h-5 mr-2" />*/}
+        {/*      Написать письмо*/}
+        {/*    </a>*/}
+        {/*  </Button>*/}
+        {/*</motion.div>*/}
 
         {/* Footer */}
         <motion.div
