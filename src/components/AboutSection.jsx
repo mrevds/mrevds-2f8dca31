@@ -18,7 +18,7 @@ const AboutSection = () => {
     <section id="about" ref={ref} className="py-20 px-6 bg-white/50">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Photo and Stats */}
+          {/* Left side - Stats */}
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
@@ -33,18 +33,6 @@ const AboutSection = () => {
             >
               О себе
             </motion.h2>
-
-            {/* Photo */}
-            <motion.div
-              className="mb-8"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <div className="w-48 h-48 mx-auto bg-gradient-to-br from-violet-200 to-emerald-200 rounded-2xl shadow-lg border border-violet-100 flex items-center justify-center">
-                <span className="text-6xl">👨‍💻</span>
-              </div>
-            </motion.div>
 
             <div className="grid grid-cols-3 gap-6">
               {stats.map((stat, index) => (
@@ -81,7 +69,8 @@ const AboutSection = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  Backend разработчик, пишу на Go. Делаю API и работаю с базами данных.
+                  Backend-разработчик с фокусом на создание надежных и масштабируемых систем. 
+                  Специализируюсь на разработке высокопроизводительных API и микросервисов.
                 </motion.p>
                 
                 <motion.p 
@@ -90,7 +79,8 @@ const AboutSection = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.7 }}
                 >
-                  Использую PostgreSQL, знаком с Docker и Linux. Люблю решать алгоритмические задачи.
+                  Основной стек — Go и PostgreSQL. Люблю решать сложные технические задачи 
+                  и оптимизировать производительность систем.
                 </motion.p>
                 
                 <motion.p 
@@ -99,7 +89,8 @@ const AboutSection = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.9 }}
                 >
-                  Постоянно изучаю новое в области разработки.
+                  Постоянно изучаю новые технологии и подходы в разработке, 
+                  активно решаю алгоритмические задачи на LeetCode.
                 </motion.p>
               </div>
             </div>

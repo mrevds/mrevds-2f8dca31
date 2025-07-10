@@ -11,24 +11,24 @@ const SkillsSection = () => {
     {
       title: "Backend",
       skills: [
-        { name: "Go", color: "from-blue-500 to-cyan-500" },
-        { name: "Gin", color: "from-green-500 to-emerald-500" },
-        { name: "REST API", color: "from-purple-500 to-pink-500" },
+        { name: "Go", level: 90, color: "from-blue-500 to-cyan-500" },
+        { name: "Gin", level: 85, color: "from-green-500 to-emerald-500" },
+        { name: "REST API", level: 88, color: "from-purple-500 to-pink-500" },
       ]
     },
     {
       title: "Базы данных",
       skills: [
-        { name: "PostgreSQL", color: "from-indigo-500 to-blue-500" },
-        { name: "SQL", color: "from-violet-500 to-purple-500" },
+        { name: "PostgreSQL", level: 80, color: "from-indigo-500 to-blue-500" },
+        { name: "SQL", level: 85, color: "from-violet-500 to-purple-500" },
       ]
     },
     {
       title: "Инструменты",
       skills: [
-        { name: "Git", color: "from-orange-500 to-red-500" },
-        { name: "Docker", color: "from-cyan-500 to-blue-500" },
-        { name: "Linux", color: "from-yellow-500 to-orange-500" },
+        { name: "Git", level: 90, color: "from-orange-500 to-red-500" },
+        { name: "Docker", level: 70, color: "from-cyan-500 to-blue-500" },
+        { name: "Linux", level: 75, color: "from-yellow-500 to-orange-500" },
       ]
     }
   ];
@@ -59,17 +59,28 @@ const SkillsSection = () => {
                 {category.title}
               </h3>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
-                    className={`px-4 py-3 bg-gradient-to-r ${skill.color} text-white rounded-lg text-center font-medium shadow-md`}
+                    className="space-y-2"
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                     transition={{ duration: 0.5, delay: (categoryIndex * 0.2) + (skillIndex * 0.1) }}
-                    whileHover={{ scale: 1.05 }}
                   >
-                    {skill.name}
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium text-slate-700">{skill.name}</span>
+                      <span className="text-sm text-slate-500">{skill.level}%</span>
+                    </div>
+                    
+                    <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                      <motion.div
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
+                        initial={{ width: 0 }}
+                        animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
+                        transition={{ duration: 1, delay: (categoryIndex * 0.2) + (skillIndex * 0.1) + 0.5 }}
+                      />
+                    </div>
                   </motion.div>
                 ))}
               </div>
