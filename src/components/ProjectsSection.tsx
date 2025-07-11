@@ -116,7 +116,7 @@ const ProjectsSection = () => {
                       GitHub
                     </a>
                   </Button>
-                  <Button 
+                  {/* <Button 
                     size="sm" 
                     className={`bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white flex-1`}
                     asChild
@@ -125,7 +125,7 @@ const ProjectsSection = () => {
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Demo
                     </a>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
 
