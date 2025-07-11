@@ -10,7 +10,7 @@ const AboutSection = () => {
 
   const stats = [
     { icon: Coffee, label: "Проектов", value: "2" },
-    { icon: Clock, label: "Комерческий опыт", value: "не имеется" },
+    { icon: Clock, label: "Комерческий опыт", value: "Пока без коммерческого опыта" },
     { icon: Target, label: "Leetcode rank", value: "<1m" },
   ];
 
@@ -34,11 +34,11 @@ const AboutSection = () => {
               О себе
             </motion.h2>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="text-center p-6 bg-white rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl transition-all duration-300"
+                  className="text-center p-4 sm:p-6 bg-white rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -47,8 +47,8 @@ const AboutSection = () => {
                   <div className="p-3 bg-gradient-to-br from-violet-100 to-emerald-100 rounded-xl mx-auto w-fit mb-4">
                     <stat.icon className="w-6 h-6 text-violet-600" />
                   </div>
-                  <div className="text-2xl font-bold text-slate-800 mb-1">{stat.value}</div>
-                  <div className="text-sm text-slate-500">{stat.label}</div>
+                  <div className="text-xl sm:text-2xl font-bold text-slate-800 mb-1 break-words">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-slate-500 break-words">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

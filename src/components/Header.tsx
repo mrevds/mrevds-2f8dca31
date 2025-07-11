@@ -95,6 +95,14 @@ const Header = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-violet-600 to-emerald-600 hover:from-violet-700 hover:to-emerald-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/resume.pdf';
+                link.download = 'Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
               <Download className="w-5 h-5 mr-2" />
               Скачать резюме
@@ -117,7 +125,7 @@ const Header = () => {
             />
             <Avatar className="w-80 h-80 border-8 border-white shadow-2xl ring-4 ring-violet-100 relative z-10">
               <AvatarImage 
-                src="https://i.pinimg.com/736x/03/e7/bf/03e7bf93b32051e3a2a404ee8e2d99fc.jpg"
+                src="https://i.pinimg.com/736x/6b/b5/35/6bb53573260bd2de44e9d44f4d2f4fed.jpg"
                 alt="Denis" 
                 className="object-cover"
               />
