@@ -13,7 +13,7 @@ const ProjectsSection = () => {
     {
       title: "REST API сервис",
       description: "Вебсервис на Go с использованием Gin фреймворка и PostgreSQL. Реализация CRUD операций, middleware для аутентификации и JWT токены.",
-      github: "#",
+      github: "https://github.com/mrevds/freeTitle",
       demo: "#",
       icon: Server,
       tech: ["Go", "Gin", "PostgreSQL", "JWT", "Docker", "GORM"],
