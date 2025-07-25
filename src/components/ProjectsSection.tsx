@@ -19,15 +19,15 @@ const ProjectsSection = () => {
       tech: ["Go", "Gin", "PostgreSQL", "JWT", "Docker", "GORM"],
       gradient: "from-blue-500 to-purple-500"
     }
-    // {
-    //   title: "CLI утилита",
-    //   description: "Инструмент командной строки для автоматизации развертывания. Написан на Go с использованием Cobra библиотеки и поддержкой конфигурационных файлов.",
-    //   github: "#",
-    //   demo: "#",
-    //   icon: Terminal,
-    //   tech: ["Go", "Cobra", "CLI", "YAML"],
-    //   gradient: "from-green-500 to-cyan-500"
-    // },
+    {
+      "title": "CLI AI Chat",
+      "description": "Консольный клиент для взаимодействия с AI-моделями через AIML API. Поддерживает историю сообщений, управление контекстом и работает с GPT-4o.",
+      "github": "https://github.com/mrevds/cli-ai-chat",
+      "demo": "#",
+      "icon": "Terminal",
+      "tech": ["Go", "GPT-4o", "AIML API", "CLI", "Chat"],
+      "gradient": "from-purple-500 to-pink-500"
+    }
     // {
     //   title: "Database Migration Tool",
     //   description: "Система миграций базы данных с поддержкой версионирования схемы, откатов и валидации изменений для PostgreSQL.",
