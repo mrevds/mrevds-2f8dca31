@@ -18,7 +18,7 @@ const ProjectsSection = () => {
       icon: Server,
       tech: ["Go", "Gin", "PostgreSQL", "JWT", "Docker", "GORM"],
       gradient: "from-blue-500 to-purple-500"
-    }
+    },
     {
       "title": "CLI AI Chat",
       "description": "Консольный клиент для взаимодействия с AI-моделями через AIML API. Поддерживает историю сообщений, управление контекстом и работает с GPT-4o.",
