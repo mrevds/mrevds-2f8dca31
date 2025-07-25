@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       "description": "Консольный клиент для взаимодействия с AI-моделями через AIML API. Поддерживает историю сообщений, управление контекстом и работает с GPT-4o.",
       "github": "https://github.com/mrevds/cli-ai-chat",
       "demo": "#",
-      "icon": "Terminal",
+      "icon": Terminal,
       "tech": ["Go", "GPT-4o", "AIML API", "CLI", "Chat"],
       "gradient": "from-purple-500 to-pink-500"
     }
