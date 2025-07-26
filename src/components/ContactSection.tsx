@@ -26,7 +26,7 @@ const ContactSection = () => {
     {
       icon: Twitter,
       label: "X (Twitter)",
-      value: "@mrevds",
+      value: "@mrevds17",
       href: "https://x.com/mrevds17",
       color: "from-gray-800 to-black",
     },
