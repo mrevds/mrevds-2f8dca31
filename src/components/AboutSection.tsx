@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -9,8 +8,8 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: Coffee, label: "Проектов", value: "2" },
-    { icon: Clock, label: "Комерческий опыт", value: "Пока без коммерческого опыта" },
+    { icon: Coffee, label: "Projects", value: "2" },
+    { icon: Clock, label: "Commercial experience", value: "No commercial experience yet" },
     { icon: Target, label: "Leetcode rank", value: "<1m" },
   ];
 
@@ -31,7 +30,7 @@ const AboutSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              О себе
+              About Me
             </motion.h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -69,8 +68,8 @@ const AboutSection = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  Backend-разработчик с фокусом на создание надежных и масштабируемых систем. 
-                  Специализируюсь на разработке высокопроизводительных API и микросервисов.
+                  Backend developer focused on building reliable and scalable systems.
+                  I specialize in developing high-performance APIs and microservices.
                 </motion.p>
                 
                 <motion.p 
@@ -79,20 +78,21 @@ const AboutSection = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.7 }}
                 >
-                  Основной стек — Go и PostgreSQL. Люблю решать сложные технические задачи 
-                  и постоянно изучаю новые технологии для повышения эффективности разработки.
+                  My core stack is Go and PostgreSQL. I enjoy solving complex technical problems 
+                  and constantly explore new technologies to boost development efficiency.
                 </motion.p>
 
-                {/*<motion.div*/}
-                {/*  className="pt-4 border-t border-violet-100"*/}
-                {/*  initial={{ opacity: 0, y: 20 }}*/}
-                {/*  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}*/}
-                {/*  transition={{ duration: 0.6, delay: 0.9 }}*/}
-                {/*>*/}
-                {/*  <p className="text-violet-600 font-medium">*/}
-                {/*    "Чистый код — это не роскошь, а необходимость"*/}
-                {/*  </p>*/}
-                {/*</motion.div>*/}
+                {/* Uncomment if you want to use the quote */}
+                {/*<motion.div
+                  className="pt-4 border-t border-violet-100"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: 0.9 }}
+                >
+                  <p className="text-violet-600 font-medium">
+                    "Clean code is not a luxury, it's a necessity"
+                  </p>
+                </motion.div>*/}
               </div>
             </div>
           </motion.div>
