@@ -53,10 +53,10 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
-            Контакты
+            Contacts
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Готов к обсуждению новых проектов и интересных задач.
+            Ready to discuss new projects and interesting challenges.
           </p>
         </motion.div>
 
