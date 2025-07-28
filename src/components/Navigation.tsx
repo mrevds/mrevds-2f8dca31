@@ -7,11 +7,11 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { icon: Home, label: "Главная", href: "#home" },
-    { icon: User, label: "О себе", href: "#about" },
-    { icon: Code, label: "Навыки", href: "#skills" },
-    { icon: Briefcase, label: "Проекты", href: "#projects" },
-    { icon: Mail, label: "Контакты", href: "#contact" },
+    { icon: Home, label: "Main", href: "#home" },
+    { icon: User, label: "About me", href: "#about" },
+    { icon: Code, label: "Skills", href: "#skills" },
+    { icon: Briefcase, label: "Projects", href: "#projects" },
+    { icon: Mail, label: "Contacts", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
