@@ -28,7 +28,7 @@ const Skills = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6 }}
           >
-            Навыки
+            Skills
             <motion.div
                 className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-primary"
                 initial={{ width: 0 }}
