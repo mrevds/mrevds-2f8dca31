@@ -30,7 +30,7 @@ const SkillsSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6 }}
           >
-            Технические навыки
+            Technical skills
           </motion.h2>
 
           <div className="grid lg:grid-cols-3 gap-8">
