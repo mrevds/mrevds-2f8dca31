@@ -12,11 +12,11 @@ const SkillsSection = () => {
       skills: ["Go", "Gin", "REST API"]
     },
     {
-      title: "Базы данных",
+      title: "Database",
       skills: ["PostgreSQL", "GORM"]
     },
     {
-      title: "Инструменты",
+      title: "Tools",
       skills: ["Git", "Docker", "Linux"]
     }
   ];
