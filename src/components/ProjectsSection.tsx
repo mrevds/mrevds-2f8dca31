@@ -11,8 +11,8 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "REST API сервис",
-      description: "Вебсервис на Go с использованием Gin фреймворка и PostgreSQL. Реализация CRUD операций, middleware для аутентификации и JWT токены.",
+      title: "REST API services",
+      description: "Go microservice using Gin framework and PostgreSQL. Implementation of CRUD operations, middleware for authentication in the format of Posts and comments.",
       github: "https://github.com/mrevds/freeTitle",
       demo: "#",
       icon: Server,
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
     },
     {
       "title": "CLI AI Chat",
-      "description": "Консольный клиент для взаимодействия с AI-моделями через AIML API. Поддерживает историю сообщений, управление контекстом и работает с GPT-4o.",
+      "description": "A console client for interacting with AI models via the AIML API. Supports message history, context management, and works with GPT-4o.",
       "github": "https://github.com/mrevds/cli-ai-chat",
       "demo": "#",
       "icon": Terminal,
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          Мои проекты
+          My projects
         </motion.h2>
 
         <div className="grid lg:grid-cols-2 gap-8">
