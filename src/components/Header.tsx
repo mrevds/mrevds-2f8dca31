@@ -84,7 +84,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            Создаю надежные и масштабируемые серверные решения на Go
+            I build reliable and scalable server solutions in Go
           </motion.p>
 
           <motion.div
