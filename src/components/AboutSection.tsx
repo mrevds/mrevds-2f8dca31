@@ -10,6 +10,8 @@ const AboutSection = () => {
   const stats = [
     { icon: Coffee, label: "Projects", value: "2" },
     { icon: Clock, label: "Commercial experience", value: "No yet" },
+{ icon: Target, label: "Target", value: "Production-ready backend engineer" }
+
 
   ];
 
