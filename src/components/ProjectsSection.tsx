@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       github: "https://github.com/mrevds/freeTitle",
       demo: "#",
       icon: Server,
-      tech: ["Go", "Gin", "PostgreSQL", "JWT", "Docker", "GORM"],
+      tech: ["Go", "Gin", "PostgreSQL", "JWT", "Docker", "GORM", "Redis", "TaskFile"],
       gradient: "from-blue-500 to-purple-500"
     },
     {
