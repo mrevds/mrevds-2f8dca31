@@ -9,8 +9,8 @@ const AboutSection = () => {
 
   const stats = [
     { icon: Coffee, label: "Projects", value: "2" },
-    { icon: Clock, label: "Commercial experience", value: "No commercial experience yet" },
-    { icon: Target, label: "Leetcode rank", value: "<1m" },
+    { icon: Clock, label: "Commercial experience", value: "No yet" },
+
   ];
 
   return (
