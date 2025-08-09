@@ -9,11 +9,11 @@ const SkillsSection = () => {
  const skillCategories = [
   {
     title: "Backend",
-    skills: ["Go", "Gin", "REST API"]
+    skills: ["Go", "REST API", "Gin"]
   },
   {
     title: "Database",
-    skills: ["PostgreSQL", "GORM", "Redis"]
+    skills: ["PostgreSQL", "Redis", "GORM"]
   },
   {
     title: "Message Brokers",
@@ -21,9 +21,10 @@ const SkillsSection = () => {
   },
   {
     title: "Tools",
-    skills: ["Git", "Docker", "Linux"]
+    skills: ["Git", "Docker", "Linux", "Taskfile", "CI/CD (GitHub Actions)"]
   }
 ];
+
 
 
   return (
