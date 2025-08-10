@@ -17,7 +17,7 @@ const SkillsSection = () => {
   },
   {
     title: "Message Brokers",
-    skills: ["Kafka"]
+    skills: ["Kafka(Basic)"]
   },
   {
     title: "Tools",
