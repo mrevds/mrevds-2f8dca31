@@ -16,12 +16,8 @@ const SkillsSection = () => {
     skills: ["PostgreSQL", "Redis", "GORM"]
   },
   {
-    title: "Message Brokers",
-    skills: ["Kafka(Basic)"]
-  },
-  {
     title: "Tools",
-    skills: ["Git", "Docker", "Linux", "Taskfile", "CI/CD (GitHub Actions)"]
+    skills: ["Git", "Docker", "Linux", "Taskfile"]
   }
 ];
 
