@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Server, Terminal, Database, Globe, container } from "lucide-react";
+import { ExternalLink, Github, Server, Terminal, Database, Globe, Container } from "lucide-react";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
@@ -29,13 +29,13 @@ const ProjectsSection = () => {
       "gradient": "from-purple-500 to-pink-500"
     },
     {
-      title: "Auth Microservice",
-      description: "Микросервис аутентификации на gRPC с JWT токенами, регистрацией, авторизацией и управлением пользователями. PostgreSQL, Docker, миграции базы данных.",
-      github: "https://github.com/mrevds/auth-micro", // замените на ваш URL
-      demo: "#",
-      icon: container, // или Lock, UserCheck - в зависимости от доступных иконок
-      tech: ["Go", "gRPC", "PostgreSQL", "Docker", "JWT"],
-      gradient: "from-blue-500 to-cyan-500"
+      "title": "Auth Microservice",
+      "description": "Микросервис аутентификации на gRPC с JWT токенами, регистрацией, авторизацией и управлением пользователями. PostgreSQL, Docker, миграции базы данных.",
+      "github": "https://github.com/mrevds/auth-micro", // замените на ваш URL
+      "demo": "#",
+      "icon": Container, // или Lock, UserCheck - в зависимости от доступных иконок
+      "tech": ["Go", "gRPC", "PostgreSQL", "Docker", "JWT"],
+      "gradient": "from-blue-500 to-cyan-500"
     },
     // {
     //   title: "API Gateway",
