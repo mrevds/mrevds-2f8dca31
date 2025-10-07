@@ -27,16 +27,15 @@ const ProjectsSection = () => {
       "icon": Terminal,
       "tech": ["Go", "GPT-4o", "AIML API", "CLI", "Chat"],
       "gradient": "from-purple-500 to-pink-500"
-    }
-    // {
-    //   title: "Database Migration Tool",
-    //   description: "Система миграций базы данных с поддержкой версионирования схемы, откатов и валидации изменений для PostgreSQL.",
-    //   github: "#",
-    //   demo: "#",
-    //   icon: Database,
-    //   tech: ["Go", "PostgreSQL", "Migrations"],
-    //   gradient: "from-purple-500 to-pink-500"
-    // },
+    },{
+  title: "Auth Microservice",
+  description: "Микросервис аутентификации на gRPC с JWT токенами, регистрацией, авторизацией и управлением пользователями. PostgreSQL, Docker, миграции базы данных.",
+  github: "https://github.com/mrevds/auth-micro", // замените на ваш URL
+  demo: "#",
+  icon: Shield, // или Lock, UserCheck - в зависимости от доступных иконок
+  tech: ["Go", "gRPC", "PostgreSQL", "Docker", "JWT"],
+  gradient: "from-blue-500 to-cyan-500"
+}
     // {
     //   title: "API Gateway",
     //   description: "Шлюз для маршрутизации запросов между микросервисами с функциями балансировки нагрузки, кэширования и мониторинга.",
