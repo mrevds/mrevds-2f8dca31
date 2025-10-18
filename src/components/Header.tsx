@@ -97,7 +97,7 @@ const Header = () => {
               className="bg-gradient-to-r from-violet-600 to-emerald-600 hover:from-violet-700 hover:to-emerald-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = 'https://www.canva.com/design/DAGy972YgBQ/WcLxlEkMtOATXgMGbkKphg/edit?utm_content=DAGy972YgBQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton';
+                link.href = 'https://www.canva.com/design/DAG1yGcz2N4/KYH2Am9Q9PsAeGQ4CA74sw/edit?utm_content=DAG1yGcz2N4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton';
                 link.download = 'Resume.pdf';
                 document.body.appendChild(link);
                 link.click();

@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion/react"; // <-- вот тут фикс
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Server, Terminal, Container } from "lucide-react"; // убрал неиспользуемые иконки
@@ -9,6 +8,16 @@ const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const projects = [
+    {
+      title: "Auth Microservice",
+      description:
+        "Authentication microservice using gRPC with JWT tokens, registration, authorization, and user management. PostgreSQL, Docker, and database migrations.",
+      github: "https://github.com/mrevds/auth-micro",
+      demo: "#",
+      icon: Container,
+      tech: ["Go", "gRPC", "PostgreSQL", "Docker", "JWT", "Uber Ratelimit", "Goose Migrations", "Bash", "Make", "Viper", "PGx", "Uber FX (DI)"],
+      gradient: "from-blue-500 to-cyan-500",
+    },
     {
       title: "REST API services",
       description:
@@ -29,16 +38,7 @@ const ProjectsSection = () => {
       tech: ["Go", "GPT-4o", "AIML API", "CLI", "Chat"],
       gradient: "from-purple-500 to-pink-500",
     },
-    {
-      title: "Auth Microservice",
-      description:
-        "Микросервис аутентификации на gRPC с JWT токенами, регистрацией, авторизацией и управлением пользователями. PostgreSQL, Docker, миграции базы данных.",
-      github: "https://github.com/mrevds/auth-micro",
-      demo: "#",
-      icon: Container,
-      tech: ["Go", "gRPC", "PostgreSQL", "Docker", "JWT"],
-      gradient: "from-blue-500 to-cyan-500",
-    },
+    
   ];
 
   return (

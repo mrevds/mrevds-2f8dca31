@@ -8,11 +8,9 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: Coffee, label: "Projects", value: "2" },
-    { icon: Clock, label: "Commercial experience", value: "2 years" },
-{ icon: Target, label: "Target", value: "Production-ready backend engineer" }
-
-
+    { icon: Coffee, label: "Projects", value: "3" },
+    { icon: Clock, label: "Experience", value: "2 yrs" },
+    { icon: Target, label: "Goal", value: "Prod-ready backend" }
   ];
 
   return (

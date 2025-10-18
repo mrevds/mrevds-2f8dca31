@@ -6,22 +6,28 @@ const SkillsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
- const skillCategories = [
+const skillCategories = [
   {
     title: "Backend",
-    skills: ["Go", "REST API", "Gin"]
+    skills: ["Go", "REST API", "Gin", "gRPC", "Microservices"],
   },
   {
     title: "Database",
-    skills: ["PostgreSQL", "Redis", "GORM"]
+    skills: ["PostgreSQL", "Redis", "GORM", "Migrations (Goose)"],
   },
   {
-    title: "Tools",
-    skills: ["Git", "Docker", "Linux", "Taskfile"]
-  }
+    title: "DevOps & CI/CD",
+    skills: ["Docker", "CI/CD", "Git", "Taskfile"],
+  },
+  {
+    title: "Tools & Scripting",
+    skills: ["Linux", "Bash"],
+  },
+  {
+    title: "Testing",
+    skills: ["Unit & integration testing"],
+  },
 ];
-
-
 
   return (
       <section id="skills" ref={ref} className="py-20 px-6 bg-gradient-to-br from-violet-50/50 to-emerald-50/30">
