@@ -1,11 +1,24 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Coffee, Clock, Target } from "lucide-react";
 
 const AboutSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: "-100px" }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   const stats = [
     { icon: Coffee, label: "Projects", value: "3" },
@@ -18,84 +31,62 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Stats */}
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className={`space-y-8 animate-fade-in-left ${isInView ? '' : 'opacity-0'}`}
           >
-            <motion.h2 
-              className="text-4xl lg:text-5xl font-light text-slate-800 mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <h2 
+              className="text-4xl lg:text-5xl font-light text-slate-800 mb-8 animate-fade-in-up"
+              style={{ animationDelay: isInView ? '0.2s' : '0s' }}
             >
               About Me
-            </motion.h2>
+            </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  className="text-center p-4 sm:p-6 bg-white rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  whileHover={{ y: -5 }}
+                  className={`text-center p-4 sm:p-6 bg-white rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl hover:scale-105 transition-all duration-300 animate-slide-in-up ${
+                    isInView ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  style={{
+                    animationDelay: isInView ? `${0.4 + index * 0.1}s` : '0s',
+                  }}
                 >
-                  <div className="p-3 bg-gradient-to-br from-violet-100 to-emerald-100 rounded-xl mx-auto w-fit mb-4">
+                  <div className="p-3 bg-gradient-to-br from-violet-100 to-emerald-100 rounded-xl mx-auto w-fit mb-4 transition-transform duration-300 hover:scale-110">
                     <stat.icon className="w-6 h-6 text-violet-600" />
                   </div>
                   <div className="text-xl sm:text-2xl font-bold text-slate-800 mb-1 break-words">{stat.value}</div>
                   <div className="text-xs sm:text-sm text-slate-500 break-words">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right side - Description */}
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+          <div
+            className={`space-y-6 animate-fade-in-right ${isInView ? '' : 'opacity-0'}`}
+            style={{ animationDelay: isInView ? '0.3s' : '0s' }}
           >
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl transition-all duration-300">
               <div className="space-y-6">
-                <motion.p 
-                  className="text-lg text-slate-700 leading-relaxed"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
+                <p 
+                  className="text-lg text-slate-700 leading-relaxed animate-fade-in-up"
+                  style={{ animationDelay: isInView ? '0.5s' : '0s' }}
                 >
                   Backend developer focused on building reliable and scalable systems.
                   I specialize in developing high-performance APIs and microservices.
-                </motion.p>
+                </p>
                 
-                <motion.p 
-                  className="text-lg text-slate-700 leading-relaxed"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
+                <p 
+                  className="text-lg text-slate-700 leading-relaxed animate-fade-in-up"
+                  style={{ animationDelay: isInView ? '0.7s' : '0s' }}
                 >
                   My core stack is Go and PostgreSQL. I enjoy solving complex technical problems 
                   and constantly explore new technologies to boost development efficiency.
-                </motion.p>
-
-                {/* Uncomment if you want to use the quote */}
-                {/*<motion.div
-                  className="pt-4 border-t border-violet-100"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: 0.9 }}
-                >
-                  <p className="text-violet-600 font-medium">
-                    "Clean code is not a luxury, it's a necessity"
-                  </p>
-                </motion.div>*/}
+                </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

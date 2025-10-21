@@ -1,11 +1,25 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Server, Terminal, Container } from "lucide-react"; // убрал неиспользуемые иконки
+import { Github, Server, Terminal, Container } from "lucide-react";
 
 const ProjectsSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: "-100px" }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   const projects = [
     {
@@ -38,30 +52,27 @@ const ProjectsSection = () => {
       tech: ["Go", "GPT-4o", "AIML API", "CLI", "Chat"],
       gradient: "from-purple-500 to-pink-500",
     },
-    
   ];
 
   return (
     <section id="projects" ref={ref} className="py-20 px-6 bg-white/30">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          className="text-4xl lg:text-5xl font-light text-slate-800 text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+        <h2
+          className={`text-4xl lg:text-5xl font-light text-slate-800 text-center mb-16 animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}
         >
           My projects
-        </motion.h2>
+        </h2>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={project.title}
-              className="group relative bg-white rounded-2xl shadow-lg border border-violet-100 overflow-hidden hover:shadow-2xl transition-all duration-500"
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: index * 0.2 }}
-              whileHover={{ y: -10 }}
+              className={`group relative bg-white rounded-2xl shadow-lg border border-violet-100 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 animate-slide-in-up ${
+                isInView ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                animationDelay: isInView ? `${index * 0.2}s` : '0s',
+              }}
             >
               {/* Gradient Header */}
               <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
@@ -70,7 +81,7 @@ const ProjectsSection = () => {
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center space-x-4">
-                    <div className={`p-3 bg-gradient-to-r ${project.gradient} rounded-xl`}>
+                    <div className={`p-3 bg-gradient-to-r ${project.gradient} rounded-xl transition-transform duration-300 group-hover:scale-110`}>
                       <project.icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-slate-800">{project.title}</h3>
@@ -85,7 +96,7 @@ const ProjectsSection = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-violet-50 text-violet-600 text-sm rounded-full border border-violet-200"
+                      className="px-3 py-1 bg-violet-50 text-violet-600 text-sm rounded-full border border-violet-200 hover:bg-violet-100 hover:border-violet-300 transition-colors duration-200"
                     >
                       {tech}
                     </span>
@@ -97,7 +108,7 @@ const ProjectsSection = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="hover:bg-slate-50 border-slate-200 flex-1"
+                    className="hover:bg-slate-50 border-slate-200 flex-1 transition-all duration-300"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -112,7 +123,7 @@ const ProjectsSection = () => {
               <div
                 className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${project.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

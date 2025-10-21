@@ -1,45 +1,54 @@
 
-import { motion } from "framer-motion";
 import { Code2, Terminal, Download } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { useEffect, useRef } from "react";
+import { animate } from "@motionone/dom";
 
 const Header = () => {
+  const bgElement1 = useRef<HTMLDivElement>(null);
+  const bgElement2 = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (bgElement1.current) {
+      animate(
+        bgElement1.current,
+        { scale: [1, 1.2, 1], rotate: [0, 180, 360] },
+        { duration: 20, repeat: Infinity, easing: "linear" }
+      );
+    }
+
+    if (bgElement2.current) {
+      animate(
+        bgElement2.current,
+        { scale: [1.2, 1, 1.2], rotate: [360, 180, 0] },
+        { duration: 15, repeat: Infinity, easing: "linear" }
+      );
+    }
+  }, []);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <motion.div 
+        <div
+          ref={bgElement1}
           className="absolute top-1/4 right-1/4 w-96 h-96 bg-violet-200/20 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
-        <motion.div 
+        <div
+          ref={bgElement2}
           className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-emerald-200/20 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1.2, 1, 1.2],
-            rotate: [360, 180, 0]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         />
       </div>
 
       <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto relative z-10">
         {/* Left side - Text content */}
-        <motion.div
-          className="text-center lg:text-left"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
+          className="text-center lg:text-left animate-fade-in-left"
         >
-          <motion.div
-            className="flex items-center justify-center lg:justify-start gap-4 mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div
+            className="flex items-center justify-center lg:justify-start gap-4 mb-6 animate-fade-in-up"
+            style={{ animationDelay: '0.2s' }}
           >
             <div className="p-3 bg-white rounded-xl shadow-lg border border-violet-100">
               <Code2 className="w-6 h-6 text-violet-600" />
@@ -47,50 +56,41 @@ const Header = () => {
             <div className="p-3 bg-violet-600 rounded-xl shadow-lg">
               <Terminal className="w-6 h-6 text-white" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.h1 
-            className="text-5xl lg:text-7xl font-light text-slate-800 mb-4 tracking-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          <h1 
+            className="text-5xl lg:text-7xl font-light text-slate-800 mb-4 tracking-tight animate-fade-in-up"
+            style={{ animationDelay: '0.4s' }}
           >
             Denis
-          </motion.h1>
+          </h1>
 
-          <motion.div 
-            className="flex items-center justify-center lg:justify-start gap-3 mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <div 
+            className="flex items-center justify-center lg:justify-start gap-3 mb-6 animate-fade-in-up"
+            style={{ animationDelay: '0.6s' }}
           >
             <div className="h-px w-16 bg-gradient-to-r from-violet-400 to-emerald-400" />
             <div className="w-2 h-2 bg-violet-500 rounded-full" />
             <div className="h-px w-16 bg-gradient-to-r from-emerald-400 to-violet-400" />
-          </motion.div>
+          </div>
 
-          <motion.p 
-            className="text-xl lg:text-2xl text-slate-600 font-light mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+          <p 
+            className="text-xl lg:text-2xl text-slate-600 font-light mb-8 animate-fade-in-up"
+            style={{ animationDelay: '0.8s' }}
           >
             Backend Developer
-          </motion.p>
+          </p>
 
-          <motion.p 
-            className="text-lg text-slate-500 mb-8 max-w-md mx-auto lg:mx-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+          <p 
+            className="text-lg text-slate-500 mb-8 max-w-md mx-auto lg:mx-0 animate-fade-in-up"
+            style={{ animationDelay: '1s' }}
           >
             I build reliable and scalable server solutions in Go
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: '1.2s' }}
           >
             <Button 
               size="lg" 
@@ -105,23 +105,19 @@ const Header = () => {
               }}
             >
               <Download className="w-5 h-5 mr-2" />
-              Donwload CV
+              Download CV
             </Button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Right side - Avatar and decorative elements */}
-        <motion.div
-          className="flex justify-center lg:justify-end"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
+          className="flex justify-center lg:justify-end animate-fade-in-right"
+          style={{ animationDelay: '0.4s' }}
         >
           <div className="relative">
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-violet-400/20 to-emerald-400/20 rounded-full blur-2xl"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            <div
+              className="absolute inset-0 bg-gradient-to-r from-violet-400/20 to-emerald-400/20 rounded-full blur-2xl animate-pulse-scale"
             />
             <Avatar className="w-80 h-80 border-8 border-white shadow-2xl ring-4 ring-violet-100 relative z-10">
               <AvatarImage 
@@ -134,7 +130,7 @@ const Header = () => {
               </AvatarFallback>
             </Avatar>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

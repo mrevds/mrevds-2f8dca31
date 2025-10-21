@@ -1,12 +1,25 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, MessageCircle, Linkedin, Twitter, Code } from "lucide-react";
 
 const ContactSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: "-100px" }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   const contactMethods = [
     {
@@ -46,11 +59,8 @@ const ContactSection = () => {
       className="py-20 px-6 bg-gradient-to-br from-slate-50 via-violet-50/30 to-emerald-50/20"
     >
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+        <div
+          className={`text-center mb-16 animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}
         >
           <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
             Contacts
@@ -58,11 +68,11 @@ const ContactSection = () => {
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Ready to discuss new projects and interesting challenges.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {contactMethods.map((method, index) => (
-            <motion.a
+            <a
               key={method.label}
               href={method.href}
               target={method.href.startsWith("http") ? "_blank" : undefined}
@@ -71,19 +81,15 @@ const ContactSection = () => {
                   ? "noopener noreferrer"
                   : undefined
               }
-              className="group block"
-              initial={{ opacity: 0, y: 30 }}
-              animate={
-                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-              }
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.95 }}
+              className={`group block animate-slide-in-up ${isInView ? 'opacity-100' : 'opacity-0'}`}
+              style={{
+                animationDelay: isInView ? `${index * 0.1}s` : '0s',
+              }}
             >
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl transition-all duration-300 h-full">
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
                 <div className="flex items-center space-x-4">
                   <div
-                    className={`p-4 bg-gradient-to-r ${method.color} rounded-xl`}
+                    className={`p-4 bg-gradient-to-r ${method.color} rounded-xl transition-transform duration-300 group-hover:scale-110`}
                   >
                     <method.icon className="w-6 h-6 text-white" />
                   </div>
@@ -97,21 +103,21 @@ const ContactSection = () => {
                   </div>
                 </div>
               </div>
-            </motion.a>
+            </a>
           ))}
         </div>
 
         {/* Footer */}
-        <motion.div
-          className="text-center mt-12 pt-8 border-t border-violet-100"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+        <div
+          className={`text-center mt-12 pt-8 border-t border-violet-100 animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}
+          style={{
+            animationDelay: isInView ? '0.7s' : '0s',
+          }}
         >
           <p className="text-slate-500">
             © {new Date().getFullYear()} Denis. Backend Developer
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

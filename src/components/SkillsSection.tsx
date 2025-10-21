@@ -1,78 +1,117 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
+import { Server, Database, Container, Terminal, Shield } from "lucide-react";
 
 const SkillsSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: "-100px" }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
 const skillCategories = [
   {
-    title: "Backend",
-    skills: ["Go", "REST API", "Gin", "gRPC", "Microservices"],
+    title: "Backend Development",
+    icon: Server,
+    gradient: "from-violet-500 to-purple-600",
+    skills: ["Go", "REST API", "Gin", "gRPC", "Microservices", "JWT"],
   },
   {
-    title: "Database",
-    skills: ["PostgreSQL", "Redis", "GORM", "Migrations (Goose)"],
+    title: "Databases & Caching",
+    icon: Database,
+    gradient: "from-blue-500 to-cyan-600",
+    skills: ["PostgreSQL", "Redis", "Apache Kafka", "GORM", "PGx", "Goose Migrations"],
   },
   {
-    title: "DevOps & CI/CD",
-    skills: ["Docker", "CI/CD", "Git", "Taskfile"],
+    title: "DevOps & Tools",
+    icon: Container,
+    gradient: "from-emerald-500 to-teal-600",
+    skills: ["Docker", "CI/CD", "Git", "Taskfile", "Make"],
   },
   {
-    title: "Tools & Scripting",
-    skills: ["Linux", "Bash"],
+    title: "System & Scripting",
+    icon: Terminal,
+    gradient: "from-orange-500 to-red-600",
+    skills: ["Linux", "Bash", "Viper", "DI (Uber FX)"],
   },
   {
-    title: "Testing",
-    skills: ["Unit & integration testing"],
+    title: "Testing & Quality",
+    icon: Shield,
+    gradient: "from-pink-500 to-rose-600",
+    skills: ["Unit Testing", "Integration Testing", "Rate Limiting"],
   },
 ];
 
   return (
       <section id="skills" ref={ref} className="py-20 px-6 bg-gradient-to-br from-violet-50/50 to-emerald-50/30">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-              className="text-4xl lg:text-5xl font-light text-slate-800 text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6 }}
+        <div className="max-w-7xl mx-auto">
+          <h2
+              className={`text-4xl lg:text-5xl font-light text-slate-800 text-center mb-4 animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}
           >
-            Technical skills
-          </motion.h2>
+            Technical Skills
+          </h2>
+          
+          <p
+              className={`text-lg text-slate-600 text-center mb-16 max-w-2xl mx-auto animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}
+              style={{ animationDelay: isInView ? '0.2s' : '0s' }}
+          >
+            Technologies and tools I use to build scalable backend solutions
+          </p>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, categoryIndex) => (
-                <motion.div
+                <div
                     key={category.title}
-                    className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-violet-100 hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                    transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-                    whileHover={{ y: -5 }}
+                    className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-violet-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden animate-slide-in-up ${
+                      isInView ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    style={{
+                      animationDelay: isInView ? `${categoryIndex * 0.15}s` : '0s',
+                    }}
                 >
-                  <h3 className="text-xl font-semibold text-slate-800 mb-6 text-center">
-                    {category.title}
-                  </h3>
+                  {/* Gradient top border */}
+                  <div className={`h-1.5 bg-gradient-to-r ${category.gradient}`} />
+                  
+                  <div className="p-6">
+                    {/* Icon and Title */}
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className={`p-3 bg-gradient-to-r ${category.gradient} rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-110`}>
+                        <category.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-slate-800">
+                        {category.title}
+                      </h3>
+                    </div>
 
-                  <div className="space-y-3">
-                    {category.skills.map((skill, skillIndex) => (
-                        <motion.div
-                            key={skill}
-                            className="bg-gradient-to-r from-violet-50 to-emerald-50 px-4 py-3 rounded-lg text-center font-medium text-slate-700 hover:from-violet-100 hover:to-emerald-100 transition-all duration-200 hover:shadow-md"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                            transition={{ duration: 0.5, delay: (categoryIndex * 0.2) + (skillIndex * 0.1) }}
-                        >
-                          {skill}
-                        </motion.div>
-                    ))}
+                    {/* Skills Grid */}
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                          <span
+                              key={skill}
+                              className="px-3 py-1.5 bg-gradient-to-r from-violet-50 to-emerald-50 text-slate-700 text-sm rounded-lg font-medium border border-violet-100/50 hover:border-violet-300 hover:shadow-md hover:scale-105 transition-all duration-200 cursor-default"
+                          >
+                            {skill}
+                          </span>
+                      ))}
+                    </div>
                   </div>
-                </motion.div>
+
+                  {/* Bottom gradient line on hover */}
+                  <div className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${category.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
+                </div>
             ))}
           </div>
-
-
         </div>
       </section>
   );
