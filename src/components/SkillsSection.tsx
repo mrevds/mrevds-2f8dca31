@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Server, Database, Container, Terminal, Shield } from "lucide-react";
+import { getSkillIcon } from "@/lib/skillIcons";
 
 const SkillsSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -95,15 +96,26 @@ const skillCategories = [
                     </div>
 
                     {/* Skills Grid */}
-                    <div className="flex flex-wrap gap-2">
-                      {category.skills.map((skill) => (
-                          <span
-                              key={skill}
-                              className="px-3 py-1.5 bg-gradient-to-r from-violet-50 to-emerald-50 text-slate-700 text-sm rounded-lg font-medium border border-violet-100/50 hover:border-violet-300 hover:shadow-md hover:scale-105 transition-all duration-200 cursor-default"
+                    <div className="flex flex-wrap gap-3">
+                      {category.skills.map((skill) => {
+                        const { icon: IconComponent, color } = getSkillIcon(skill);
+                        return (
+                          <div
+                            key={skill}
+                            className="group relative flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-violet-50 to-emerald-50 rounded-lg border border-violet-100/50 hover:border-violet-300 hover:shadow-md transition-all duration-200 cursor-default hover:scale-110"
+                            title={skill}
                           >
-                            {skill}
-                          </span>
-                      ))}
+                            <IconComponent 
+                              size={24} 
+                              style={{ color }} 
+                              className="transition-transform group-hover:scale-110"
+                            />
+                            <span className="text-xs font-medium text-slate-700 text-center max-w-[80px] break-words">
+                              {skill}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
 

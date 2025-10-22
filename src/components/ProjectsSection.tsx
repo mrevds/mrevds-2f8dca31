@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Server, Terminal, Container } from "lucide-react";
+import { getSkillIcon } from "@/lib/skillIcons";
 
 const ProjectsSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -92,15 +93,26 @@ const ProjectsSection = () => {
                 <p className="text-slate-600 leading-relaxed mb-6">{project.description}</p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-violet-50 text-violet-600 text-sm rounded-full border border-violet-200 hover:bg-violet-100 hover:border-violet-300 transition-colors duration-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {project.tech.map((tech) => {
+                    const { icon: IconComponent, color } = getSkillIcon(tech);
+                    return (
+                      <div
+                        key={tech}
+                        className="group relative flex flex-col items-center gap-1 p-2 bg-violet-50 rounded-lg border border-violet-200 hover:border-violet-300 hover:shadow-md transition-all duration-200 hover:scale-110"
+                        title={tech}
+                      >
+                        <IconComponent 
+                          size={20} 
+                          style={{ color }} 
+                          className="transition-transform group-hover:scale-110"
+                        />
+                        <span className="text-xs font-medium text-slate-700 text-center max-w-[70px] break-words">
+                          {tech}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {/* Action Buttons */}
