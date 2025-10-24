@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, MessageCircle, Linkedin, Twitter, Code } from "lucide-react";
+import { Mail, MessageCircle, Linkedin, Twitter, Code, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -22,6 +22,20 @@ const ContactSection = () => {
   }, []);
 
   const contactMethods = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "yakhlovemoon@gmail.com",
+      href: "mailto:yakhlovemoon@gmail.com",
+      color: "from-red-400 to-red-600",
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+998913798151",
+      href: "tel:+998913798151",
+      color: "from-green-400 to-green-600",
+    },
     {
       icon: MessageCircle,
       label: "Telegram",
@@ -70,7 +84,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-10 sm:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12">
           {contactMethods.map((method, index) => (
             <a
               key={method.label}
