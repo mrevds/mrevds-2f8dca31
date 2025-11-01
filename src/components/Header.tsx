@@ -97,7 +97,7 @@ const Header = () => {
               className="bg-gradient-to-r from-violet-600 to-emerald-600 hover:from-violet-700 hover:to-emerald-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = 'https://www.canva.com/design/DAG1yGcz2N4/KYH2Am9Q9PsAeGQ4CA74sw/edit?utm_content=DAG1yGcz2N4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton';
+                link.href = 'https://www.notion.so/29de79ff0df5801d9b6eea0daa4f8e31?source=copy_link';
                 link.download = 'Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
@@ -121,7 +121,7 @@ const Header = () => {
             />
             <Avatar className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 border-4 sm:border-8 border-white shadow-2xl ring-4 ring-violet-100 relative z-10">
               <AvatarImage 
-                src="https://i.pinimg.com/1200x/2d/13/ee/2d13ee206ea3b99173048e407c61fa40.jpg"
+                src="https://i.pinimg.com/736x/3b/8a/41/3b8a41561703856730267c937b91db8f.jpg"
                 alt="Denis" 
                 className="object-cover"
               />

@@ -32,7 +32,7 @@ const skillCategories = [
     title: "Databases & Caching",
     icon: Database,
     gradient: "from-blue-500 to-cyan-600",
-    skills: ["PostgreSQL", "Redis", "Apache Kafka", "GORM", "PGx", "Goose Migrations"],
+    skills: ["PostgreSQL", "Redis", "MongoDB", "Apache Kafka", "GORM", "PGx", "Goose Migrations"],
   },
   {
     title: "DevOps & Tools",

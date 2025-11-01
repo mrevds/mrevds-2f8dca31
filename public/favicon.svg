@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded square background -->
+  <rect x="20" y="20" width="160" height="160" rx="40" ry="40" fill="url(#bgGradient)" />
+  
+  <!-- Border accent -->
+  <rect x="20" y="20" width="160" height="160" rx="40" ry="40" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3" />
+  
+  <!-- Code brackets decoration (top) -->
+  <g opacity="0.2">
+    <path d="M 40 50 L 50 60 L 40 70" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 160 50 L 150 60 L 160 70" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Main "D" letter -->
+  <text x="100" y="130" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" letter-spacing="-5">
+    D
+  </text>
+  
+  <!-- Small "Dev" text below (optional accent) -->
+  <text x="100" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#ffffff" opacity="0.9">
+    DEV
+  </text>
+  
+  <!-- Code dot decoration (bottom corners) -->
+  <circle cx="50" cy="160" r="3" fill="#ffffff" opacity="0.6" />
+  <circle cx="150" cy="160" r="3" fill="#ffffff" opacity="0.6" />
+</svg>

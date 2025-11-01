@@ -1,5 +1,5 @@
 import React from 'react';
-import { SiGo, SiPostgresql, SiRedis, SiApachekafka, SiDocker, SiGit } from 'react-icons/si';
+import { SiGo, SiPostgresql, SiRedis, SiApachekafka, SiDocker, SiGit, SiMongodb } from 'react-icons/si';
 import { BiGitBranch, BiTerminal } from 'react-icons/bi';
 
 // Маппинг технологий на иконки с цветами
@@ -16,6 +16,7 @@ export const skillIconMap: Record<string, { icon: React.ComponentType<any>; colo
   PostgreSQL: { icon: SiPostgresql, color: '#336791' },
   Redis: { icon: SiRedis, color: '#DC382D' },
   'Apache Kafka': { icon: SiApachekafka, color: '#000' },
+  MongoDB: { icon: SiMongodb, color: '#13AA52' },
   GORM: { icon: SiGo, color: '#00ADD8' },
   PGx: { icon: SiPostgresql, color: '#336791' },
   'Goose Migrations': { icon: SiGo, color: '#00ADD8' },
@@ -46,6 +47,7 @@ export const skillIconMap: Record<string, { icon: React.ComponentType<any>; colo
   'Uber Ratelimit': { icon: SiGo, color: '#00ADD8' },
   TaskFile: { icon: BiTerminal, color: '#667BC6' },
   'Uber FX (DI)': { icon: SiGo, color: '#00ADD8' },
+  'Payment Integration': { icon: BiGitBranch, color: '#1A56DB' },
 };
 
 export const getSkillIcon = (skillName: string) => {

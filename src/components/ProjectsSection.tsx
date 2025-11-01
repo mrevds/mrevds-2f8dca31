@@ -24,6 +24,16 @@ const ProjectsSection = () => {
 
   const projects = [
     {
+      title: "Pizza App",
+      description:
+        "Microservices-based food delivery platform with user authentication, card payment integration, order management, and real-time updates. Multiple gRPC services with event streaming via Kafka.",
+      github: "https://github.com/mrevds/pizza-app",
+      demo: "#",
+      icon: Server,
+      tech: ["Go", "gRPC", "PostgreSQL",  "Apache Kafka", "Docker", "JWT", "Microservices", "Api Gateway", "Rate Limiting", "CI/CD", "Bash", "Make", "Viper", "Uber FX (DI)"],
+      gradient: "from-orange-500 to-red-500",
+    },
+    {
       title: "Auth Microservice",
       description:
         "Authentication microservice using gRPC with JWT tokens, registration, authorization, and user management. PostgreSQL, Docker, and database migrations.",
@@ -53,6 +63,7 @@ const ProjectsSection = () => {
       tech: ["Go", "GPT-4o", "AIML API", "CLI", "Chat"],
       gradient: "from-purple-500 to-pink-500",
     },
+    
   ];
 
   return (
