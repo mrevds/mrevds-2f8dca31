@@ -32,19 +32,19 @@ const skillCategories = [
     title: "Databases & Caching",
     icon: Database,
     gradient: "from-blue-500 to-cyan-600",
-    skills: ["PostgreSQL", "Redis", "MongoDB", "Apache Kafka", "GORM", "PGx", "Goose Migrations"],
+    skills: ["PostgreSQL", "Redis", "MongoDB", "Kafka(basic)", "S3(basic)","GORM", "PGx", "Goose Migrations"],
   },
   {
     title: "DevOps & Tools",
     icon: Container,
     gradient: "from-emerald-500 to-teal-600",
-    skills: ["Docker", "CI/CD", "Git", "Taskfile", "Make"],
+    skills: ["Docker", "CI/CD(github actions)", "Git", "Taskfile", "Make"],
   },
   {
     title: "System & Scripting",
     icon: Terminal,
     gradient: "from-orange-500 to-red-600",
-    skills: ["Linux", "Bash", "Viper", "DI (Uber FX)"],
+    skills: ["Linux", "Bash", "Viper", "DI"],
   },
   {
     title: "Testing & Quality",

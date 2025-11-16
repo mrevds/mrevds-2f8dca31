@@ -1,9 +1,9 @@
 import React from 'react';
-import { SiGo, SiPostgresql, SiRedis, SiApachekafka, SiDocker, SiGit, SiMongodb } from 'react-icons/si';
+import { SiGo, SiPostgresql, SiRedis, SiApachekafka, SiDocker, SiGit, SiMongodb, SiAmazons3 } from 'react-icons/si';
 import { BiGitBranch, BiTerminal } from 'react-icons/bi';
 
 // Маппинг технологий на иконки с цветами
-export const skillIconMap: Record<string, { icon: React.ComponentType<any>; color: string }> = {
+const skillIconMap: Record<string, { icon: React.ComponentType<any>; color: string }> = {
   // Backend
   Go: { icon: SiGo, color: '#00ADD8' },
   'REST API': { icon: BiGitBranch, color: '#667BC6' },
@@ -15,7 +15,8 @@ export const skillIconMap: Record<string, { icon: React.ComponentType<any>; colo
   // Database
   PostgreSQL: { icon: SiPostgresql, color: '#336791' },
   Redis: { icon: SiRedis, color: '#DC382D' },
-  'Apache Kafka': { icon: SiApachekafka, color: '#000' },
+  S3: {icon: SiAmazons3, color: '#DC382D'},
+  Kafka: { icon: SiApachekafka, color: '#000' },
   MongoDB: { icon: SiMongodb, color: '#13AA52' },
   GORM: { icon: SiGo, color: '#00ADD8' },
   PGx: { icon: SiPostgresql, color: '#336791' },
@@ -47,9 +48,25 @@ export const skillIconMap: Record<string, { icon: React.ComponentType<any>; colo
   'Uber Ratelimit': { icon: SiGo, color: '#00ADD8' },
   TaskFile: { icon: BiTerminal, color: '#667BC6' },
   'Uber FX (DI)': { icon: SiGo, color: '#00ADD8' },
-  'Payment Integration': { icon: BiGitBranch, color: '#1A56DB' },
+  
 };
 
+const normalizeSkillName = (value: string) =>
+  value
+    .replace(/\s*\(.*?\)/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+const normalizedSkillMap = Object.entries(skillIconMap).reduce(
+  (acc, [key, iconConfig]) => {
+    acc[normalizeSkillName(key)] = iconConfig;
+    return acc;
+  },
+  {} as Record<string, { icon: React.ComponentType<any>; color: string }>
+);
+
 export const getSkillIcon = (skillName: string) => {
-  return skillIconMap[skillName] || { icon: BiGitBranch, color: '#667BC6' };
+  const normalized = normalizeSkillName(skillName);
+  return normalizedSkillMap[normalized] || { icon: BiGitBranch, color: '#667BC6' };
 };
