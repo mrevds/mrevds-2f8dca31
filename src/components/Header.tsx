@@ -92,21 +92,6 @@ const Header = () => {
             className="animate-fade-in-up"
             style={{ animationDelay: '1.2s' }}
           >
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-violet-600 to-emerald-600 hover:from-violet-700 hover:to-emerald-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = 'https://www.notion.so/29de79ff0df5801d9b6eea0daa4f8e31?source=copy_link';
-                link.download = 'Resume.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              Download CV
-            </Button>
           </div>
         </div>
 
