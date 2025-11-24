@@ -23,20 +23,6 @@ const ContactSection = () => {
 
   const contactMethods = [
     {
-      icon: Mail,
-      label: "Email",
-      value: "yakhlovemoon@gmail.com",
-      href: "mailto:yakhlovemoon@gmail.com",
-      color: "from-red-400 to-red-600",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+998913798151",
-      href: "tel:+998913798151",
-      color: "from-green-400 to-green-600",
-    },
-    {
       icon: MessageCircle,
       label: "Telegram",
       value: "@mrevds",
