@@ -10,15 +10,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-violet-50/30 to-emerald-50/20">
       <Navigation />
-      <div className="ml-0 lg:ml-20">
-        <Header />
-        <div className="space-y-0">
+      <main className="ml-0 lg:ml-24">
+        <div className="px-4 sm:px-6 lg:px-12 space-y-16 lg:space-y-20">
+          <Header />
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
           <ContactSection />
         </div>
-      </div>
+      </main>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SiGo, SiPostgresql, SiRedis, SiApachekafka, SiDocker, SiGit, SiMongodb, SiAmazons3 } from 'react-icons/si';
+import { SiGo, SiPostgresql, SiRedis, SiApachekafka, SiDocker, SiGit, SiMongodb, SiAmazons3, SiPhp, SiLaravel } from 'react-icons/si';
 import { BiGitBranch, BiTerminal } from 'react-icons/bi';
 
 // Маппинг технологий на иконки с цветами
@@ -11,6 +11,8 @@ const skillIconMap: Record<string, { icon: React.ComponentType<any>; color: stri
   gRPC: { icon: SiGo, color: '#00ADD8' },
   Microservices: { icon: BiGitBranch, color: '#667BC6' },
   JWT: { icon: BiGitBranch, color: '#000' },
+  PHP: { icon: SiPhp, color: '#777BB4' },
+  Laravel: { icon: SiLaravel, color: '#FF2D20' },
 
   // Database
   PostgreSQL: { icon: SiPostgresql, color: '#336791' },

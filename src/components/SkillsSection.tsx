@@ -1,10 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import { Server, Database, Container, Terminal, Shield } from "lucide-react";
 import { getSkillIcon } from "@/lib/skillIcons";
+import { useLanguage } from "@/context/LanguageContext";
 
 const SkillsSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
+  const { content } = useLanguage();
+  const skillsContent = content.skills;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,111 +24,86 @@ const SkillsSection = () => {
     return () => observer.disconnect();
   }, []);
 
-const skillCategories = [
-  {
-    title: "Backend Development",
-    icon: Server,
-    gradient: "from-violet-500 to-purple-600",
-    skills: ["Go", "REST API", "Gin", "gRPC", "Microservices", "JWT"],
-  },
-  {
-    title: "Databases & Caching",
-    icon: Database,
-    gradient: "from-blue-500 to-cyan-600",
-    skills: ["PostgreSQL", "Redis", "MongoDB", "Kafka(basic)", "S3(basic)","GORM", "PGx", "Goose Migrations"],
-  },
-  {
-    title: "DevOps & Tools",
-    icon: Container,
-    gradient: "from-emerald-500 to-teal-600",
-    skills: ["Docker", "CI/CD(github actions)", "Git", "Taskfile", "Make"],
-  },
-  {
-    title: "System & Scripting",
-    icon: Terminal,
-    gradient: "from-orange-500 to-red-600",
-    skills: ["Linux", "Bash", "Viper", "DI"],
-  },
-  {
-    title: "Testing & Quality",
-    icon: Shield,
-    gradient: "from-pink-500 to-rose-600",
-    skills: ["Unit Testing", "Integration Testing", "Rate Limiting"],
-  },
-];
+  const skillClusters = [
+    {
+      title: skillsContent.categories.backend,
+      subtitle: skillsContent.categories.data,
+      icon: Server,
+      accent: "from-violet-500 to-emerald-500",
+      skills: ["Go", "PHP", "Laravel", "REST API", "Gin", "gRPC", "Microservices", "JWT", "PostgreSQL", "Redis", "MongoDB", "Kafka", "S3", "GORM"],
+    },
+    {
+      title: skillsContent.categories.devops,
+      subtitle: skillsContent.categories.system,
+      icon: Container,
+      accent: "from-emerald-500 to-cyan-500",
+      skills: ["Docker", "CI/CD", "Git", "Taskfile", "Linux", "Bash", "Viper", "DI (Uber FX)", "Rate Limiting"],
+    },
+    {
+      title: skillsContent.categories.quality,
+      subtitle: "",
+      icon: Shield,
+      accent: "from-pink-500 to-rose-500",
+      skills: ["Unit Testing", "Integration Testing", "Rate Limiting"],
+    },
+  ];
 
   return (
-      <section id="skills" ref={ref} className="py-20 px-6 bg-gradient-to-br from-violet-50/50 to-emerald-50/30">
-        <div className="max-w-7xl mx-auto">
-          <h2
-              className={`text-4xl lg:text-5xl font-light text-slate-800 text-center mb-4 animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}
-          >
-            Technical Skills
-          </h2>
-          
-          <p
-              className={`text-lg text-slate-600 text-center mb-16 max-w-2xl mx-auto animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}
-              style={{ animationDelay: isInView ? '0.2s' : '0s' }}
-          >
-            Technologies and tools I use to build scalable backend solutions
-          </p>
+    <section id="skills" ref={ref} className="relative py-20 px-4 sm:px-6">
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-12 right-8 w-72 h-72 rounded-full bg-violet-200/35 blur-3xl" />
+        <div className="absolute bottom-4 left-6 w-80 h-80 rounded-full bg-emerald-200/35 blur-3xl" />
+      </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillCategories.map((category, categoryIndex) => (
-                <div
-                    key={category.title}
-                    className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-violet-100 hover:shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden animate-slide-in-up ${
-                      isInView ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    style={{
-                      animationDelay: isInView ? `${categoryIndex * 0.15}s` : '0s',
-                    }}
-                >
-                  {/* Gradient top border */}
-                  <div className={`h-1.5 bg-gradient-to-r ${category.gradient}`} />
-                  
-                  <div className="p-6">
-                    {/* Icon and Title */}
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className={`p-3 bg-gradient-to-r ${category.gradient} rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-110`}>
-                        <category.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="text-lg font-semibold text-slate-800">
-                        {category.title}
-                      </h3>
-                    </div>
-
-                    {/* Skills Grid */}
-                    <div className="flex flex-wrap gap-3">
-                      {category.skills.map((skill) => {
-                        const { icon: IconComponent, color } = getSkillIcon(skill);
-                        return (
-                          <div
-                            key={skill}
-                            className="group relative flex flex-col items-center gap-2 p-3 bg-gradient-to-r from-violet-50 to-emerald-50 rounded-lg border border-violet-100/50 hover:border-violet-300 hover:shadow-md transition-all duration-200 cursor-default hover:scale-110"
-                            title={skill}
-                          >
-                            <IconComponent 
-                              size={24} 
-                              style={{ color }} 
-                              className="transition-transform group-hover:scale-110"
-                            />
-                            <span className="text-xs font-medium text-slate-700 text-center max-w-[80px] break-words">
-                              {skill}
-                            </span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Bottom gradient line on hover */}
-                  <div className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${category.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
-                </div>
-            ))}
-          </div>
+      <div className="relative max-w-7xl mx-auto rounded-[36px] bg-white/85 shadow-[0_35px_120px_rgba(79,70,229,0.15)] backdrop-blur px-6 sm:px-10 lg:px-16 py-14">
+        <div className={`text-center max-w-3xl mx-auto mb-14 animate-fade-in-up ${isInView ? '' : 'opacity-0'}`}>
+          <p className="text-xs uppercase tracking-[0.4em] text-slate-400">{skillsContent.title}</p>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-light text-slate-900">{skillsContent.title}</h2>
+          <p className="mt-4 text-lg text-slate-600">{skillsContent.description}</p>
         </div>
-      </section>
+
+        <div className="space-y-6">
+          {skillClusters.map((cluster, index) => (
+            <div
+              key={cluster.title}
+              className={`relative rounded-[32px] bg-white/85 px-6 py-6 shadow-[0_20px_60px_rgba(79,70,229,0.12)] animate-slide-in-up ${
+                isInView ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{ animationDelay: isInView ? `${index * 0.1}s` : '0s' }}
+            >
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-4">
+                  <div className={`p-3 rounded-2xl bg-gradient-to-br ${cluster.accent} text-white shadow-lg`}>
+                    <cluster.icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.35em] text-slate-400">{cluster.title}</p>
+                    {cluster.subtitle && (
+                      <p className="text-base text-slate-500 mt-1">{cluster.subtitle}</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {cluster.skills.map((skill) => {
+                  const { icon: IconComponent, color } = getSkillIcon(skill);
+                  return (
+                    <span
+                      key={skill}
+                      className="inline-flex items-center gap-2 rounded-2xl bg-white/90 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm"
+                    >
+                      <IconComponent size={16} style={{ color }} />
+                      {skill}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
