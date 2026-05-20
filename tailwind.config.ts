@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				serif: ['Fraunces', 'Iowan Old Style', 'Georgia', 'serif'],
+				sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +57,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				mochi: {
+					cream: 'hsl(var(--mochi-cream))',
+					paper: 'hsl(var(--mochi-paper))',
+					sand: 'hsl(var(--mochi-sand))',
+					ink: 'hsl(var(--mochi-ink))',
+					stone: 'hsl(var(--mochi-stone))',
+					sakura: 'hsl(var(--mochi-sakura))',
+					matcha: 'hsl(var(--mochi-matcha))',
+					cocoa: 'hsl(var(--mochi-cocoa))',
+					kinako: 'hsl(var(--mochi-kinako))',
+					azuki: 'hsl(var(--mochi-azuki))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -65,30 +82,27 @@ export default {
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				md: 'calc(var(--radius) - 4px)',
+				sm: 'calc(var(--radius) - 8px)'
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'mochi-float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-8px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'mochi-float': 'mochi-float 6s ease-in-out infinite',
 			}
 		}
 	},

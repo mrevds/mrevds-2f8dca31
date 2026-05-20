@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "fetchedAt": "2026-05-20T18:58:36.327Z",
+  "range": "last_7_days",
+  "humanReadableTotal": "37 hrs 47 mins",
+  "humanReadableDailyAverage": "5 hrs 23 mins",
+  "totalSeconds": 136060.493,
+  "dailyAverage": 19437,
+  "languages": [
+    {
+      "name": "Go",
+      "percent": 51.93,
+      "text": "20 hrs 33 mins"
+    },
+    {
+      "name": "JavaScript",
+      "percent": 16.17,
+      "text": "6 hrs 24 mins"
+    },
+    {
+      "name": "CSS",
+      "percent": 14.28,
+      "text": "5 hrs 39 mins"
+    },
+    {
+      "name": "TypeScript",
+      "percent": 5.91,
+      "text": "2 hrs 20 mins"
+    },
+    {
+      "name": "Other",
+      "percent": 4.54,
+      "text": "1 hr 47 mins"
+    },
+    {
+      "name": "Bash",
+      "percent": 3.54,
+      "text": "1 hr 24 mins"
+    },
+    {
+      "name": "SQL",
+      "percent": 1.55,
+      "text": "36 mins"
+    },
+    {
+      "name": "Markdown",
+      "percent": 0.84,
+      "text": "20 mins"
+    }
+  ],
+  "editors": [
+    {
+      "name": "VS Code",
+      "percent": 43.37,
+      "text": "17 hrs 10 mins"
+    },
+    {
+      "name": "Claude Code",
+      "percent": 43.15,
+      "text": "17 hrs 5 mins"
+    },
+    {
+      "name": "Zed",
+      "percent": 10.58,
+      "text": "4 hrs 11 mins"
+    },
+    {
+      "name": "GoLand",
+      "percent": 2.91,
+      "text": "1 hr 9 mins"
+    }
+  ],
+  "operatingSystems": [
+    {
+      "name": "Linux",
+      "percent": 100,
+      "text": "39 hrs 35 mins"
+    }
+  ],
+  "projects": [
+    {
+      "name": "vocab",
+      "percent": 47.28,
+      "text": "18 hrs 43 mins"
+    },
+    {
+      "name": "cbs-lms",
+      "percent": 25.85,
+      "text": "10 hrs 14 mins"
+    },
+    {
+      "name": "new-rene",
+      "percent": 17.69,
+      "text": "7 hrs"
+    },
+    {
+      "name": "corporate-admin-panel",
+      "percent": 9.04,
+      "text": "3 hrs 34 mins"
+    },
+    {
+      "name": "tmp",
+      "percent": 0.07,
+      "text": "1 min"
+    }
+  ],
+  "allTime": "709 hrs 20 mins"
+}

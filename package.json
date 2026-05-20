@@ -4,11 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/fetch-wakatime.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/fetch-wakatime.mjs",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "waka": "node scripts/fetch-wakatime.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
