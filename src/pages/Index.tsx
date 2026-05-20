@@ -194,7 +194,7 @@ const Index = () => {
         <nav className="nav" aria-label="primary">
           <div className="brand">
             <span className="mochi-mini"><MochiMini /></span>
-            <span>denis<span style={{ color: "var(--sakura-2)" }}>.</span>dev</span>
+            <span><span style={{ color: "var(--sakura-2)" }}>@</span>mrevds</span>
           </div>
           <ul>
             <li><a href="#about">about</a></li>
