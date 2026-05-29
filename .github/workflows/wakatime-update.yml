@@ -1,0 +1,50 @@
+name: Update WakaTime Data
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Every day at 02:00 UTC
+  workflow_dispatch:      # Allow manual trigger
+
+jobs:
+  update-wakatime:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Needed to commit back
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Fetch full history to enable proper commits
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run WakaTime fetch script
+        env:
+          WAKA_KEY: ${{ secrets.WAKA_KEY }}
+        run: |
+          node scripts/fetch-wakatime.mjs
+
+      - name: Check for changes
+        id: git_check
+        run: |
+          if git diff --quiet src/data/wakatime.json; then
+            echo "no_changes" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.git_check.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/wakatime.json
+          git commit -m "chore: update WakaTime data ($(date -u +'%Y-%m-%d %H:%M:%S UTC'))"
+          git push
