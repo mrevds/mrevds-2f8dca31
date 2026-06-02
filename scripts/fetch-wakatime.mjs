@@ -88,10 +88,11 @@ const out = {
   humanReadableDailyAverage: d.human_readable_daily_average,
   totalSeconds: d.total_seconds,
   dailyAverage: d.daily_average,
-  languages: pick(d.languages, 8),
+  languages: pick(d.languages, 10),
   editors: pick(d.editors, 4),
   operatingSystems: pick(d.operating_systems, 4),
   projects: pick(d.projects, 5),
+  categories: pick(d.categories, 10),
   allTime: allTime?.data?.text ?? null,
 };
 

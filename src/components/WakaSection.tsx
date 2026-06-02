@@ -11,6 +11,7 @@ type WakaData = {
   editors?: WakaItem[];
   operatingSystems?: WakaItem[];
   projects?: WakaItem[];
+  categories?: WakaItem[];
   allTime?: string | null;
 };
 
@@ -75,7 +76,7 @@ const WakaSection = () => {
             <span className="waka-langs-jp">ことば</span>
           </div>
           <ul className="waka-bars">
-            {data.languages.slice(0, 6).map((lang, i) => (
+            {data.languages.slice(0, 10).map((lang, i) => (
               <li key={lang.name} className="waka-bar-row">
                 <span className="waka-bar-label">{lang.name}</span>
                 <span className="waka-bar">
@@ -123,6 +124,16 @@ const WakaSection = () => {
               {data.projects[0].name}
             </div>
             <div className="waka-tile-meta">{data.projects[0].text}</div>
+          </div>
+        )}
+        {data.categories?.find(c => c.name === "AI Coding") && (
+          <div className="waka-tile" style={{ background: "var(--matcha)" }}>
+            <div className="waka-tile-label">// ai coding</div>
+            <div className="waka-tile-name">
+              <span className="waka-tile-emoji">🤖</span>
+              {data.categories.find(c => c.name === "AI Coding")!.percent.toFixed(1)}%
+            </div>
+            <div className="waka-tile-meta">{data.categories.find(c => c.name === "AI Coding")!.text}</div>
           </div>
         )}
       </div>

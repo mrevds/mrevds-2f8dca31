@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-02T14:01:22.650Z",
+  "fetchedAt": "2026-06-02T14:29:30.682Z",
   "range": "last_7_days",
   "humanReadableTotal": "25 hrs 3 mins",
   "humanReadableDailyAverage": "4 hrs 10 mins",
@@ -46,6 +46,16 @@
       "name": "textmate",
       "percent": 1.21,
       "text": "18 mins"
+    },
+    {
+      "name": "JSON",
+      "percent": 1.21,
+      "text": "18 mins"
+    },
+    {
+      "name": "go.mod",
+      "percent": 0.97,
+      "text": "14 mins"
     }
   ],
   "editors": [
@@ -104,5 +114,27 @@
       "text": "15 mins"
     }
   ],
-  "allTime": "753 hrs 52 mins"
+  "categories": [
+    {
+      "name": "Coding",
+      "percent": 91.99,
+      "text": "23 hrs 24 mins"
+    },
+    {
+      "name": "AI Coding",
+      "percent": 5.99,
+      "text": "1 hr 31 mins"
+    },
+    {
+      "name": "Writing Docs",
+      "percent": 2.02,
+      "text": "30 mins"
+    },
+    {
+      "name": "Writing Tests",
+      "percent": 0,
+      "text": "0 secs"
+    }
+  ],
+  "allTime": "754 hrs 31 mins"
 }
