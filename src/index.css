@@ -329,6 +329,49 @@ footer .heart { display: inline-block; animation: beat 1.2s ease-in-out infinite
 .waka-grid { display: grid; grid-template-columns: 0.9fr 1.3fr; gap: 24px; margin-top: 36px; align-items: stretch; }
 @media (max-width: 900px) { .waka-grid { grid-template-columns: 1fr; } }
 
+/* ---- AI Coding card (inside stat card) ---- */
+.waka-ai-card {
+  background: linear-gradient(135deg, var(--matcha), #b4e8c8);
+  border-radius: 20px;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  animation: ai-glow 3s ease-in-out infinite alternate;
+}
+@keyframes ai-glow {
+  0%   { box-shadow: 0 0 0 0 color-mix(in oklch, var(--matcha), transparent 60%); }
+  100% { box-shadow: 0 0 18px 4px color-mix(in oklch, var(--matcha), transparent 40%); }
+}
+.waka-ai-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(255,255,255,0.08) 8px,
+    rgba(255,255,255,0.08) 16px
+  );
+  pointer-events: none;
+}
+.waka-ai-body { position: relative; z-index: 1; }
+.waka-ai-label { font-family: var(--pixel); font-size: 10px; color: var(--ink); opacity: 0.6; letter-spacing: 0.08em; }
+.waka-ai-pct {
+  font-family: var(--round); font-weight: 900; font-size: 32px; line-height: 1;
+  color: var(--ink); margin-top: 2px;
+}
+.waka-ai-time { font-family: var(--pixel); font-size: 11px; color: var(--ink); opacity: 0.6; margin-top: 2px; }
+.waka-ai-sparkle {
+  font-size: 48px; line-height: 1; opacity: 0.3; position: relative; z-index: 1;
+  animation: spin 8s linear infinite;
+}
+
+/* ---- stat card ---- */
 .waka-stat-card { background: var(--paper); border: 1.5px solid var(--line); border-radius: 32px;
   padding: 28px; box-shadow: 0 6px 0 color-mix(in oklch, var(--line), white 75%);
   position: relative; overflow: hidden; transform: rotate(-1deg); }
@@ -342,6 +385,7 @@ footer .heart { display: inline-block; animation: beat 1.2s ease-in-out infinite
 .waka-stat-foot { margin-top: 18px; padding-top: 14px; border-top: 1.5px dashed color-mix(in oklch, var(--line), white 40%);
   font-family: var(--pixel); font-size: 12px; color: var(--ink-soft); }
 
+/* ---- languages card ---- */
 .waka-langs { background: var(--paper); border: 1.5px solid var(--line); border-radius: 32px;
   padding: 28px; box-shadow: 0 6px 0 color-mix(in oklch, var(--line), white 75%);
   transform: rotate(0.5deg); }
@@ -349,18 +393,36 @@ footer .heart { display: inline-block; animation: beat 1.2s ease-in-out infinite
 .waka-langs-title { font-family: var(--round); font-weight: 800; font-size: 20px; color: var(--ink); }
 .waka-langs-jp { font-family: var(--pixel); font-size: 12px; color: var(--ink-soft); }
 
-.waka-bars { list-style: none; display: grid; gap: 12px; }
-.waka-bar-row { display: grid; grid-template-columns: 100px 1fr 56px; align-items: center; gap: 12px; }
-@media (max-width: 600px) { .waka-bar-row { grid-template-columns: 80px 1fr 48px; gap: 8px; } }
-.waka-bar-label { font-family: var(--round); font-weight: 700; font-size: 14px; color: var(--ink); }
-.waka-bar { display: block; height: 14px; background: color-mix(in oklch, var(--bg), var(--line) 18%);
+/* ---- language bars ---- */
+.waka-bars { list-style: none; display: grid; gap: 10px; }
+.waka-bar-row {
+  display: grid;
+  grid-template-columns: 22px auto 1fr 48px;
+  align-items: center;
+  gap: 10px;
+  animation: bar-slide 0.5s cubic-bezier(.34,1.4,.64,1) both;
+}
+@keyframes bar-slide {
+  from { opacity: 0; transform: translateX(-16px); }
+}
+@media (max-width: 600px) {
+  .waka-bar-row { grid-template-columns: 18px auto 1fr 40px; gap: 6px; }
+}
+.waka-bar-rank { font-family: var(--pixel); font-size: 11px; color: var(--ink-soft); text-align: center; }
+.waka-bar-label {
+  font-family: var(--round); font-weight: 700; font-size: 13px; color: var(--ink);
+  display: flex; align-items: center; gap: 6px; white-space: nowrap;
+}
+.waka-bar-emoji { font-size: 16px; flex-shrink: 0; }
+.waka-bar-track { display: block; height: 12px; background: color-mix(in oklch, var(--bg), var(--line) 18%);
   border: 1.5px solid var(--line); border-radius: 999px; overflow: hidden; position: relative; }
 .waka-bar-fill { display: block; height: 100%; border-radius: 999px;
-  box-shadow: inset 0 -3px 0 color-mix(in oklch, var(--ink), transparent 88%);
-  animation: bar-grow .9s cubic-bezier(.34,1.4,.64,1) both; }
+  box-shadow: inset 0 -2px 0 color-mix(in oklch, var(--ink), transparent 88%);
+  animation: bar-grow .7s cubic-bezier(.34,1.4,.64,1) both; }
 @keyframes bar-grow { from { width: 0 !important; } }
-.waka-bar-pct { font-family: var(--pixel); font-size: 12px; color: var(--ink-soft); text-align: right; }
+.waka-bar-pct { font-family: var(--pixel); font-size: 11px; color: var(--ink-soft); text-align: right; }
 
+/* ---- meta tiles ---- */
 .waka-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
 @media (max-width: 760px) { .waka-meta { grid-template-columns: 1fr; } }
 .waka-tile { border: 1.5px solid var(--line); border-radius: 24px; padding: 18px 20px;

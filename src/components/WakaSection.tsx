@@ -26,7 +26,28 @@ const BAR_TONES = [
   "var(--sky)",
   "var(--sakura-2)",
   "var(--matcha-2)",
+  "var(--taro)",
+  "var(--peach)",
 ];
+
+const langEmoji: Record<string, string> = {
+  Go: "🐹",
+  SQL: "🗄️",
+  YAML: "📋",
+  Makefile: "🔧",
+  Bash: "🐚",
+  Markdown: "📝",
+  TypeScript: "📘",
+  JSON: "🔗",
+  Other: "🔮",
+  "go.mod": "📦",
+  "GitIgnore file": "🙈",
+  Text: "📃",
+  CSV: "📊",
+  textmate: "📄",
+};
+
+const ranks = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"];
 
 const editorEmoji: Record<string, string> = {
   GoLand: "🐹",
@@ -50,6 +71,8 @@ const osEmoji: Record<string, string> = {
 const WakaSection = () => {
   if (!data.ok || !data.languages?.length) return null;
 
+  const aiCat = data.categories?.find(c => c.name === "AI Coding");
+
   return (
     <section className="block reveal" id="waka">
       <div className="eyebrow"><span className="num">03</span> · what i actually write · じっせきデータ</div>
@@ -60,6 +83,16 @@ const WakaSection = () => {
 
       <div className="waka-grid">
         <div className="waka-stat-card">
+          {aiCat && (
+            <div className="waka-ai-card">
+              <div className="waka-ai-body">
+                <div className="waka-ai-label">// ai coding</div>
+                <div className="waka-ai-pct">{aiCat.percent.toFixed(1)}%</div>
+                <div className="waka-ai-time">{aiCat.text}</div>
+              </div>
+              <div className="waka-ai-sparkle">✦</div>
+            </div>
+          )}
           <div className="waka-stat-label">last 7 days</div>
           <div className="waka-stat-num">{data.humanReadableTotal}</div>
           <div className="waka-stat-sub">
@@ -77,14 +110,19 @@ const WakaSection = () => {
           </div>
           <ul className="waka-bars">
             {data.languages.slice(0, 10).map((lang, i) => (
-              <li key={lang.name} className="waka-bar-row">
-                <span className="waka-bar-label">{lang.name}</span>
-                <span className="waka-bar">
+              <li key={lang.name} className="waka-bar-row" style={{ animationDelay: `${i * 0.06}s` }}>
+                <span className="waka-bar-rank">{ranks[i]}</span>
+                <span className="waka-bar-label">
+                  <span className="waka-bar-emoji">{langEmoji[lang.name] || "◈"}</span>
+                  {lang.name}
+                </span>
+                <span className="waka-bar-track">
                   <span
                     className="waka-bar-fill"
                     style={{
-                      width: `${Math.max(lang.percent, 4)}%`,
+                      width: `${Math.max(lang.percent, 3)}%`,
                       background: BAR_TONES[i % BAR_TONES.length],
+                      animationDelay: `${i * 0.06}s`,
                     }}
                   />
                 </span>
@@ -124,16 +162,6 @@ const WakaSection = () => {
               {data.projects[0].name}
             </div>
             <div className="waka-tile-meta">{data.projects[0].text}</div>
-          </div>
-        )}
-        {data.categories?.find(c => c.name === "AI Coding") && (
-          <div className="waka-tile" style={{ background: "var(--matcha)" }}>
-            <div className="waka-tile-label">// ai coding</div>
-            <div className="waka-tile-name">
-              <span className="waka-tile-emoji">🤖</span>
-              {data.categories.find(c => c.name === "AI Coding")!.percent.toFixed(1)}%
-            </div>
-            <div className="waka-tile-meta">{data.categories.find(c => c.name === "AI Coding")!.text}</div>
           </div>
         )}
       </div>
