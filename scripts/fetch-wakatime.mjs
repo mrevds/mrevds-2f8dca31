@@ -29,8 +29,13 @@ if (!key && existsSync(ENV_PATH)) {
 await mkdir(path.dirname(OUT_PATH), { recursive: true });
 
 if (!key) {
-  console.warn("[wakatime] WAKA_KEY not set — skipping fetch");
-  // Always write/update so fetchedAt refreshes and git detects changes
+  // If the file already has real data, keep it (don't destroy on Vercel/CI builds).
+  const existing = existsSync(OUT_PATH) ? JSON.parse(await readFile(OUT_PATH, "utf-8")) : null;
+  if (existing?.ok === true && existing?.languages?.length) {
+    console.log(`[wakatime] WAKA_KEY not set — keeping existing data from ${existing.fetchedAt}`);
+    process.exit(0);
+  }
+  console.warn("[wakatime] WAKA_KEY not set — writing fallback stub");
   const fallback = { ok: false, fetchedAt: new Date().toISOString() };
   await writeFile(OUT_PATH, JSON.stringify(fallback, null, 2));
   console.log(`[wakatime] wrote ${OUT_PATH} (no data — missing key)`);
