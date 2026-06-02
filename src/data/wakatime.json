@@ -1,108 +1,108 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-29T10:52:07.196Z",
+  "fetchedAt": "2026-06-02T13:51:38.306Z",
   "range": "last_7_days",
-  "humanReadableTotal": "18 hrs 25 mins",
-  "humanReadableDailyAverage": "3 hrs 4 mins",
-  "totalSeconds": 66306.286,
-  "dailyAverage": 11051,
+  "humanReadableTotal": "25 hrs 3 mins",
+  "humanReadableDailyAverage": "4 hrs 10 mins",
+  "totalSeconds": 90219.462,
+  "dailyAverage": 15037,
   "languages": [
     {
       "name": "Go",
-      "percent": 64.24,
-      "text": "11 hrs 59 mins"
-    },
-    {
-      "name": "YAML",
-      "percent": 12.62,
-      "text": "2 hrs 21 mins"
-    },
-    {
-      "name": "Makefile",
-      "percent": 6.68,
-      "text": "1 hr 14 mins"
-    },
-    {
-      "name": "Bash",
-      "percent": 3.74,
-      "text": "41 mins"
+      "percent": 77.28,
+      "text": "19 hrs 39 mins"
     },
     {
       "name": "SQL",
-      "percent": 3.65,
-      "text": "40 mins"
+      "percent": 5.13,
+      "text": "1 hr 18 mins"
     },
     {
-      "name": "Java",
-      "percent": 2.68,
-      "text": "29 mins"
+      "name": "YAML",
+      "percent": 4.42,
+      "text": "1 hr 7 mins"
     },
     {
-      "name": "textmate",
-      "percent": 1.96,
-      "text": "21 mins"
+      "name": "Makefile",
+      "percent": 2.75,
+      "text": "41 mins"
+    },
+    {
+      "name": "Bash",
+      "percent": 2.02,
+      "text": "30 mins"
     },
     {
       "name": "Markdown",
-      "percent": 1.79,
-      "text": "20 mins"
+      "percent": 2.02,
+      "text": "30 mins"
+    },
+    {
+      "name": "Other",
+      "percent": 1.52,
+      "text": "23 mins"
+    },
+    {
+      "name": "textmate",
+      "percent": 1.21,
+      "text": "18 mins"
     }
   ],
   "editors": [
     {
       "name": "GoLand",
-      "percent": 62.25,
-      "text": "11 hrs 37 mins"
-    },
-    {
-      "name": "VS Code",
-      "percent": 26.46,
-      "text": "4 hrs 56 mins"
-    },
-    {
-      "name": "Zed",
-      "percent": 9.4,
-      "text": "1 hr 45 mins"
+      "percent": 96.15,
+      "text": "24 hrs 28 mins"
     },
     {
       "name": "Claude Code",
-      "percent": 1.89,
-      "text": "21 mins"
+      "percent": 1.87,
+      "text": "28 mins"
+    },
+    {
+      "name": "Zed",
+      "percent": 1.05,
+      "text": "16 mins"
+    },
+    {
+      "name": "VS Code",
+      "percent": 0.93,
+      "text": "14 mins"
     }
   ],
   "operatingSystems": [
     {
       "name": "Linux",
       "percent": 100,
-      "text": "18 hrs 40 mins"
+      "text": "25 hrs 26 mins"
     }
   ],
   "projects": [
     {
       "name": "cbs-backend",
-      "percent": 54.82,
-      "text": "10 hrs 14 mins"
+      "percent": 64.93,
+      "text": "16 hrs 31 mins"
     },
     {
       "name": "new-rene",
-      "percent": 31.7,
-      "text": "5 hrs 55 mins"
+      "percent": 29.42,
+      "text": "7 hrs 29 mins"
     },
     {
-      "name": "cbs-lms",
-      "percent": 8.12,
-      "text": "1 hr 30 mins"
-    },
-    {
-      "name": "first",
-      "percent": 2.68,
-      "text": "29 mins"
+      "name": "mrevds-2f8dca31",
+      "percent": 2.64,
+      "text": "40 mins"
     },
     {
       "name": "Unknown Project",
-      "percent": 1.42,
+      "percent": 1.04,
+      "text": "15 mins"
+    },
+    {
+      "name": "cbs-lms",
+      "percent": 1.04,
       "text": "15 mins"
     }
   ],
-  "allTime": "733 hrs 48 mins"
+  "allTime": "753 hrs 52 mins"
 }

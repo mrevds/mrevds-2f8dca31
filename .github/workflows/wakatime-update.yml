@@ -25,7 +25,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check WAKA_KEY secret
+        id: key_check
+        env:
+          WAKA_KEY: ${{ secrets.WAKA_KEY }}
+        run: |
+          if [ -z "$WAKA_KEY" ]; then
+            echo "::error::WAKA_KEY secret is NOT set! Go to Settings → Secrets and variables → Actions and add it."
+            exit 1
+          fi
+          echo "WAKA_KEY is set (starts with: ${WAKA_KEY:0:8}...)"
+
       - name: Run WakaTime fetch script
+        id: fetch
         env:
           WAKA_KEY: ${{ secrets.WAKA_KEY }}
         run: |

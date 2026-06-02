@@ -30,9 +30,10 @@ await mkdir(path.dirname(OUT_PATH), { recursive: true });
 
 if (!key) {
   console.warn("[wakatime] WAKA_KEY not set — skipping fetch");
-  if (!existsSync(OUT_PATH)) {
-    await writeFile(OUT_PATH, JSON.stringify({ ok: false, fetchedAt: null }, null, 2));
-  }
+  // Always write/update so fetchedAt refreshes and git detects changes
+  const fallback = { ok: false, fetchedAt: new Date().toISOString() };
+  await writeFile(OUT_PATH, JSON.stringify(fallback, null, 2));
+  console.log(`[wakatime] wrote ${OUT_PATH} (no data — missing key)`);
   process.exit(0);
 }
 
@@ -58,10 +59,10 @@ const [stats, allTime] = await Promise.all([
 ]);
 
 if (!stats?.data) {
-  console.error("[wakatime] could not fetch stats — keeping existing file");
-  if (!existsSync(OUT_PATH)) {
-    await writeFile(OUT_PATH, JSON.stringify({ ok: false, fetchedAt: null }, null, 2));
-  }
+  console.error("[wakatime] could not fetch stats — writing fallback");
+  const fallback = { ok: false, fetchedAt: new Date().toISOString() };
+  await writeFile(OUT_PATH, JSON.stringify(fallback, null, 2));
+  console.log(`[wakatime] wrote ${OUT_PATH} (API returned no data)`);
   process.exit(0);
 }
 
