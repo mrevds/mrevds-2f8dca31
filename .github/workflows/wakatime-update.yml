@@ -47,9 +47,9 @@ jobs:
         id: git_check
         run: |
           if git diff --quiet src/data/wakatime.json; then
-            echo "no_changes" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "has_changes" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push changes
