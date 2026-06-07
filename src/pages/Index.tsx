@@ -211,7 +211,7 @@ const Index = () => {
           </h2>
 
           <div className="about-card">
-            <div className="tape" />
+            <div className="about-card-inner">
             <div className="about-grid">
               <div>
                 <p>
@@ -243,6 +243,7 @@ const Index = () => {
                 </ul>
               </div>
             </div>
+            </div>
           </div>
         </section>
 
@@ -254,12 +255,12 @@ const Index = () => {
             <span className="jp">あそぶ どうぐ</span>
           </h2>
 
-          <div className="crests">
+          <div className="artifacts">
             {tools.map((t, i) => (
-              <div className="crest" key={t.label} style={{ "--i": i } as React.CSSProperties}>
-                <div className="crest-icon">{t.icon}</div>
-                <div className="crest-label">{t.label}</div>
-                <div className="crest-meta">{t.meta}</div>
+              <div className="artifact" key={t.label} style={{ "--i": i } as React.CSSProperties}>
+                <div className="artifact-icon">{t.icon}</div>
+                <div className="artifact-label">{t.label}</div>
+                <div className="artifact-meta">{t.meta}</div>
               </div>
             ))}
           </div>
@@ -280,6 +281,7 @@ const Index = () => {
           </h2>
 
           <article className="company-card">
+            <div className="company-card-inner">
             <div className="logo-wrap">
               <img src="/assets/renesans-logo.png" alt="Renesans logo" />
             </div>
@@ -292,6 +294,7 @@ const Index = () => {
               </p>
             </div>
             <span className="stamp">★ ima koko ★</span>
+            </div>
           </article>
         </section>
 
