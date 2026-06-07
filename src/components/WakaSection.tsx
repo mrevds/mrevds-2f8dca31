@@ -25,15 +25,6 @@ type WakaData = {
 
 const data = waka as WakaData;
 
-const BAR_TONES = [
-  "var(--sakura)", "var(--matcha)", "var(--taro)", "var(--peach)", "var(--butter)",
-  "var(--sky)", "var(--sakura-2)", "var(--matcha-2)", "var(--taro)", "var(--peach)",
-];
-
-const ALL_TONES = [
-  "var(--sakura-2)", "var(--matcha-2)", "var(--taro-2)", "var(--peach-2)", "var(--butter)",
-];
-
 const langIcon: Record<string, React.ReactNode> = {
   Go: <SiGo />, TypeScript: <SiTypescript />, SQL: <SiPostgresql />,
   Bash: <SiGnubash />, Markdown: <SiMarkdown />,
@@ -65,29 +56,29 @@ const WakaSection = () => {
       <div className="waka-duo">
         {/* ── left card: stats + all-time + meta ── */}
         <div className="waka-card waka-card-left">
-          <div className="waka-tape">wakatime · ✦</div>
+          <div className="waka-bar-accent" />
 
           <div className="waka-blob-grid">
             {data.humanReadableTotal && (
-              <div className="waka-blob" style={{ background: "var(--sakura)" }}>
+              <div className="waka-blob">
                 <span className="waka-blob-label">14d</span>
                 <span className="waka-blob-val">{data.humanReadableTotal}</span>
               </div>
             )}
             {data.allTime && (
-              <div className="waka-blob" style={{ background: "var(--matcha)" }}>
+              <div className="waka-blob">
                 <span className="waka-blob-label">all time</span>
                 <span className="waka-blob-val">{data.allTime}</span>
               </div>
             )}
             {data.humanReadableDailyAverage && (
-              <div className="waka-blob" style={{ background: "var(--peach)" }}>
+              <div className="waka-blob">
                 <span className="waka-blob-label">&nbsp;/ day</span>
                 <span className="waka-blob-val">{data.humanReadableDailyAverage}</span>
               </div>
             )}
             {aiCat && (
-              <div className="waka-blob" style={{ background: "var(--taro)" }}>
+              <div className="waka-blob">
                 <span className="waka-blob-label">ai · {aiCat.text}</span>
                 <span className="waka-blob-val">{aiCat.percent.toFixed(1)}%</span>
               </div>
@@ -110,7 +101,6 @@ const WakaSection = () => {
                     <span className="waka-all-track">
                       <span className="waka-all-fill" style={{
                         width: `${Math.max(lang.percent, 3)}%`,
-                        background: ALL_TONES[i % ALL_TONES.length],
                       }} />
                     </span>
                     <span className="waka-all-pct">{lang.percent.toFixed(1)}%</span>
@@ -128,7 +118,6 @@ const WakaSection = () => {
                     <span className="waka-all-track">
                       <span className="waka-all-fill" style={{
                         width: `${Math.max(lang.percent, 3)}%`,
-                        background: ALL_TONES[i % ALL_TONES.length],
                       }} />
                     </span>
                     <span className="waka-all-pct">{lang.percent.toFixed(1)}%</span>
@@ -165,6 +154,7 @@ const WakaSection = () => {
 
         {/* ── right card: 7d languages ── */}
         <div className="waka-card waka-card-right">
+          <div className="waka-bar-accent" />
           <div className="waka-langs-head">
             <span className="waka-langs-title">top languages</span>
             <span className="waka-langs-jp">ことば</span>
@@ -181,7 +171,6 @@ const WakaSection = () => {
                   <span className="waka-bar-fill"
                     style={{
                       width: `${Math.max(lang.percent, 3)}%`,
-                      background: BAR_TONES[i % BAR_TONES.length],
                       animationDelay: `${i * 0.06}s`,
                     }}
                   />
