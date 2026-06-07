@@ -1,10 +1,14 @@
+import {
+  SiGo, SiPostgresql, SiTypescript, SiLinux, SiVsco,
+  SiMarkdown, SiGnubash, SiNeovim, SiApple,
+} from "react-icons/si";
 import waka from "@/data/wakatime.json";
+import MochiFace from "./MochiFace";
 
 type WakaItem = { name: string; percent: number; text: string; color?: string };
 type WakaData = {
   ok: boolean;
   fetchedAt: string | null;
-  range?: string;
   humanReadableTotal?: string;
   humanReadableDailyAverage?: string;
   languages?: WakaItem[];
@@ -13,59 +17,36 @@ type WakaData = {
   projects?: WakaItem[];
   categories?: WakaItem[];
   allTime?: string | null;
+  allTimeLanguages?: WakaItem[];
+  allTimeEditors?: WakaItem[];
+  allTimeOS?: WakaItem[];
+  allTimeTotalSeconds?: number;
 };
 
 const data = waka as WakaData;
 
 const BAR_TONES = [
-  "var(--sakura)",
-  "var(--matcha)",
-  "var(--taro)",
-  "var(--peach)",
-  "var(--butter)",
-  "var(--sky)",
-  "var(--sakura-2)",
-  "var(--matcha-2)",
-  "var(--taro)",
-  "var(--peach)",
+  "var(--sakura)", "var(--matcha)", "var(--taro)", "var(--peach)", "var(--butter)",
+  "var(--sky)", "var(--sakura-2)", "var(--matcha-2)", "var(--taro)", "var(--peach)",
 ];
 
-const langEmoji: Record<string, string> = {
-  Go: "🐹",
-  SQL: "🗄️",
-  YAML: "📋",
-  Makefile: "🔧",
-  Bash: "🐚",
-  Markdown: "📝",
-  TypeScript: "📘",
-  JSON: "🔗",
-  Other: "🔮",
-  "go.mod": "📦",
-  "GitIgnore file": "🙈",
-  Text: "📃",
-  CSV: "📊",
-  textmate: "📄",
+const ALL_TONES = [
+  "var(--sakura-2)", "var(--matcha-2)", "var(--taro-2)", "var(--peach-2)", "var(--butter)",
+];
+
+const langIcon: Record<string, React.ReactNode> = {
+  Go: <SiGo />, TypeScript: <SiTypescript />, SQL: <SiPostgresql />,
+  Bash: <SiGnubash />, Markdown: <SiMarkdown />,
 };
 
 const ranks = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"];
 
-const editorEmoji: Record<string, string> = {
-  GoLand: "🐹",
-  "VS Code": "💻",
-  WebStorm: "🌐",
-  PhpStorm: "🐘",
-  IntelliJ: "🧠",
-  Vim: "⌨️",
-  Neovim: "⌨️",
+const editorPics: Record<string, React.ReactNode> = {
+  "VS Code": <SiVsco />, GoLand: <SiGo />, Neovim: <SiNeovim />,
 };
 
-const osEmoji: Record<string, string> = {
-  Mac: "🍎",
-  macOS: "🍎",
-  Linux: "🐧",
-  Windows: "🪟",
-  Arch: "🐧",
-  Ubuntu: "🐧",
+const osPics: Record<string, React.ReactNode> = {
+  Linux: <SiLinux />, macOS: <SiApple />, Mac: <SiApple />,
 };
 
 const WakaSection = () => {
@@ -81,29 +62,109 @@ const WakaSection = () => {
         <span className="jp">てを うごかすデータ</span>
       </h2>
 
-      <div className="waka-grid">
-        <div className="waka-stat-card">
-          {aiCat && (
-            <div className="waka-ai-card">
-              <div className="waka-ai-body">
-                <div className="waka-ai-label">// ai coding</div>
-                <div className="waka-ai-pct">{aiCat.percent.toFixed(1)}%</div>
-                <div className="waka-ai-time">{aiCat.text}</div>
+      <div className="waka-duo">
+        {/* ── left card: stats + all-time + meta ── */}
+        <div className="waka-card waka-card-left">
+          <div className="waka-tape">wakatime · ✦</div>
+
+          <div className="waka-blob-grid">
+            {data.humanReadableTotal && (
+              <div className="waka-blob" style={{ background: "var(--sakura)" }}>
+                <span className="waka-blob-label">14d</span>
+                <span className="waka-blob-val">{data.humanReadableTotal}</span>
               </div>
-              <div className="waka-ai-sparkle">✦</div>
-            </div>
-          )}
-          <div className="waka-stat-label">last 7 days</div>
-          <div className="waka-stat-num">{data.humanReadableTotal}</div>
-          <div className="waka-stat-sub">
-            avg <span className="waka-hl">{data.humanReadableDailyAverage}</span> / day
+            )}
+            {data.allTime && (
+              <div className="waka-blob" style={{ background: "var(--matcha)" }}>
+                <span className="waka-blob-label">all time</span>
+                <span className="waka-blob-val">{data.allTime}</span>
+              </div>
+            )}
+            {data.humanReadableDailyAverage && (
+              <div className="waka-blob" style={{ background: "var(--peach)" }}>
+                <span className="waka-blob-label">&nbsp;/ day</span>
+                <span className="waka-blob-val">{data.humanReadableDailyAverage}</span>
+              </div>
+            )}
+            {aiCat && (
+              <div className="waka-blob" style={{ background: "var(--taro)" }}>
+                <span className="waka-blob-label">ai · {aiCat.text}</span>
+                <span className="waka-blob-val">{aiCat.percent.toFixed(1)}%</span>
+              </div>
+            )}
           </div>
-          {data.allTime && (
-            <div className="waka-stat-foot">all-time · {data.allTime}</div>
-          )}
+
+          <div className="waka-all-section">
+            <div className="waka-all-head">
+              <span className="waka-all-title">all-time languages</span>
+              <span className="waka-all-jp">ぜんきろく</span>
+            </div>
+            {data.allTimeLanguages?.length ? (
+              <ul className="waka-all-bars">
+                {(data.allTimeLanguages ?? []).slice(0, 5).map((lang, i) => (
+                  <li key={lang.name} className="waka-all-row">
+                    <span className="waka-all-label">
+                      <span className="waka-bar-emoji">{langIcon[lang.name] || "◈"}</span>
+                      {lang.name}
+                    </span>
+                    <span className="waka-all-track">
+                      <span className="waka-all-fill" style={{
+                        width: `${Math.max(lang.percent, 3)}%`,
+                        background: ALL_TONES[i % ALL_TONES.length],
+                      }} />
+                    </span>
+                    <span className="waka-all-pct">{lang.percent.toFixed(1)}%</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <ul className="waka-all-bars">
+                {data.languages.slice(0, 5).map((lang, i) => (
+                  <li key={lang.name} className="waka-all-row">
+                    <span className="waka-all-label">
+                      <span className="waka-bar-emoji">{langIcon[lang.name] || "◈"}</span>
+                      {lang.name}
+                    </span>
+                    <span className="waka-all-track">
+                      <span className="waka-all-fill" style={{
+                        width: `${Math.max(lang.percent, 3)}%`,
+                        background: ALL_TONES[i % ALL_TONES.length],
+                      }} />
+                    </span>
+                    <span className="waka-all-pct">{lang.percent.toFixed(1)}%</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          <div className="waka-stamp-row">
+            {data.editors?.[0] && (
+              <span className="waka-stamp">
+                {editorPics[data.editors[0].name] || "✏️"}
+                {data.editors[0].name}
+                <span className="waka-stamp-text">{data.editors[0].text}</span>
+              </span>
+            )}
+            {data.operatingSystems?.[0] && (
+              <span className="waka-stamp">
+                {osPics[data.operatingSystems[0].name] || "🖥️"}
+                {data.operatingSystems[0].name}
+                <span className="waka-stamp-text">{data.operatingSystems[0].text}</span>
+              </span>
+            )}
+            {data.projects?.[0] && (
+              <span className="waka-stamp">
+                📦
+                {data.projects[0].name}
+                <span className="waka-stamp-text">{data.projects[0].text}</span>
+              </span>
+            )}
+          </div>
         </div>
 
-        <div className="waka-langs">
+        {/* ── right card: 7d languages ── */}
+        <div className="waka-card waka-card-right">
           <div className="waka-langs-head">
             <span className="waka-langs-title">top languages</span>
             <span className="waka-langs-jp">ことば</span>
@@ -113,12 +174,11 @@ const WakaSection = () => {
               <li key={lang.name} className="waka-bar-row" style={{ animationDelay: `${i * 0.06}s` }}>
                 <span className="waka-bar-rank">{ranks[i]}</span>
                 <span className="waka-bar-label">
-                  <span className="waka-bar-emoji">{langEmoji[lang.name] || "◈"}</span>
+                  <span className="waka-bar-emoji">{langIcon[lang.name] || "◈"}</span>
                   {lang.name}
                 </span>
                 <span className="waka-bar-track">
-                  <span
-                    className="waka-bar-fill"
+                  <span className="waka-bar-fill"
                     style={{
                       width: `${Math.max(lang.percent, 3)}%`,
                       background: BAR_TONES[i % BAR_TONES.length],
@@ -130,40 +190,10 @@ const WakaSection = () => {
               </li>
             ))}
           </ul>
+          <div className="waka-mochi-corner">
+            <MochiFace mood="genki" size={40} blink antenna={false} />
+          </div>
         </div>
-      </div>
-
-      <div className="waka-meta">
-        {data.editors?.[0] && (
-          <div className="waka-tile" style={{ background: "var(--taro)" }}>
-            <div className="waka-tile-label">// editor</div>
-            <div className="waka-tile-name">
-              <span className="waka-tile-emoji">{editorEmoji[data.editors[0].name] || "✏️"}</span>
-              {data.editors[0].name}
-            </div>
-            <div className="waka-tile-meta">{data.editors[0].text}</div>
-          </div>
-        )}
-        {data.operatingSystems?.[0] && (
-          <div className="waka-tile" style={{ background: "var(--sky)" }}>
-            <div className="waka-tile-label">// os</div>
-            <div className="waka-tile-name">
-              <span className="waka-tile-emoji">{osEmoji[data.operatingSystems[0].name] || "🖥️"}</span>
-              {data.operatingSystems[0].name}
-            </div>
-            <div className="waka-tile-meta">{data.operatingSystems[0].text}</div>
-          </div>
-        )}
-        {data.projects?.[0] && (
-          <div className="waka-tile" style={{ background: "var(--butter)" }}>
-            <div className="waka-tile-label">// top project</div>
-            <div className="waka-tile-name">
-              <span className="waka-tile-emoji">📦</span>
-              {data.projects[0].name}
-            </div>
-            <div className="waka-tile-meta">{data.projects[0].text}</div>
-          </div>
-        )}
       </div>
 
       {data.fetchedAt && (

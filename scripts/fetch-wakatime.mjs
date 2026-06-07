@@ -58,9 +58,10 @@ async function get(p) {
   }
 }
 
-const [stats, allTime] = await Promise.all([
+const [stats, allTime, allTimeStats] = await Promise.all([
   get("/users/current/stats/last_7_days"),
   get("/users/current/all_time_since_today"),
+  get("/users/current/stats/all_time"),
 ]);
 
 if (!stats?.data) {
@@ -80,6 +81,7 @@ const pick = (arr, n) =>
     color: x.color,
   }));
 
+const ats = allTimeStats?.data;
 const out = {
   ok: true,
   fetchedAt: new Date().toISOString(),
@@ -94,6 +96,10 @@ const out = {
   projects: pick(d.projects, 5),
   categories: pick(d.categories, 10),
   allTime: allTime?.data?.text ?? null,
+  allTimeLanguages: ats ? pick(ats.languages, 5) : [],
+  allTimeEditors: ats ? pick(ats.editors, 3) : [],
+  allTimeOS: ats ? pick(ats.operating_systems, 3) : [],
+  allTimeTotalSeconds: ats?.total_seconds ?? null,
 };
 
 await writeFile(OUT_PATH, JSON.stringify(out, null, 2));

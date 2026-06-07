@@ -1,5 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import WakaSection from "@/components/WakaSection";
+import YandexMusicSection from "@/components/YandexMusicSection";
+import MochiFace, { type MochiMood } from "@/components/MochiFace";
+import MochiPet from "@/components/MochiPet";
+import { SiGo, SiPostgresql, SiDocker, SiGit, SiRedis, SiLinux, SiPostman, SiVsco, SiGoland, SiGithub, SiFastapi } from "react-icons/si";
+import { VscSymbolMethod } from "react-icons/vsc";
 
 /* ------- inline SVG icons used in the design ------- */
 
@@ -46,65 +51,27 @@ const StarTaro = () => (
   </svg>
 );
 
-const MochiMini = () => (
-  <svg viewBox="0 0 100 100" width="28" height="28" aria-hidden="true">
-    <ellipse cx="50" cy="92" rx="22" ry="3" fill="rgba(0,0,0,0.08)" />
-    <ellipse cx="50" cy="56" rx="34" ry="30" fill="oklch(99% 0.008 75)" stroke="oklch(36% 0.045 35)" strokeWidth="3" />
-    <ellipse className="blink" cx="40" cy="55" rx="3" ry="5" fill="oklch(36% 0.045 35)" />
-    <ellipse className="blink" cx="60" cy="55" rx="3" ry="5" fill="oklch(36% 0.045 35)" />
-    <ellipse cx="33" cy="66" rx="4" ry="2.5" fill="oklch(86% 0.078 12)" opacity="0.85" />
-    <ellipse cx="67" cy="66" rx="4" ry="2.5" fill="oklch(86% 0.078 12)" opacity="0.85" />
-    <path d="M 45 64 Q 50 70 55 64" stroke="oklch(36% 0.045 35)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-  </svg>
-);
+const MochiMini = () => <MochiFace mood="genki" size={28} blink antenna={false} />;
 
-const MochiBig = () => (
-  <svg viewBox="0 0 100 100" width="200" height="200" className="mochi-svg" style={{ position: "relative", zIndex: 1 }}>
-    <g className="mochi-bounce">
-      <ellipse cx="50" cy="58" rx="36" ry="32" fill="oklch(99% 0.008 75)" stroke="oklch(36% 0.045 35)" strokeWidth="2.5" />
-      <ellipse cx="32" cy="68" rx="6" ry="3.5" fill="oklch(86% 0.078 12)" opacity="0.85" />
-      <ellipse cx="68" cy="68" rx="6" ry="3.5" fill="oklch(86% 0.078 12)" opacity="0.85" />
-      <ellipse className="blink" cx="38" cy="56" rx="3.2" ry="5" fill="oklch(36% 0.045 35)" />
-      <ellipse className="blink" cx="62" cy="56" rx="3.2" ry="5" fill="oklch(36% 0.045 35)" />
-      <circle cx="37" cy="54" r="1.1" fill="white" />
-      <circle cx="61" cy="54" r="1.1" fill="white" />
-      <path d="M 44 66 Q 50 72 56 66" stroke="oklch(36% 0.045 35)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-      <ellipse cx="14" cy="62" rx="5" ry="4" fill="oklch(99% 0.008 75)" stroke="oklch(36% 0.045 35)" strokeWidth="2.5" />
-      <ellipse cx="86" cy="62" rx="5" ry="4" fill="oklch(99% 0.008 75)" stroke="oklch(36% 0.045 35)" strokeWidth="2.5" />
-      <path d="M 50 27 Q 52 22 55 24" stroke="oklch(36% 0.045 35)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-      <circle cx="55" cy="24" r="2.2" fill="oklch(86% 0.078 12)" stroke="oklch(36% 0.045 35)" strokeWidth="2" />
-    </g>
-  </svg>
-);
-
-const MochiAvatar = () => (
-  <svg viewBox="0 0 100 100" width="100" height="100" aria-hidden="true">
-    <ellipse cx="50" cy="58" rx="34" ry="30" fill="oklch(99% 0.008 75)" stroke="oklch(36% 0.045 35)" strokeWidth="3" />
-    <ellipse cx="32" cy="68" rx="6" ry="3.5" fill="oklch(86% 0.078 12)" opacity="0.85" />
-    <ellipse cx="68" cy="68" rx="6" ry="3.5" fill="oklch(86% 0.078 12)" opacity="0.85" />
-    <ellipse className="blink" cx="38" cy="56" rx="3.2" ry="5" fill="oklch(36% 0.045 35)" />
-    <ellipse className="blink" cx="62" cy="56" rx="3.2" ry="5" fill="oklch(36% 0.045 35)" />
-    <circle cx="37" cy="54" r="1.1" fill="white" />
-    <circle cx="61" cy="54" r="1.1" fill="white" />
-    <path d="M 44 66 Q 50 72 56 66" stroke="oklch(36% 0.045 35)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-  </svg>
-);
+const MochiAvatar = () => <MochiFace mood="genki" size={100} blink antenna={false} />;
 
 /* ------- data ------- */
 
-const charms: { emoji: string; label: string; meta: string }[] = [
-  { emoji: "🐹", label: "Go", meta: "main lang" },
-  { emoji: "🐘", label: "PostgreSQL", meta: "SQL · queries" },
-  { emoji: "🐳", label: "Docker", meta: "container life" },
-  { emoji: "🌐", label: "REST API", meta: "json all day" },
-  { emoji: "🚀", label: "gRPC", meta: "proto buf!" },
-  { emoji: "🌿", label: "Git", meta: "commit chaos" },
-  { emoji: "🔴", label: "Redis", meta: "cache me" },
-  { emoji: "🐧", label: "Linux", meta: "bash + vibes" },
-  { emoji: "📮", label: "Postman", meta: "poke endpoints" },
-  { emoji: "💻", label: "VS Code", meta: "daily driver" },
-  { emoji: "⚙️", label: "GoLand", meta: "sometimes" },
-  { emoji: "🐙", label: "GitHub", meta: "push & pray" },
+type ToolItem = { icon: React.ReactNode; label: string; meta: string };
+
+const tools: ToolItem[] = [
+  { icon: <SiGo />, label: "Go", meta: "backend · services" },
+  { icon: <SiPostgresql />, label: "PostgreSQL", meta: "data · sql" },
+  { icon: <SiDocker />, label: "Docker", meta: "containers" },
+  { icon: <SiFastapi />, label: "REST API", meta: "json · http" },
+  { icon: <VscSymbolMethod />, label: "gRPC", meta: "proto · rpc" },
+  { icon: <SiGit />, label: "Git", meta: "vcs" },
+  { icon: <SiRedis />, label: "Redis", meta: "cache · queue" },
+  { icon: <SiLinux />, label: "Linux", meta: "os · bash" },
+  { icon: <SiPostman />, label: "Postman", meta: "testing" },
+  { icon: <SiVsco />, label: "VS Code", meta: "editor · daily" },
+  { icon: <SiGoland />, label: "GoLand", meta: "ide" },
+  { icon: <SiGithub />, label: "GitHub", meta: "ci · prs" },
 ];
 
 const stripItems: { icon: string; jp: string; en: string }[] = [
@@ -125,6 +92,46 @@ const contacts: { href: string; label: string; jp: string }[] = [
 
 const Index = () => {
   const nameLettersRef = useRef<HTMLHeadingElement>(null);
+  const mochiRef = useRef<HTMLDivElement>(null);
+  const [mood, setMood] = useState<MochiMood>("genki");
+  const [clickBurst, setClickBurst] = useState<string | null>(null);
+  const burstTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  /* mood cycle */
+  useEffect(() => {
+    const moods: MochiMood[] = ["genki", "happy", "surprised"];
+    const t = setInterval(() => {
+      setMood(moods[Math.floor(Math.random() * moods.length)]);
+    }, 5000 + Math.random() * 4000);
+    return () => clearInterval(t);
+  }, []);
+
+  /* mochi click */
+  const handleMochiClick = useCallback(() => {
+    const emojis = ["♡", "✦", "☆", "♥", "♪", "✿"];
+    setClickBurst(emojis[Math.floor(Math.random() * emojis.length)]);
+    clearTimeout(burstTimer.current);
+    burstTimer.current = setTimeout(() => setClickBurst(null), 600);
+    setMood("happy");
+    setTimeout(() => setMood("genki"), 800);
+  }, []);
+
+  /* mochi parallax tilt */
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    const el = mochiRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const cx = r.left + r.width / 2;
+    const cy = r.top + r.height / 2;
+    const dx = (e.clientX - cx) / r.width;
+    const dy = (e.clientY - cy) / r.height;
+    el.style.transform = `perspective(400px) rotateY(${dx * -12}deg) rotateX(${dy * 12}deg)`;
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    const el = mochiRef.current;
+    if (el) el.style.transform = "";
+  }, []);
 
   /* scroll reveal */
   useEffect(() => {
@@ -162,22 +169,26 @@ const Index = () => {
     });
   }, []);
 
-  /* mochi giggle on click */
+  /* section background tracking */
   useEffect(() => {
-    const handlers: Array<() => void> = [];
-    document.querySelectorAll<SVGSVGElement>(".mochi-svg, .mochi-mini svg").forEach((svg) => {
-      svg.style.cursor = "pointer";
-      const handler = () => {
-        svg.style.transition = "transform .4s cubic-bezier(.34,1.6,.64,1)";
-        svg.style.transform = "scale(1.15) rotate(-8deg)";
-        setTimeout(() => {
-          svg.style.transform = "";
-        }, 350);
-      };
-      svg.addEventListener("click", handler);
-      handlers.push(() => svg.removeEventListener("click", handler));
-    });
-    return () => handlers.forEach((off) => off());
+    const sections = document.querySelectorAll<HTMLElement>("[data-section]");
+    const visible = new Map<Element, number>();
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          visible.set(e.target, e.intersectionRatio);
+        });
+        let best: Element | null = null;
+        let bestRatio = 0;
+        for (const [el, r] of visible) {
+          if (r > bestRatio) { bestRatio = r; best = el; }
+        }
+        document.documentElement.dataset.section = best?.getAttribute("data-section") ?? "";
+      },
+      { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] }
+    );
+    sections.forEach((s) => io.observe(s));
+    return () => io.disconnect();
   }, []);
 
   return (
@@ -188,6 +199,7 @@ const Index = () => {
         <div className="star s3"><StarMatcha /></div>
         <div className="star s4"><StarTaro /></div>
       </div>
+      <div className="bg-scroll" aria-hidden="true" />
 
       <div className="page">
         {/* NAV */}
@@ -199,6 +211,7 @@ const Index = () => {
           <ul>
             <li><a href="#about">about</a></li>
             <li><a href="#stack">stack</a></li>
+            <li><a href="#music">music</a></li>
             <li><a href="#work">work</a></li>
             <li><a href="#say-hi">say hi</a></li>
           </ul>
@@ -206,7 +219,7 @@ const Index = () => {
         </nav>
 
         {/* HERO */}
-        <header className="hero">
+        <header className="hero" data-section="hero">
           <span className="bubble">
             <span className="jp">やあ!</span> hi, you found me &nbsp;✨
           </span>
@@ -235,9 +248,18 @@ const Index = () => {
               Clean architecture, careful with details, <em>steady delivery</em>.
             </p>
 
-            <div className="hero-mochi">
-              <MochiBig />
+            <div
+              ref={mochiRef}
+              className="hero-mochi"
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              onClick={handleMochiClick}
+            >
+              <div className="mochi-bounce-wrap">
+                <MochiFace mood={mood} size={200} blink={mood !== "sleepy"} />
+              </div>
               <div className="ground"></div>
+              {clickBurst && <span className="mochi-burst" key={clickBurst + Date.now()}>{clickBurst}</span>}
             </div>
           </div>
 
@@ -261,7 +283,7 @@ const Index = () => {
         </div>
 
         {/* ABOUT */}
-        <section className="block reveal" id="about">
+        <section className="block reveal" id="about" data-section="about">
           <div className="eyebrow"><span className="num">01</span> · about me · じこしょうかい</div>
           <h2>
             A little <span className="accent">about</span> me
@@ -305,30 +327,36 @@ const Index = () => {
         </section>
 
         {/* STACK */}
-        <section className="block reveal" id="stack">
+        <section className="block reveal" id="stack" data-section="stack">
           <div className="eyebrow"><span className="num">02</span> · my toolbox · どうぐばこ</div>
           <h2>
             Tools I <span className="accent">play with</span>
             <span className="jp">あそぶ どうぐ</span>
           </h2>
 
-          <div className="charms">
-            {charms.map((c) => (
-              <div className="charm" key={c.label}>
-                <div className="emoji">{c.emoji}</div>
-                <div className="label">{c.label}</div>
-                <div className="meta">{c.meta}</div>
+          <div className="polaroids">
+            {tools.map((t, i) => (
+              <div className="polaroid" key={t.label} style={{ "--i": i } as React.CSSProperties}>
+                <div className="polaroid-pic">
+                  <span className="polaroid-icon">{t.icon}</span>
+                </div>
+                <div className="polaroid-label">{t.label}</div>
+                <div className="polaroid-meta">{t.meta}</div>
+                <div className="polaroid-shadow" aria-hidden="true" />
               </div>
             ))}
           </div>
         </section>
 
         {/* WAKATIME */}
-        <WakaSection />
+        <div data-section="waka"><WakaSection /></div>
+
+        {/* YANDEX MUSIC */}
+        <div data-section="music"><YandexMusicSection /></div>
 
         {/* WORK */}
-        <section className="block reveal" id="work">
-          <div className="eyebrow"><span className="num">04</span> · where i show up · しごと</div>
+        <section className="block reveal" id="work" data-section="work">
+          <div className="eyebrow"><span className="num">05</span> · where i show up · しごと</div>
           <h2>
             Currently <span className="accent">shipping</span> at —
             <span className="jp">いま はたらいてる</span>
@@ -351,8 +379,8 @@ const Index = () => {
         </section>
 
         {/* CONTACTS */}
-        <section className="block reveal" id="say-hi">
-          <div className="eyebrow"><span className="num">05</span> · say hi · よろしく</div>
+        <section className="block reveal" id="say-hi" data-section="sayhi">
+          <div className="eyebrow"><span className="num">06</span> · say hi · よろしく</div>
           <h2>
             Let's <span className="accent">talk</span>
             <span className="jp">はなしましょう</span>
@@ -380,6 +408,8 @@ const Index = () => {
           <div>no cookies · no analytics · just ふわふわ vibes</div>
         </footer>
       </div>
+
+      <MochiPet />
     </>
   );
 };

@@ -1,0 +1,61 @@
+name: Update Yandex Music Data
+
+on:
+  schedule:
+    - cron: '30 2 * * *'  # Every day at 02:30 UTC (offset from wakatime)
+  workflow_dispatch:
+
+jobs:
+  update-yandex-music:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check YANDEX_MUSIC_TOKEN secret
+        id: key_check
+        env:
+          YANDEX_MUSIC_TOKEN: ${{ secrets.YANDEX_MUSIC_TOKEN }}
+        run: |
+          if [ -z "$YANDEX_MUSIC_TOKEN" ]; then
+            echo "::error::YANDEX_MUSIC_TOKEN secret is NOT set! Go to Settings → Secrets and variables → Actions and add it."
+            exit 1
+          fi
+          echo "YANDEX_MUSIC_TOKEN is set"
+
+      - name: Run Yandex Music fetch script
+        id: fetch
+        env:
+          YANDEX_MUSIC_TOKEN: ${{ secrets.YANDEX_MUSIC_TOKEN }}
+        run: |
+          node scripts/fetch-yandex-music.mjs
+
+      - name: Check for changes
+        id: git_check
+        run: |
+          if git diff --quiet src/data/yandex-music.json; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.git_check.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/yandex-music.json
+          git commit -m "chore: update Yandex Music data ($(date -u +'%Y-%m-%d %H:%M:%S UTC'))"
+          git push
