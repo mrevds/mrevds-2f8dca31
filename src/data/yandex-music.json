@@ -1,12 +1,45 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-08T07:14:54.338Z",
+  "fetchedAt": "2026-06-09T06:33:37.161Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "72298512",
+      "title": "眩しくて",
+      "artists": [
+        "クレナズム"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/2355477/f6b06008.a.12419695-1/200x200",
+      "albumTitle": "eyes on you",
+      "albumId": 12419695,
+      "durationMs": 253790
+    },
+    {
+      "id": "40226348",
+      "title": "Selfish",
+      "artists": [
+        "SAINt JHN"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/143117/928e0d1e.a.5222993-1/200x200",
+      "albumTitle": "Collection One",
+      "albumId": 5222993,
+      "durationMs": 234970
+    },
+    {
+      "id": "97241394",
+      "title": "The Best Part of Life",
+      "artists": [
+        "SAINt JHN"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/5417945/035f45af.a.20010182-1/200x200",
+      "albumTitle": "The Best Part of Life",
+      "albumId": 20010182,
+      "durationMs": 196870
+    },
     {
       "id": "130590821",
       "title": "Circadian Rhythm",
@@ -249,7 +282,7 @@
       "artists": [
         "Дима Билан"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/16450533/b5933a77.a.225699-5/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/19035207/b5933a77.a.225699-7/200x200",
       "albumTitle": "Мечтатель",
       "albumId": 225699,
       "durationMs": 217330
@@ -1094,41 +1127,8 @@
       "albumTitle": "С неба падали тысячи птиц",
       "albumId": 7757002,
       "durationMs": 183950
-    },
-    {
-      "id": "47320537",
-      "title": "Chamomile Tea",
-      "artists": [
-        "Chance Thrash"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/149669/fc978e9d.a.6418857-1/200x200",
-      "albumTitle": "Tea Time",
-      "albumId": 6418857,
-      "durationMs": 142330
-    },
-    {
-      "id": "142608974",
-      "title": "WITCHYA",
-      "artists": [
-        "Justin Bieber"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/13043189/599224ae.a.38100481-1/200x200",
-      "albumTitle": "SWAG II",
-      "albumId": 38100481,
-      "durationMs": 163320
-    },
-    {
-      "id": "143465304",
-      "title": "guitar meditations (IV)",
-      "artists": [
-        "Vraell"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14651289/06743ecd.a.38442353-1/200x200",
-      "albumTitle": "guitar meditations",
-      "albumId": 38442353,
-      "durationMs": 201590
     }
   ],
-  "likedTracksCount": 1314,
-  "totalLikedTracks": 1071
+  "likedTracksCount": 1317,
+  "totalLikedTracks": 1074
 }
