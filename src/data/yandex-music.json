@@ -1,12 +1,57 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-09T06:33:37.161Z",
+  "fetchedAt": "2026-06-10T06:50:01.848Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "151736099",
+      "title": "Мы сделаем это",
+      "artists": [
+        "SLAVA MARLOW",
+        "Sir Soylok"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16464214/10af7343.a.42231800-2/200x200",
+      "albumTitle": "DIXXTAPE",
+      "albumId": 42231800,
+      "durationMs": 155000
+    },
+    {
+      "id": "119063398",
+      "title": "7am in Ohio",
+      "artists": [
+        "Trippie Redd"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/9837520/44ec6e15.a.31325033-1/200x200",
+      "albumTitle": "Saint Michael V2",
+      "albumId": 31325033,
+      "durationMs": 112550
+    },
+    {
+      "id": "150721333",
+      "title": "Может быть",
+      "artists": [
+        "Dima Roux"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/18172800/3375d0f9.a.41782011-1/200x200",
+      "albumTitle": "Может быть",
+      "albumId": 41782011,
+      "durationMs": 113200
+    },
+    {
+      "id": "63437709",
+      "title": "I'm Sorry",
+      "artists": [
+        "Lil Uzi Vert"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14304155/a593554c.a.10152182-6/200x200",
+      "albumTitle": "Eternal Atake  - LUV vs. The World 2",
+      "albumId": 10152182,
+      "durationMs": 211880
+    },
     {
       "id": "72298512",
       "title": "眩しくて",
@@ -193,7 +238,7 @@
         "Дос-Мұқасан"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/16154377/8d70774e.a.6864008-2/200x200",
-      "albumTitle": "Жыр жазамын жүрегімнен",
+      "albumTitle": "Жыр жазамын жүр��гімнен",
       "albumId": 6864008,
       "durationMs": 250980
     },
@@ -274,7 +319,7 @@
       "cover": "https://avatars.yandex.net/get-music-content/17740720/b1714222.a.41442025-1/200x200",
       "albumTitle": "STORM",
       "albumId": 41442025,
-      "durationMs": 173430
+      "durationMs": 173380
     },
     {
       "id": "29146038",
@@ -1083,52 +1128,8 @@
       "albumTitle": "afterglow",
       "albumId": 40203050,
       "durationMs": 96600
-    },
-    {
-      "id": "148906044",
-      "title": "SPILL YOUR TIME - Live from Charbo",
-      "artists": [
-        "KatzPascale"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17681324/ca428de0.a.40983914-1/200x200",
-      "albumTitle": "SPILL YOUR TIME - Live from Charbo",
-      "albumId": 40983914,
-      "durationMs": 328120
-    },
-    {
-      "id": "145450281",
-      "title": "i miss your warm hands",
-      "artists": [
-        "i don't like glasses"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17722696/fbbba7e6.a.39345238-1/200x200",
-      "albumTitle": "i miss your warm hands",
-      "albumId": 39345238,
-      "durationMs": 131730
-    },
-    {
-      "id": "143463278",
-      "title": "guitar meditations (II)",
-      "artists": [
-        "Vraell"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14651289/06743ecd.a.38442353-1/200x200",
-      "albumTitle": "guitar meditations",
-      "albumId": 38442353,
-      "durationMs": 205410
-    },
-    {
-      "id": "54019214",
-      "title": "На всю жизнь",
-      "artists": [
-        "противотень"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/95061/0e8300fb.a.7757002-1/200x200",
-      "albumTitle": "С неба падали тысячи птиц",
-      "albumId": 7757002,
-      "durationMs": 183950
     }
   ],
-  "likedTracksCount": 1317,
-  "totalLikedTracks": 1074
+  "likedTracksCount": 1321,
+  "totalLikedTracks": 1078
 }
