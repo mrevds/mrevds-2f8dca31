@@ -1,12 +1,34 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-10T06:50:01.848Z",
+  "fetchedAt": "2026-06-11T07:16:23.228Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "148124122",
+      "title": "Ты :D <3",
+      "artists": [
+        "YN WIGGA"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20031403/154f1250.a.40620769-1/200x200",
+      "albumTitle": "Не Люблю Любить",
+      "albumId": 40620769,
+      "durationMs": 132850
+    },
+    {
+      "id": "142481170",
+      "title": "No Ordinary Love",
+      "artists": [
+        "Sade"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16450533/35597c4e.a.38048154-1/200x200",
+      "albumTitle": "The Best of Sade",
+      "albumId": 38048154,
+      "durationMs": 440710
+    },
     {
       "id": "151736099",
       "title": "Мы сделаем это",
@@ -238,7 +260,7 @@
         "Дос-Мұқасан"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/16154377/8d70774e.a.6864008-2/200x200",
-      "albumTitle": "Жыр жазамын жүр��гімнен",
+      "albumTitle": "Жыр жазамын жүрегімнен",
       "albumId": 6864008,
       "durationMs": 250980
     },
@@ -1104,32 +1126,8 @@
       "albumTitle": "недостоин",
       "albumId": 40868780,
       "durationMs": 178800
-    },
-    {
-      "id": "118465149",
-      "title": "Еле дыша",
-      "artists": [
-        "Три дня дождя",
-        "LYRIQ"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17722696/81f99638.a.27856013-1/200x200",
-      "albumTitle": "melancholia",
-      "albumId": 27856013,
-      "durationMs": 189810
-    },
-    {
-      "id": "132685423",
-      "title": "childhood memories",
-      "artists": [
-        "seen twice",
-        "Money Flip"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17655650/9624d766.a.40203050-2/200x200",
-      "albumTitle": "afterglow",
-      "albumId": 40203050,
-      "durationMs": 96600
     }
   ],
-  "likedTracksCount": 1321,
-  "totalLikedTracks": 1078
+  "likedTracksCount": 1323,
+  "totalLikedTracks": 1079
 }
