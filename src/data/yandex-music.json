@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-11T07:16:23.228Z",
+  "fetchedAt": "2026-06-12T07:06:15.592Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -338,9 +338,9 @@
         "Gener8ion",
         "Yung Lean"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/17740720/b1714222.a.41442025-1/200x200",
-      "albumTitle": "STORM",
-      "albumId": 41442025,
+      "cover": "https://avatars.yandex.net/get-music-content/17655650/d3cf0411.a.42534838-1/200x200",
+      "albumTitle": "Love & Tears",
+      "albumId": 42534838,
       "durationMs": 173380
     },
     {
@@ -1006,7 +1006,7 @@
     },
     {
       "id": "54019211",
-      "title": "Прошлое смотрит на меня мёртвыми глазами",
+      "title": "Прошлое смотрит на меня мёртвыми глазам��",
       "artists": [
         "противотень"
       ],
@@ -1129,5 +1129,5 @@
     }
   ],
   "likedTracksCount": 1323,
-  "totalLikedTracks": 1079
+  "totalLikedTracks": 1080
 }
