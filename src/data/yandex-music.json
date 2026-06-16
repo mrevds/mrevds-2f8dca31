@@ -1,12 +1,57 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-15T08:38:15.633Z",
+  "fetchedAt": "2026-06-16T08:31:03.471Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "117340063",
+      "title": "Backstreet Girl",
+      "artists": [
+        "d4vd"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/13043189/e6591002.a.38405889-1/200x200",
+      "albumTitle": "Petals to Thorns",
+      "albumId": 38405889,
+      "durationMs": 250490
+    },
+    {
+      "id": "115180548",
+      "title": "Patience",
+      "artists": [
+        "Lil Uzi Vert",
+        "Don Toliver"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14270105/2dee0b41.a.26467955-6/200x200",
+      "albumTitle": "Pink Tape",
+      "albumId": 26467955,
+      "durationMs": 262420
+    },
+    {
+      "id": "146824641",
+      "title": "вставааай",
+      "artists": [
+        "glow of shame"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17674835/4bb41c98.a.40026870-2/200x200",
+      "albumTitle": "вставааай",
+      "albumId": 40026870,
+      "durationMs": 267560
+    },
+    {
+      "id": "2627529",
+      "title": "Come See Me",
+      "artists": [
+        "112"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/38044/97b95d76.a.272959-1/200x200",
+      "albumTitle": "112",
+      "albumId": 272959,
+      "durationMs": 265760
+    },
     {
       "id": "148124122",
       "title": "Ты :D <3",
@@ -1081,53 +1126,8 @@
       "albumTitle": "Things",
       "albumId": 32393030,
       "durationMs": 132040
-    },
-    {
-      "id": "148448324",
-      "title": "КАССЕТЫ",
-      "artists": [
-        "LYRIQ"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/15406468/91a00ea1.a.40767822-1/200x200",
-      "albumTitle": "КАССЕТЫ",
-      "albumId": 40767822,
-      "durationMs": 177600
-    },
-    {
-      "id": "147923912",
-      "title": "Мне не нужны",
-      "artists": [
-        "MIURA",
-        "Rendow"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16334817/f4d77e8b.a.40534744-2/200x200",
-      "albumTitle": "Мне не нужны",
-      "albumId": 40534744,
-      "durationMs": 167600
-    },
-    {
-      "id": "147966657",
-      "title": "Отпусти",
-      "artists": [
-        "ismie"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17659805/9b59f4fc.a.40554036-2/200x200",
-      "albumTitle": "Отпусти",
-      "albumId": 40554036,
-      "durationMs": 209220
-    },
-    {
-      "id": "148663198",
-      "title": "недостоин",
-      "artists": [
-        "XKELN"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/18172800/a6556f79.a.40868780-1/200x200",
-      "albumTitle": "недостоин",
-      "albumId": 40868780,
-      "durationMs": 178800
     }
   ],
-  "likedTracksCount": 1323,
-  "totalLikedTracks": 1081
+  "likedTracksCount": 1327,
+  "totalLikedTracks": 1086
 }
