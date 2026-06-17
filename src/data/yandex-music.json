@@ -1,12 +1,34 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-16T08:31:03.471Z",
+  "fetchedAt": "2026-06-17T07:36:33.343Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "107108838",
+      "title": "Romantic Homicide",
+      "artists": [
+        "d4vd"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/13043189/e6591002.a.38405889-1/200x200",
+      "albumTitle": "Petals to Thorns",
+      "albumId": 38405889,
+      "durationMs": 132630
+    },
+    {
+      "id": "139888220",
+      "title": "all eyes on me",
+      "artists": [
+        "Echstacy"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14439424/f899d541.a.36938481-1/200x200",
+      "albumTitle": "ill intent",
+      "albumId": 36938481,
+      "durationMs": 103460
+    },
     {
       "id": "117340063",
       "title": "Backstreet Girl",
@@ -1015,18 +1037,6 @@
       "durationMs": 102090
     },
     {
-      "id": "140944609",
-      "title": "кружит",
-      "artists": [
-        "rubchanskii",
-        "кража банкнот"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/15042045/c2569c81.a.37385228-1/200x200",
-      "albumTitle": "кружит",
-      "albumId": 37385228,
-      "durationMs": 165940
-    },
-    {
       "id": "149309806",
       "title": "CORTISOL",
       "artists": [
@@ -1115,19 +1125,8 @@
       "albumTitle": "MYLONCORE ERA",
       "albumId": 40450344,
       "durationMs": 93330
-    },
-    {
-      "id": "128879150",
-      "title": "Things",
-      "artists": [
-        "Aftertheparty"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/13449652/ffd4afb4.a.32393030-1/200x200",
-      "albumTitle": "Things",
-      "albumId": 32393030,
-      "durationMs": 132040
     }
   ],
-  "likedTracksCount": 1327,
+  "likedTracksCount": 1329,
   "totalLikedTracks": 1086
 }
