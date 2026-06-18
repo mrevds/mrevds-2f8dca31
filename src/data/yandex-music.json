@@ -1,12 +1,46 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-17T07:36:33.343Z",
+  "fetchedAt": "2026-06-18T07:17:44.916Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "142752328",
+      "title": "worry",
+      "artists": [
+        "LONOWN",
+        "Riserayss"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/15682289/45dd4e8c.a.38155818-1/200x200",
+      "albumTitle": "worry",
+      "albumId": 38155818,
+      "durationMs": 201900
+    },
+    {
+      "id": "150320859",
+      "title": "100 причин",
+      "artists": [
+        "XKELN"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/18132539/2895c07b.a.41612797-1/200x200",
+      "albumTitle": "100 причин",
+      "albumId": 41612797,
+      "durationMs": 201410
+    },
+    {
+      "id": "151575096",
+      "title": "КАК МЫ",
+      "artists": [
+        "LIL KRYSTALLL"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20031403/f450233b.a.42164383-1/200x200",
+      "albumTitle": "КАК МЫ",
+      "albumId": 42164383,
+      "durationMs": 135000
+    },
     {
       "id": "107108838",
       "title": "Romantic Homicide",
@@ -1091,42 +1125,8 @@
       "albumTitle": "ФУТУРОАРХАИКА",
       "albumId": 34219537,
       "durationMs": 116570
-    },
-    {
-      "id": "131943774",
-      "title": "Вечно Молодой",
-      "artists": [
-        "Три дня дождя"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14299670/fa91abd1.a.33611734-1/200x200",
-      "albumTitle": "Три дня до вечности",
-      "albumId": 33611734,
-      "durationMs": 209680
-    },
-    {
-      "id": "8265744",
-      "title": "Electric Tears",
-      "artists": [
-        "Buckethead"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/32236/f08982c7.a.862783-1/200x200",
-      "albumTitle": "Electric Tears",
-      "albumId": 862783,
-      "durationMs": 332050
-    },
-    {
-      "id": "147729993",
-      "title": "РАЙ",
-      "artists": [
-        "XKELN",
-        "StarLineMusic"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16334817/db0adeaa.a.40450344-1/200x200",
-      "albumTitle": "MYLONCORE ERA",
-      "albumId": 40450344,
-      "durationMs": 93330
     }
   ],
-  "likedTracksCount": 1329,
-  "totalLikedTracks": 1086
+  "likedTracksCount": 1332,
+  "totalLikedTracks": 1089
 }
