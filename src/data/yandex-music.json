@@ -1,12 +1,34 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-18T07:17:44.916Z",
+  "fetchedAt": "2026-06-19T07:41:18.425Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "152095723",
+      "title": "athens",
+      "artists": [
+        "deathmarried"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20322863/ac019e25.a.42384413-1/200x200",
+      "albumTitle": "athens",
+      "albumId": 42384413,
+      "durationMs": 124150
+    },
+    {
+      "id": "151693271",
+      "title": "SS26",
+      "artists": [
+        "Charli XCX"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17674835/c7a3ee65.a.42214069-1/200x200",
+      "albumTitle": "SS26",
+      "albumId": 42214069,
+      "durationMs": 167670
+    },
     {
       "id": "142752328",
       "title": "worry",
@@ -1103,30 +1125,8 @@
       "albumTitle": "С неба падали тысячи птиц",
       "albumId": 7757002,
       "durationMs": 177740
-    },
-    {
-      "id": "149254008",
-      "title": "they come and go",
-      "artists": [
-        "i don't like glasses"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17730916/1e040332.a.41145713-1/200x200",
-      "albumTitle": "they come and go",
-      "albumId": 41145713,
-      "durationMs": 93590
-    },
-    {
-      "id": "133438622",
-      "title": "Я+СВАЯЛ",
-      "artists": [
-        "Boulevard Depo"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14439424/dc6c8ca6.a.34219537-2/200x200",
-      "albumTitle": "ФУТУРОАРХАИКА",
-      "albumId": 34219537,
-      "durationMs": 116570
     }
   ],
-  "likedTracksCount": 1332,
-  "totalLikedTracks": 1089
+  "likedTracksCount": 1334,
+  "totalLikedTracks": 1091
 }
