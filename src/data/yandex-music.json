@@ -1,12 +1,23 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-19T07:41:18.425Z",
+  "fetchedAt": "2026-06-20T06:46:40.274Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "147728922",
+      "title": "Привет, спишь?",
+      "artists": [
+        "TEY DI"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17659805/8b1f5739.a.40449733-1/200x200",
+      "albumTitle": "Привет, спишь?",
+      "albumId": 40449733,
+      "durationMs": 105360
+    },
     {
       "id": "152095723",
       "title": "athens",
@@ -1114,19 +1125,8 @@
       "albumTitle": "с тобой",
       "albumId": 38045485,
       "durationMs": 111040
-    },
-    {
-      "id": "54019211",
-      "title": "Прошлое смотрит на меня мёртвыми глазами",
-      "artists": [
-        "противотень"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/95061/0e8300fb.a.7757002-1/200x200",
-      "albumTitle": "С неба падали тысячи птиц",
-      "albumId": 7757002,
-      "durationMs": 177740
     }
   ],
-  "likedTracksCount": 1334,
-  "totalLikedTracks": 1091
+  "likedTracksCount": 1335,
+  "totalLikedTracks": 1092
 }
