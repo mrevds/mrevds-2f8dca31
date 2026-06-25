@@ -1,12 +1,58 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-24T06:29:55.278Z",
+  "fetchedAt": "2026-06-25T06:32:39.139Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "254274",
+      "title": "Wahdon",
+      "artists": [
+        "Fairuz"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/38044/762acf71.a.26570-1/200x200",
+      "albumTitle": "Fairuz Chillout Classics",
+      "albumId": 26570,
+      "durationMs": 374570
+    },
+    {
+      "id": "138644342",
+      "title": "At The Beach, In Every Life",
+      "artists": [
+        "Gigi Perez"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/12554677/bc3e52b2.a.37546457-2/200x200",
+      "albumTitle": "At The Beach, In Every Life",
+      "albumId": 37546457,
+      "durationMs": 237800
+    },
+    {
+      "id": "129259409",
+      "title": "дура",
+      "artists": [
+        "Fandape"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/9868087/d6be3af3.a.32528775-1/200x200",
+      "albumTitle": "дура",
+      "albumId": 32528775,
+      "durationMs": 151870
+    },
+    {
+      "id": "152653249",
+      "title": "Gut Genug (mit Blumengarten & Shirin David)",
+      "artists": [
+        "KitschKrieg",
+        "Blumengarten",
+        "Shirin David"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20322863/cec7b927.a.42632601-1/200x200",
+      "albumTitle": "Gut Genug (mit Blumengarten & Shirin David)",
+      "albumId": 42632601,
+      "durationMs": 188910
+    },
     {
       "id": "147728922",
       "title": "Привет, спишь?",
@@ -472,7 +518,7 @@
         "Gener8ion",
         "Yung Lean"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/17655650/d3cf0411.a.42534838-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/20840698/d3cf0411.a.42534838-2/200x200",
       "albumTitle": "Love & Tears",
       "albumId": 42534838,
       "durationMs": 173380
@@ -1078,55 +1124,8 @@
       "albumTitle": "LAST ONE",
       "albumId": 23812350,
       "durationMs": 168370
-    },
-    {
-      "id": "140763522",
-      "title": "Целуй 2.0",
-      "artists": [
-        "NYUSHA",
-        "Rakhim",
-        "ayv1o"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14304155/bc8673f8.a.37307305-1/200x200",
-      "albumTitle": "Целуй 2.0",
-      "albumId": 37307305,
-      "durationMs": 115300
-    },
-    {
-      "id": "116718577",
-      "title": "ПРЯМО ЗА ТОБОЙ",
-      "artists": [
-        "SALUKI"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16616584/249b6af7.a.27105482-5/200x200",
-      "albumTitle": "ПРЯМО ЗА ТОБОЙ",
-      "albumId": 27105482,
-      "durationMs": 102090
-    },
-    {
-      "id": "149309806",
-      "title": "CORTISOL",
-      "artists": [
-        "SALUKI"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/18172800/91d1d659.a.41172630-2/200x200",
-      "albumTitle": "CORTISOL",
-      "albumId": 41172630,
-      "durationMs": 151180
-    },
-    {
-      "id": "142475756",
-      "title": "с тобой",
-      "artists": [
-        "kouru",
-        "angeveils"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14304155/8d7087b1.a.38045485-1/200x200",
-      "albumTitle": "с тобой",
-      "albumId": 38045485,
-      "durationMs": 111040
     }
   ],
-  "likedTracksCount": 1335,
-  "totalLikedTracks": 1092
+  "likedTracksCount": 1341,
+  "totalLikedTracks": 1096
 }
