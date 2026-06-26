@@ -1,12 +1,24 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-25T06:32:39.139Z",
+  "fetchedAt": "2026-06-26T06:36:30.837Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "152357964",
+      "title": "CONSTANTLY",
+      "artists": [
+        "Tiffany Day",
+        "slayr"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17649213/a3a4f618.a.42510395-4/200x200",
+      "albumTitle": "CONSTANTLY",
+      "albumId": 42510395,
+      "durationMs": 182360
+    },
     {
       "id": "254274",
       "title": "Wahdon",
@@ -1113,19 +1125,8 @@
       "albumTitle": "you said",
       "albumId": 39532077,
       "durationMs": 121250
-    },
-    {
-      "id": "108127255",
-      "title": "Ночь, Такси, Заметки",
-      "artists": [
-        "MORGENSHTERN"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17784780/d2e89c8c.a.23812350-2/200x200",
-      "albumTitle": "LAST ONE",
-      "albumId": 23812350,
-      "durationMs": 168370
     }
   ],
-  "likedTracksCount": 1341,
-  "totalLikedTracks": 1096
+  "likedTracksCount": 1342,
+  "totalLikedTracks": 1097
 }
