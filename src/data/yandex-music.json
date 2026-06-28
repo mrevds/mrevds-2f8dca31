@@ -1,12 +1,35 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-27T06:08:56.256Z",
+  "fetchedAt": "2026-06-28T06:44:38.261Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "149151002",
+      "title": "meaningful love",
+      "artists": [
+        "Silo",
+        "Steven Cranberry"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16485602/c9e63a0a.a.41304078-1/200x200",
+      "albumTitle": "INLOVE",
+      "albumId": 41304078,
+      "durationMs": 291140
+    },
+    {
+      "id": "147698080",
+      "title": "START OVER",
+      "artists": [
+        "Tiffany Day"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
+      "albumTitle": "HALO",
+      "albumId": 40436467,
+      "durationMs": 170380
+    },
     {
       "id": "152357964",
       "title": "CONSTANTLY",
@@ -1102,31 +1125,8 @@
       "albumTitle": "BEACH ROCK HOTEL",
       "albumId": 31807414,
       "durationMs": 96090
-    },
-    {
-      "id": "144449042",
-      "title": "108 FM",
-      "artists": [
-        "Biicla",
-        "FEDUK"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/15134515/22780127.a.38865969-2/200x200",
-      "albumTitle": "БИКЛА (1)",
-      "albumId": 38865969,
-      "durationMs": 130740
-    },
-    {
-      "id": "145796560",
-      "title": "you said",
-      "artists": [
-        "Thiago Sub"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14651289/ac4c9474.a.39532077-1/200x200",
-      "albumTitle": "you said",
-      "albumId": 39532077,
-      "durationMs": 121250
     }
   ],
-  "likedTracksCount": 1343,
-  "totalLikedTracks": 1096
+  "likedTracksCount": 1345,
+  "totalLikedTracks": 1098
 }
