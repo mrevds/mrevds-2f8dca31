@@ -1,12 +1,23 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-28T06:44:38.261Z",
+  "fetchedAt": "2026-06-29T07:13:43.965Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "99508944",
+      "title": "BROKEN PLATES",
+      "artists": [
+        "Tiffany Day"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/5696151/a1b7aa7c.a.20794640-1/200x200",
+      "albumTitle": "THE RENEWAL PROJECT",
+      "albumId": 20794640,
+      "durationMs": 177900
+    },
     {
       "id": "149151002",
       "title": "meaningful love",
@@ -1114,19 +1125,8 @@
       "albumTitle": "BURN IT",
       "albumId": 41005390,
       "durationMs": 175140
-    },
-    {
-      "id": "127422739",
-      "title": "HEAVEN IND.",
-      "artists": [
-        "SALUKI"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17784780/576d39ce.a.31807414-6/200x200",
-      "albumTitle": "BEACH ROCK HOTEL",
-      "albumId": 31807414,
-      "durationMs": 96090
     }
   ],
-  "likedTracksCount": 1345,
-  "totalLikedTracks": 1098
+  "likedTracksCount": 1346,
+  "totalLikedTracks": 1099
 }
