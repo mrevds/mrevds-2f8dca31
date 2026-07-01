@@ -1,12 +1,24 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-30T06:39:30.530Z",
+  "fetchedAt": "2026-07-01T06:52:40.897Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "153041831",
+      "title": "На бумере",
+      "artists": [
+        "Aarne",
+        "Платина"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/19999910/6c6b8bd6.a.42806725-1/200x200",
+      "albumTitle": "На бумере",
+      "albumId": 42806725,
+      "durationMs": 153600
+    },
     {
       "id": "150262315",
       "title": "When I'm Not Nice",
@@ -1114,19 +1126,8 @@
       "albumTitle": "«Пятьдесят оттенков серого»",
       "albumId": 2428590,
       "durationMs": 252220
-    },
-    {
-      "id": "113746188",
-      "title": "Tek Sen",
-      "artists": [
-        "Rusha"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10092855/8ce483e4.a.25833687-2/200x200",
-      "albumTitle": "Tek Sen",
-      "albumId": 25833687,
-      "durationMs": 197450
     }
   ],
-  "likedTracksCount": 1348,
+  "likedTracksCount": 1351,
   "totalLikedTracks": 1101
 }
