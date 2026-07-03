@@ -1,12 +1,128 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-02T06:23:39.834Z",
+  "fetchedAt": "2026-07-03T06:09:53.840Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "136252536",
+      "title": "you know you like it",
+      "artists": [
+        "molvy",
+        "nocap beats"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14707562/ef8026a0.a.35460176-1/200x200",
+      "albumTitle": "you know you like it",
+      "albumId": 35460176,
+      "durationMs": 145600
+    },
+    {
+      "id": "144548653",
+      "title": "AMERICAN GIRL",
+      "artists": [
+        "Tiffany Day"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
+      "albumTitle": "HALO",
+      "albumId": 40436467,
+      "durationMs": 176360
+    },
+    {
+      "id": "146188309",
+      "title": "Think About Us",
+      "artists": [
+        "Sonny Fodera",
+        "D.O.D",
+        "Poppy Baskcomb"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16406615/b8685cf4.a.39730561-1/200x200",
+      "albumTitle": "Think About Us",
+      "albumId": 39730561,
+      "durationMs": 178210
+    },
+    {
+      "id": "103039910",
+      "title": "Afterlife",
+      "artists": [
+        "Nu Aspect",
+        "Jewels",
+        "Magnus"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/6214856/972c8286.a.21971254-1/200x200",
+      "albumTitle": "Afterlife",
+      "albumId": 21971254,
+      "durationMs": 192120
+    },
+    {
+      "id": "43658938",
+      "title": "Liverpool Street In The Rain",
+      "artists": [
+        "Mall Grab"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20608190/3082a3bf.a.19236312-4/200x200",
+      "albumTitle": "How The Dogs Chill, Vol.1",
+      "albumId": 19236312,
+      "durationMs": 332430
+    },
+    {
+      "id": "93585734",
+      "title": "EMPTY XXX",
+      "artists": [
+        "Mezer"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/5234929/195d0b9b.a.18869760-1/200x200",
+      "albumTitle": "ORGAN BOYS CLUB",
+      "albumId": 18869760,
+      "durationMs": 242810
+    },
+    {
+      "id": "135244893",
+      "title": "The Days",
+      "artists": [
+        "Velours"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/13529784/88f51efc.a.35001868-1/200x200",
+      "albumTitle": "The Days",
+      "albumId": 35001868,
+      "durationMs": 233260
+    },
+    {
+      "id": "132996415",
+      "title": "Need it",
+      "artists": [
+        "Gapto Fobia"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/13911897/33a322f9.a.34042089-1/200x200",
+      "albumTitle": "VA 002",
+      "albumId": 34042089,
+      "durationMs": 165330
+    },
+    {
+      "id": "138168581",
+      "title": "Forever",
+      "artists": [
+        "Zulan"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14715139/d1ce182d.a.36213974-1/200x200",
+      "albumTitle": "Forever",
+      "albumId": 36213974,
+      "durationMs": 159120
+    },
+    {
+      "id": "145321823",
+      "title": "WILDFIRE",
+      "artists": [
+        "Fuzion",
+        "Zeli"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16508792/8c5ac0df.a.39268146-1/200x200",
+      "albumTitle": "WILDFIRE",
+      "albumId": 39268146,
+      "durationMs": 177110
+    },
     {
       "id": "153041831",
       "title": "На бумере",
@@ -1015,119 +1131,8 @@
       "albumTitle": "Starboy",
       "albumId": 29621442,
       "durationMs": 223290
-    },
-    {
-      "id": "123873167",
-      "title": "brown eyes*",
-      "artists": [
-        "re6ce"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10918712/76d4930c.a.31440486-1/200x200",
-      "albumTitle": "grey europe",
-      "albumId": 31440486,
-      "durationMs": 163340
-    },
-    {
-      "id": "137944008",
-      "title": "Мен деп ойла (1984)",
-      "artists": [
-        "Айжан Нұрмағамбетова"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14707562/d8f68618.a.36119488-1/200x200",
-      "albumTitle": "Мен деп ойла",
-      "albumId": 36119488,
-      "durationMs": 247060
-    },
-    {
-      "id": "119456551",
-      "title": "JANYM",
-      "artists": [
-        "MINHWA",
-        "made1rg"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10139807/ba8b2ba8.a.28299186-1/200x200",
-      "albumTitle": "JANYM",
-      "albumId": 28299186,
-      "durationMs": 148500
-    },
-    {
-      "id": "127422718",
-      "title": "ГДЕ БЫ Я НИ ЗАСНУЛ",
-      "artists": [
-        "SALUKI"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17784780/576d39ce.a.31807414-6/200x200",
-      "albumTitle": "BEACH ROCK HOTEL",
-      "albumId": 31807414,
-      "durationMs": 105520
-    },
-    {
-      "id": "24948472",
-      "title": "Acquainted",
-      "artists": [
-        "The Weeknd"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9867886/dd4b25cc.a.29644890-2/200x200",
-      "albumTitle": "The Highlights",
-      "albumId": 29644890,
-      "durationMs": 348850
-    },
-    {
-      "id": "135698139",
-      "title": "Baptized In Fear",
-      "artists": [
-        "The Weeknd"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/20031403/4557faab.a.35219103-6/200x200",
-      "albumTitle": "Hurry Up Tomorrow",
-      "albumId": 35219103,
-      "durationMs": 232170
-    },
-    {
-      "id": "108864305",
-      "title": "Я Потратил Ночь На Поиск",
-      "artists": [
-        "PHARAOH"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16464214/c7eb9ea1.a.24137654-3/200x200",
-      "albumTitle": "PHILARMONIA",
-      "albumId": 24137654,
-      "durationMs": 159550
-    },
-    {
-      "id": "63883258",
-      "title": "Repeat After Me (Interlude)",
-      "artists": [
-        "The Weeknd"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10641165/788bd384.a.29678799-1/200x200",
-      "albumTitle": "After Hours",
-      "albumId": 29678799,
-      "durationMs": 195810
-    },
-    {
-      "id": "31411989",
-      "title": "False Alarm",
-      "artists": [
-        "The Weeknd"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10139807/ca59a845.a.29621442-1/200x200",
-      "albumTitle": "Starboy",
-      "albumId": 29621442,
-      "durationMs": 220300
-    },
-    {
-      "id": "21243485",
-      "title": "Earned It",
-      "artists": [
-        "The Weeknd"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/2427101/7b7160f8.a.2428590-2/200x200",
-      "albumTitle": "«Пятьдесят оттенков серого»",
-      "albumId": 2428590,
-      "durationMs": 252220
     }
   ],
-  "likedTracksCount": 1351,
-  "totalLikedTracks": 1101
+  "likedTracksCount": 1361,
+  "totalLikedTracks": 1111
 }
