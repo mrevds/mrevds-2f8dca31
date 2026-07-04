@@ -1,12 +1,47 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-03T06:09:53.840Z",
+  "fetchedAt": "2026-07-04T05:59:54.413Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "147698079",
+      "title": "NO LUCK",
+      "artists": [
+        "Tiffany Day"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
+      "albumTitle": "HALO",
+      "albumId": 40436467,
+      "durationMs": 188930
+    },
+    {
+      "id": "149905673",
+      "title": "show me how",
+      "artists": [
+        "Ecchi.mp4"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/19035207/6b48e0a0.a.41426195-1/200x200",
+      "albumTitle": "show me how",
+      "albumId": 41426195,
+      "durationMs": 171670
+    },
+    {
+      "id": "138135740",
+      "title": "with you",
+      "artists": [
+        "DJ Anemia",
+        "Crier",
+        "sixnite"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/12554677/63795858.a.36199208-1/200x200",
+      "albumTitle": "with you",
+      "albumId": 36199208,
+      "durationMs": 163630
+    },
     {
       "id": "136252536",
       "title": "you know you like it",
@@ -1098,41 +1133,8 @@
       "albumTitle": "Ghetto Lenny's Love Songs",
       "albumId": 29610112,
       "durationMs": 196300
-    },
-    {
-      "id": "108549577",
-      "title": "SORRY I'M WORKING ON THE WILD EA$T",
-      "artists": [
-        "SALUKI"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/5853241/e7cade14.a.23955879-1/200x200",
-      "albumTitle": "SORRY I'M WORKING ON THE WILD EA$T",
-      "albumId": 23955879,
-      "durationMs": 111720
-    },
-    {
-      "id": "29145997",
-      "title": "Lady",
-      "artists": [
-        "Дима Билан"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/15406468/a9ebd083.a.204486-5/200x200",
-      "albumTitle": "Believe",
-      "albumId": 204486,
-      "durationMs": 224100
-    },
-    {
-      "id": "32435587",
-      "title": "Love To Lay",
-      "artists": [
-        "The Weeknd"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10139807/ca59a845.a.29621442-1/200x200",
-      "albumTitle": "Starboy",
-      "albumId": 29621442,
-      "durationMs": 223290
     }
   ],
-  "likedTracksCount": 1361,
-  "totalLikedTracks": 1111
+  "likedTracksCount": 1364,
+  "totalLikedTracks": 1114
 }
