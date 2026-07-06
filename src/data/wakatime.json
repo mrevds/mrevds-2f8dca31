@@ -1,40 +1,40 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-05T05:56:23.418Z",
+  "fetchedAt": "2026-07-06T06:19:46.150Z",
   "range": "last_7_days",
-  "humanReadableTotal": "32 hrs 4 mins",
-  "humanReadableDailyAverage": "4 hrs 34 mins",
-  "totalSeconds": 115451.249,
-  "dailyAverage": 16493,
+  "humanReadableTotal": "32 hrs 15 mins",
+  "humanReadableDailyAverage": "4 hrs 36 mins",
+  "totalSeconds": 116112.023,
+  "dailyAverage": 16587,
   "languages": [
     {
       "name": "Go",
-      "percent": 68.85,
-      "text": "22 hrs 26 mins"
+      "percent": 71.08,
+      "text": "23 hrs 18 mins"
     },
     {
       "name": "Java",
-      "percent": 14.58,
-      "text": "4 hrs 45 mins"
+      "percent": 12.44,
+      "text": "4 hrs 4 mins"
     },
     {
       "name": "SQL",
-      "percent": 10.4,
+      "percent": 10.34,
       "text": "3 hrs 23 mins"
     },
     {
       "name": "Bash",
-      "percent": 2.72,
+      "percent": 2.7,
       "text": "53 mins"
     },
     {
       "name": "Other",
-      "percent": 1.64,
+      "percent": 1.63,
       "text": "32 mins"
     },
     {
       "name": "YAML",
-      "percent": 0.98,
+      "percent": 0.97,
       "text": "19 mins"
     },
     {
@@ -56,17 +56,17 @@
   "editors": [
     {
       "name": "VS Code",
-      "percent": 76.18,
-      "text": "24 hrs 50 mins"
+      "percent": 78.37,
+      "text": "25 hrs 41 mins"
     },
     {
       "name": "IntelliJ IDEA",
-      "percent": 15.24,
-      "text": "4 hrs 58 mins"
+      "percent": 13.09,
+      "text": "4 hrs 17 mins"
     },
     {
       "name": "DataGrip",
-      "percent": 8.18,
+      "percent": 8.14,
       "text": "2 hrs 40 mins"
     },
     {
@@ -79,28 +79,28 @@
     {
       "name": "Linux",
       "percent": 100,
-      "text": "32 hrs 36 mins"
+      "text": "32 hrs 47 mins"
     }
   ],
   "projects": [
     {
       "name": "cbs-backend",
-      "percent": 75.78,
-      "text": "24 hrs 42 mins"
+      "percent": 77.97,
+      "text": "25 hrs 33 mins"
     },
     {
       "name": "java-basic",
-      "percent": 14.58,
-      "text": "4 hrs 45 mins"
+      "percent": 12.44,
+      "text": "4 hrs 4 mins"
     },
     {
       "name": "renesans",
-      "percent": 8.3,
+      "percent": 8.25,
       "text": "2 hrs 42 mins"
     },
     {
       "name": "IntelliJIdea2026.1",
-      "percent": 0.8,
+      "percent": 0.79,
       "text": "15 mins"
     },
     {
@@ -112,13 +112,13 @@
   "categories": [
     {
       "name": "Coding",
-      "percent": 74.36,
-      "text": "24 hrs 14 mins"
+      "percent": 72.49,
+      "text": "23 hrs 46 mins"
     },
     {
       "name": "AI Coding",
-      "percent": 25.63,
-      "text": "8 hrs 21 mins"
+      "percent": 27.5,
+      "text": "9 hrs 1 min"
     },
     {
       "name": "Writing Tests",
@@ -130,22 +130,22 @@
   "allTimeLanguages": [
     {
       "name": "Go",
-      "percent": 61.51,
-      "text": "531 hrs 35 mins"
+      "percent": 61.54,
+      "text": "532 hrs 27 mins"
     },
     {
       "name": "TypeScript",
-      "percent": 12.46,
+      "percent": 12.45,
       "text": "107 hrs 41 mins"
     },
     {
       "name": "PHP",
-      "percent": 5.57,
+      "percent": 5.56,
       "text": "48 hrs 6 mins"
     },
     {
       "name": "SQL",
-      "percent": 3.85,
+      "percent": 3.84,
       "text": "33 hrs 15 mins"
     },
     {
@@ -157,13 +157,13 @@
   "allTimeEditors": [
     {
       "name": "GoLand",
-      "percent": 44.49,
+      "percent": 44.45,
       "text": "384 hrs 31 mins"
     },
     {
       "name": "VS Code",
-      "percent": 34.36,
-      "text": "296 hrs 57 mins"
+      "percent": 34.42,
+      "text": "297 hrs 48 mins"
     },
     {
       "name": "PhpStorm",
@@ -174,14 +174,14 @@
   "allTimeOS": [
     {
       "name": "Linux",
-      "percent": 78.06,
-      "text": "674 hrs 38 mins"
+      "percent": 78.08,
+      "text": "675 hrs 30 mins"
     },
     {
       "name": "Windows",
-      "percent": 21.94,
+      "percent": 21.92,
       "text": "189 hrs 39 mins"
     }
   ],
-  "allTimeTotalSeconds": 3051753.064
+  "allTimeTotalSeconds": 3054842.868
 }
