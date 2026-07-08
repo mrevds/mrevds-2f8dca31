@@ -1,12 +1,95 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-07T06:30:09.549Z",
+  "fetchedAt": "2026-07-08T05:37:07.697Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "138499802",
+      "title": "emphasis",
+      "artists": [
+        "onexice",
+        "fatalshears",
+        "Silecut"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14304155/41c9875e.a.36348032-1/200x200",
+      "albumTitle": "emphasis",
+      "albumId": 36348032,
+      "durationMs": 165640
+    },
+    {
+      "id": "138805875",
+      "title": "Era of us",
+      "artists": [
+        "plaguedoll"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/15142616/24ce1b0b.a.36475583-1/200x200",
+      "albumTitle": "Era of us",
+      "albumId": 36475583,
+      "durationMs": 175130
+    },
+    {
+      "id": "140220658",
+      "title": "jessie",
+      "artists": [
+        "Riserayss",
+        "LONOWN"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/15401259/439a406d.a.37075137-1/200x200",
+      "albumTitle": "jessie",
+      "albumId": 37075137,
+      "durationMs": 218980
+    },
+    {
+      "id": "136629223",
+      "title": "style",
+      "artists": [
+        "2hollis"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14662984/b053f86d.a.35620731-2/200x200",
+      "albumTitle": "style",
+      "albumId": 35620731,
+      "durationMs": 99250
+    },
+    {
+      "id": "125977216",
+      "title": "Angel Dust",
+      "artists": [
+        "akiaura",
+        "LONOWN",
+        "Olya Holiday"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/10918712/2961158e.a.31220772-1/200x200",
+      "albumTitle": "Destruction Age",
+      "albumId": 31220772,
+      "durationMs": 326770
+    },
+    {
+      "id": "144937513",
+      "title": "love kiss (hoodtrap)",
+      "artists": [
+        "1NZZiDENT"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14304155/44e218d9.a.39087408-1/200x200",
+      "albumTitle": "love kiss (hoodtrap)",
+      "albumId": 39087408,
+      "durationMs": 92450
+    },
+    {
+      "id": "150594252",
+      "title": "addiction",
+      "artists": [
+        "LONOWN",
+        "Asenssia"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20322863/1ba03ff8.a.42143119-2/200x200",
+      "albumTitle": "captivation",
+      "albumId": 42143119,
+      "durationMs": 208970
+    },
     {
       "id": "125957560",
       "title": "sister",
@@ -185,7 +268,7 @@
       "title": "На бумере",
       "artists": [
         "Aarne",
-        "Платина"
+        "Пл��тина"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/19999910/6c6b8bd6.a.42806725-1/200x200",
       "albumTitle": "На бумере",
@@ -1055,85 +1138,8 @@
       "albumTitle": "Теряю сон",
       "albumId": 41397179,
       "durationMs": 127810
-    },
-    {
-      "id": "36833885",
-      "title": "Сдавайся",
-      "artists": [
-        "Сергей Лазарев"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/192707/7e78e64f.a.4647697-1/200x200",
-      "albumTitle": "Сдавайся",
-      "albumId": 4647697,
-      "durationMs": 200760
-    },
-    {
-      "id": "113140421",
-      "title": "Интересно",
-      "artists": [
-        "OG Buda"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/7852894/6ca905b5.a.25573804-1/200x200",
-      "albumTitle": "Cкучаю, Но Работаю",
-      "albumId": 25573804,
-      "durationMs": 160000
-    },
-    {
-      "id": "146421225",
-      "title": "Me and Madness",
-      "artists": [
-        "Wale the Sage"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16406615/b0c5dcd9.a.39842992-1/200x200",
-      "albumTitle": "HUG ME AS IF WE WERE TO DIE TOMORROW",
-      "albumId": 39842992,
-      "durationMs": 155800
-    },
-    {
-      "id": "39091503",
-      "title": "Cry Me a River",
-      "artists": [
-        "Leroy Sanchez"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/15142616/2f196acc.a.5031085-4/200x200",
-      "albumTitle": "Cry Me a River",
-      "albumId": 5031085,
-      "durationMs": 213690
-    },
-    {
-      "id": "17197710",
-      "title": "Ты должна рядом быть (Not That Simple)",
-      "artists": [
-        "Дима Билан"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/2806365/f07e0262.a.12487036-1/200x200",
-      "albumTitle": "На берегу неба",
-      "albumId": 12487036,
-      "durationMs": 220170
-    },
-    {
-      "id": "149069294",
-      "title": "worst",
-      "artists": [
-        "Sahxl"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/20031403/43acc1b8.a.41064965-2/200x200",
-      "albumTitle": "worst",
-      "albumId": 41064965,
-      "durationMs": 166880
-    },
-    {
-      "id": "54185813",
-      "title": "ARAWA",
-      "artists": [
-        "Electric Youth"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/143117/d4c6ff12.a.8106738-1/200x200",
-      "albumTitle": "Memory Emotion",
-      "albumId": 8106738,
-      "durationMs": 280880
     }
   ],
-  "likedTracksCount": 1366,
-  "totalLikedTracks": 1116
+  "likedTracksCount": 1373,
+  "totalLikedTracks": 1123
 }
