@@ -1,12 +1,69 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-08T05:37:07.697Z",
+  "fetchedAt": "2026-07-09T06:27:31.192Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "114850596",
+      "title": "Hide Your Heart",
+      "artists": [
+        "WORMSOUL"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16616584/3f4a99b9.a.26314138-2/200x200",
+      "albumTitle": "Obsession",
+      "albumId": 26314138,
+      "durationMs": 131370
+    },
+    {
+      "id": "125517515",
+      "title": "BACKBONE",
+      "artists": [
+        "Notion",
+        "Olivia Rose"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/13663712/024d68a6.a.33043879-2/200x200",
+      "albumTitle": "FORWARDS",
+      "albumId": 33043879,
+      "durationMs": 186220
+    },
+    {
+      "id": "141398050",
+      "title": "Drain",
+      "artists": [
+        "plaguedoll",
+        "bulletrain"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/15682289/2c1bc36f.a.37591173-1/200x200",
+      "albumTitle": "Drain",
+      "albumId": 37591173,
+      "durationMs": 207270
+    },
+    {
+      "id": "84518414",
+      "title": "CLIFF JUMP",
+      "artists": [
+        "Charles the Emperor"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/4796762/86ec119e.a.16030630-1/200x200",
+      "albumTitle": "FIELD TRIP",
+      "albumId": 16030630,
+      "durationMs": 161700
+    },
+    {
+      "id": "151403120",
+      "title": "New Bestie",
+      "artists": [
+        "Drake"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17722696/057e329e.a.42095264-1/200x200",
+      "albumTitle": "MAID OF HONOUR",
+      "albumId": 42095264,
+      "durationMs": 259860
+    },
     {
       "id": "138499802",
       "title": "emphasis",
@@ -268,7 +325,7 @@
       "title": "На бумере",
       "artists": [
         "Aarne",
-        "Пл��тина"
+        "Платина"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/19999910/6c6b8bd6.a.42806725-1/200x200",
       "albumTitle": "На бумере",
@@ -1083,63 +1140,8 @@
       "albumTitle": "Túımedaq",
       "albumId": 12937373,
       "durationMs": 172020
-    },
-    {
-      "id": "113122179",
-      "title": "Nege Bilmedim?",
-      "artists": [
-        "MEREY"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/8871869/d07b4794.a.25565679-1/200x200",
-      "albumTitle": "Nege Bilmedim?",
-      "albumId": 25565679,
-      "durationMs": 232660
-    },
-    {
-      "id": "120045532",
-      "title": "seniñ janyñda ^-^",
-      "artists": [
-        "Ayau"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9837405/0f056e26.a.28551259-1/200x200",
-      "albumTitle": "LEXUS x ЗК",
-      "albumId": 28551259,
-      "durationMs": 146930
-    },
-    {
-      "id": "29146009",
-      "title": "Это была любовь",
-      "artists": [
-        "Дима Билан"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16464214/1695136f.a.1566044-5/200x200",
-      "albumTitle": "Время-река",
-      "albumId": 1566044,
-      "durationMs": 224250
-    },
-    {
-      "id": "150224136",
-      "title": "kim?",
-      "artists": [
-        "Rusha"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16464214/05ed0cdc.a.41568018-1/200x200",
-      "albumTitle": "kim?",
-      "albumId": 41568018,
-      "durationMs": 172970
-    },
-    {
-      "id": "149843895",
-      "title": "Теряю сон",
-      "artists": [
-        "17 SEVENTEEN"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/18172800/30b866de.a.41397179-1/200x200",
-      "albumTitle": "Теряю сон",
-      "albumId": 41397179,
-      "durationMs": 127810
     }
   ],
-  "likedTracksCount": 1373,
-  "totalLikedTracks": 1123
+  "likedTracksCount": 1378,
+  "totalLikedTracks": 1128
 }
