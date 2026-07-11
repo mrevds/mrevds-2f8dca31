@@ -1,12 +1,23 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-10T06:26:30.973Z",
+  "fetchedAt": "2026-07-11T05:26:42.840Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "153486388",
+      "title": "одной из",
+      "artists": [
+        "тёмный принц"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20013662/61a6dc78.a.42993899-1/200x200",
+      "albumTitle": "MILITANTUM",
+      "albumId": 42993899,
+      "durationMs": 165510
+    },
     {
       "id": "114850596",
       "title": "Hide Your Heart",
@@ -1129,19 +1140,8 @@
       "albumTitle": "sezgim keledi",
       "albumId": 38383039,
       "durationMs": 128720
-    },
-    {
-      "id": "74135279",
-      "title": "Bárі jaqsy bolady",
-      "artists": [
-        "Kunzharyq"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14270105/75b60708.a.12937373-2/200x200",
-      "albumTitle": "Túımedaq",
-      "albumId": 12937373,
-      "durationMs": 172020
     }
   ],
-  "likedTracksCount": 1378,
-  "totalLikedTracks": 1127
+  "likedTracksCount": 1379,
+  "totalLikedTracks": 1128
 }
