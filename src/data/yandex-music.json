@@ -1,12 +1,70 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-12T05:42:48.517Z",
+  "fetchedAt": "2026-07-13T05:53:30.694Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "148434954",
+      "title": "кимано x mylancore",
+      "artists": [
+        "kwal1x",
+        "headssmoke"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17649213/6066a182.a.40761917-1/200x200",
+      "albumTitle": "кимано x mylancore",
+      "albumId": 40761917,
+      "durationMs": 218670
+    },
+    {
+      "id": "47166496",
+      "title": "AAA Powerline",
+      "artists": [
+        "Ecco2k"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/8123381/e4d5339a.a.24980889-1/200x200",
+      "albumTitle": "E",
+      "albumId": 24980889,
+      "durationMs": 252000
+    },
+    {
+      "id": "145881106",
+      "title": "my girl x mylancore",
+      "artists": [
+        "qwzbtw0",
+        "fortexe"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17722696/16ee47f9.a.39576560-1/200x200",
+      "albumTitle": "my girl x mylancore",
+      "albumId": 39576560,
+      "durationMs": 150850
+    },
+    {
+      "id": "100893231",
+      "title": "sorry days",
+      "artists": [
+        "quannnic"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16616584/8f69505f.a.21222934-2/200x200",
+      "albumTitle": "kenopsia",
+      "albumId": 21222934,
+      "durationMs": 212030
+    },
+    {
+      "id": "149219222",
+      "title": "worry",
+      "artists": [
+        "LONOWN",
+        "Riserayss"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20031403/2b57b48e.a.41130867-1/200x200",
+      "albumTitle": "worry",
+      "albumId": 41130867,
+      "durationMs": 255590
+    },
     {
       "id": "153486388",
       "title": "одной из",
@@ -1085,63 +1143,8 @@
       "albumTitle": "-18",
       "albumId": 22190002,
       "durationMs": 216770
-    },
-    {
-      "id": "138557706",
-      "title": "Sagan kimmin?",
-      "artists": [
-        "dosm."
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/12554677/8b62f45c.a.36374327-1/200x200",
-      "albumTitle": "Sagan kimmin?",
-      "albumId": 36374327,
-      "durationMs": 227050
-    },
-    {
-      "id": "108769063",
-      "title": "Seni Eske Alganda",
-      "artists": [
-        "Kunzharyq"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/7548376/98a34b29.a.24036258-1/200x200",
-      "albumTitle": "Margauym",
-      "albumId": 24036258,
-      "durationMs": 274580
-    },
-    {
-      "id": "119044689",
-      "title": "kel kel :)",
-      "artists": [
-        "Ayau"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9837803/5e8fea91.a.28117252-3/200x200",
-      "albumTitle": "AYAULYM",
-      "albumId": 28117252,
-      "durationMs": 197500
-    },
-    {
-      "id": "107302576",
-      "title": "Tasjúrek",
-      "artists": [
-        "Bella K."
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/6296749/f92e3722.a.23518216-1/200x200",
-      "albumTitle": "Tasjúrek",
-      "albumId": 23518216,
-      "durationMs": 193630
-    },
-    {
-      "id": "143319160",
-      "title": "sezgim keledi",
-      "artists": [
-        "plecto"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16334817/95998284.a.38383039-1/200x200",
-      "albumTitle": "sezgim keledi",
-      "albumId": 38383039,
-      "durationMs": 128720
     }
   ],
-  "likedTracksCount": 1379,
-  "totalLikedTracks": 1128
+  "likedTracksCount": 1384,
+  "totalLikedTracks": 1133
 }
