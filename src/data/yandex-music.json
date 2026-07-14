@@ -1,12 +1,45 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-13T05:53:30.694Z",
+  "fetchedAt": "2026-07-14T05:14:53.402Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "136026615",
+      "title": "таким как я",
+      "artists": [
+        "голодный"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14439424/9ba6941a.a.35356010-1/200x200",
+      "albumTitle": "таким как я",
+      "albumId": 35356010,
+      "durationMs": 109590
+    },
+    {
+      "id": "137472446",
+      "title": "таб***ки",
+      "artists": [
+        "голодный"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14270105/c12e2c3e.a.35928692-1/200x200",
+      "albumTitle": "таб***ки",
+      "albumId": 35928692,
+      "durationMs": 98220
+    },
+    {
+      "id": "151421867",
+      "title": "волк",
+      "artists": [
+        "голодный"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20113429/fa5e347a.a.42103948-1/200x200",
+      "albumTitle": "волк",
+      "albumId": 42103948,
+      "durationMs": 142640
+    },
     {
       "id": "148434954",
       "title": "кимано x mylancore",
@@ -1110,41 +1143,8 @@
       "albumTitle": "Piss In The Wind",
       "albumId": 42437247,
       "durationMs": 153570
-    },
-    {
-      "id": "119916478",
-      "title": "Usta",
-      "artists": [
-        "Rusha"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9867886/90eb1134.a.28496092-1/200x200",
-      "albumTitle": "Usta",
-      "albumId": 28496092,
-      "durationMs": 151000
-    },
-    {
-      "id": "146153985",
-      "title": "oiymda sen",
-      "artists": [
-        "plecto"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16334817/38557cbd.a.39716013-1/200x200",
-      "albumTitle": "oiymda sen",
-      "albumId": 39716013,
-      "durationMs": 226120
-    },
-    {
-      "id": "94071433",
-      "title": "Seni oilai",
-      "artists": [
-        "ALPHA"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/6447985/00266259.a.22190002-1/200x200",
-      "albumTitle": "-18",
-      "albumId": 22190002,
-      "durationMs": 216770
     }
   ],
-  "likedTracksCount": 1384,
-  "totalLikedTracks": 1133
+  "likedTracksCount": 1387,
+  "totalLikedTracks": 1139
 }
