@@ -1,12 +1,23 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-15T05:15:36.127Z",
+  "fetchedAt": "2026-07-16T05:25:24.403Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "153092229",
+      "title": "Эрго",
+      "artists": [
+        "godmodskiy"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20189877/e1cc060b.a.42826970-1/200x200",
+      "albumTitle": "Эрго",
+      "albumId": 42826970,
+      "durationMs": 123600
+    },
     {
       "id": "136026615",
       "title": "таким как я",
@@ -1131,20 +1142,8 @@
       "albumTitle": "Baribir",
       "albumId": 34356689,
       "durationMs": 139250
-    },
-    {
-      "id": "147949938",
-      "title": "Rose Colored",
-      "artists": [
-        "Joji",
-        "Yeat"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17730916/d35edd58.a.42437247-1/200x200",
-      "albumTitle": "Piss In The Wind",
-      "albumId": 42437247,
-      "durationMs": 153570
     }
   ],
-  "likedTracksCount": 1387,
-  "totalLikedTracks": 1139
+  "likedTracksCount": 1388,
+  "totalLikedTracks": 1140
 }
