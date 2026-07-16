@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-15T04:41:41.276Z",
+  "fetchedAt": "2026-07-16T04:51:56.262Z",
   "range": "last_7_days",
   "humanReadableTotal": "12 hrs 3 mins",
   "humanReadableDailyAverage": "2 hrs",
@@ -131,62 +131,62 @@
       "text": "0 secs"
     }
   ],
-  "allTime": "886 hrs 5 mins",
+  "allTime": "887 hrs 39 mins",
   "allTimeLanguages": [
     {
       "name": "Go",
-      "percent": 61.63,
+      "percent": 61.55,
       "text": "546 hrs 6 mins"
     },
     {
       "name": "TypeScript",
-      "percent": 12.15,
+      "percent": 12.14,
       "text": "107 hrs 41 mins"
     },
     {
       "name": "PHP",
-      "percent": 5.43,
+      "percent": 5.42,
       "text": "48 hrs 6 mins"
     },
     {
       "name": "SQL",
-      "percent": 4.09,
-      "text": "36 hrs 16 mins"
+      "percent": 4.1,
+      "text": "36 hrs 24 mins"
     },
     {
       "name": "YAML",
-      "percent": 3.26,
-      "text": "28 hrs 53 mins"
+      "percent": 3.3,
+      "text": "29 hrs 16 mins"
     }
   ],
   "allTimeEditors": [
     {
       "name": "GoLand",
-      "percent": 44.23,
-      "text": "391 hrs 53 mins"
+      "percent": 44.28,
+      "text": "392 hrs 55 mins"
     },
     {
       "name": "VS Code",
-      "percent": 34.88,
+      "percent": 34.83,
       "text": "309 hrs 4 mins"
     },
     {
       "name": "PhpStorm",
-      "percent": 5.74,
+      "percent": 5.73,
       "text": "50 hrs 51 mins"
     }
   ],
   "allTimeOS": [
     {
       "name": "Linux",
-      "percent": 78.6,
-      "text": "696 hrs 26 mins"
+      "percent": 78.63,
+      "text": "697 hrs 39 mins"
     },
     {
       "name": "Windows",
-      "percent": 21.4,
+      "percent": 21.37,
       "text": "189 hrs 39 mins"
     }
   ],
-  "allTimeTotalSeconds": 3127944.661
+  "allTimeTotalSeconds": 3131453.101
 }
