@@ -1,45 +1,45 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-19T05:12:49.072Z",
+  "fetchedAt": "2026-07-20T05:32:05.429Z",
   "range": "last_7_days",
-  "humanReadableTotal": "6 hrs 39 mins",
-  "humanReadableDailyAverage": "1 hr 6 mins",
-  "totalSeconds": 23943.304,
-  "dailyAverage": 3991,
+  "humanReadableTotal": "7 hrs",
+  "humanReadableDailyAverage": "1 hr 10 mins",
+  "totalSeconds": 25204.691,
+  "dailyAverage": 4201,
   "languages": [
     {
       "name": "Bash",
-      "percent": 36.5,
-      "text": "2 hrs 36 mins"
+      "percent": 38.93,
+      "text": "2 hrs 53 mins"
     },
     {
       "name": "SQL",
-      "percent": 27.22,
-      "text": "1 hr 56 mins"
+      "percent": 27.05,
+      "text": "2 hrs"
     },
     {
       "name": "Go",
-      "percent": 18.17,
+      "percent": 17.47,
       "text": "1 hr 17 mins"
     },
     {
-      "name": "Other",
-      "percent": 7.03,
-      "text": "30 mins"
-    },
-    {
       "name": "YAML",
-      "percent": 6.43,
+      "percent": 6.18,
       "text": "27 mins"
     },
     {
+      "name": "Other",
+      "percent": 5.89,
+      "text": "26 mins"
+    },
+    {
       "name": "Env File",
-      "percent": 2.55,
+      "percent": 2.46,
       "text": "10 mins"
     },
     {
       "name": "Text",
-      "percent": 1.87,
+      "percent": 1.79,
       "text": "8 mins"
     },
     {
@@ -61,12 +61,12 @@
   "editors": [
     {
       "name": "GoLand",
-      "percent": 65.65,
-      "text": "4 hrs 41 mins"
+      "percent": 66.97,
+      "text": "4 hrs 58 mins"
     },
     {
       "name": "DataGrip",
-      "percent": 34.35,
+      "percent": 33.03,
       "text": "2 hrs 27 mins"
     }
   ],
@@ -74,31 +74,31 @@
     {
       "name": "Linux",
       "percent": 100,
-      "text": "7 hrs 9 mins"
+      "text": "7 hrs 26 mins"
     }
   ],
   "projects": [
     {
       "name": "cbs-backend",
-      "percent": 65.76,
-      "text": "4 hrs 42 mins"
+      "percent": 67.34,
+      "text": "5 hrs"
     },
     {
       "name": "renesans",
-      "percent": 34.24,
-      "text": "2 hrs 26 mins"
+      "percent": 32.66,
+      "text": "2 hrs 25 mins"
     }
   ],
   "categories": [
     {
       "name": "Coding",
-      "percent": 55.7,
-      "text": "3 hrs 59 mins"
+      "percent": 54.06,
+      "text": "4 hrs 1 min"
     },
     {
       "name": "AI Coding",
-      "percent": 44.28,
-      "text": "3 hrs 10 mins"
+      "percent": 45.92,
+      "text": "3 hrs 24 mins"
     },
     {
       "name": "Writing Tests",
