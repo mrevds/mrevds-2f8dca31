@@ -1,12 +1,34 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-22T05:34:39.213Z",
+  "fetchedAt": "2026-07-23T05:39:41.176Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "149655220",
+      "title": "Wish on Me",
+      "artists": [
+        "IVOXYGEN"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/18172800/9cd4c52f.a.41325953-1/200x200",
+      "albumTitle": "Wish on Me",
+      "albumId": 41325953,
+      "durationMs": 165880
+    },
+    {
+      "id": "131302066",
+      "title": "Sweet (Opiumcore)",
+      "artists": [
+        "egare"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14082060/7603b889.a.33360011-1/200x200",
+      "albumTitle": "Sweet (Opiumcore)",
+      "albumId": 33360011,
+      "durationMs": 151900
+    },
     {
       "id": "147872102",
       "title": "Just Dance - Angelcore",
@@ -812,7 +834,7 @@
     },
     {
       "id": "151736099",
-      "title": "Мы сделаем э��о",
+      "title": "Мы сделаем это",
       "artists": [
         "SLAVA MARLOW",
         "Sir Soylok"
@@ -1123,32 +1145,8 @@
       "albumTitle": "Love & Tears",
       "albumId": 42534838,
       "durationMs": 173380
-    },
-    {
-      "id": "29146038",
-      "title": "По парам",
-      "artists": [
-        "Дима Билан"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/19035207/b5933a77.a.225699-7/200x200",
-      "albumTitle": "Мечтатель",
-      "albumId": 225699,
-      "durationMs": 217330
-    },
-    {
-      "id": "109156006",
-      "title": "basqany :(",
-      "artists": [
-        "Ayau",
-        "Shiza",
-        "M'Dee"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9837803/5e8fea91.a.28117252-3/200x200",
-      "albumTitle": "AYAULYM",
-      "albumId": 28117252,
-      "durationMs": 221000
     }
   ],
-  "likedTracksCount": 1396,
-  "totalLikedTracks": 1148
+  "likedTracksCount": 1398,
+  "totalLikedTracks": 1150
 }
