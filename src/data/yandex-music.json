@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-24T05:36:06.551Z",
+  "fetchedAt": "2026-07-25T05:30:06.450Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -636,10 +636,10 @@
       "artists": [
         "Fairuz"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/38044/762acf71.a.26570-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/20712233/762acf71.a.26570-4/200x200",
       "albumTitle": "Fairuz Chillout Classics",
       "albumId": 26570,
-      "durationMs": 374570
+      "durationMs": 373380
     },
     {
       "id": "138644342",
@@ -704,9 +704,9 @@
       "artists": [
         "Charli XCX"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/17674835/c7a3ee65.a.42214069-1/200x200",
-      "albumTitle": "SS26",
-      "albumId": 42214069,
+      "cover": "https://avatars.yandex.net/get-music-content/19035207/b813dac2.a.43226379-1/200x200",
+      "albumTitle": "Music, Fashion, Film",
+      "albumId": 43226379,
       "durationMs": 167670
     },
     {
@@ -1148,5 +1148,5 @@
     }
   ],
   "likedTracksCount": 1398,
-  "totalLikedTracks": 1150
+  "totalLikedTracks": 1151
 }
