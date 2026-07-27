@@ -1,12 +1,35 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-26T05:45:59.706Z",
+  "fetchedAt": "2026-07-27T06:05:16.389Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "152770714",
+      "title": "flowers",
+      "artists": [
+        "GHO$†BOY",
+        "braidedpiercing"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/18172800/32181390.a.42689557-1/200x200",
+      "albumTitle": "flowers",
+      "albumId": 42689557,
+      "durationMs": 195260
+    },
+    {
+      "id": "153337864",
+      "title": "glass skin",
+      "artists": [
+        "Steele 11"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/19999910/ec74fbd4.a.42930459-1/200x200",
+      "albumTitle": "glass skin",
+      "albumId": 42930459,
+      "durationMs": 92570
+    },
     {
       "id": "149655220",
       "title": "Wish on Me",
@@ -1122,31 +1145,8 @@
       "albumTitle": "haunted, lost",
       "albumId": 39785386,
       "durationMs": 198660
-    },
-    {
-      "id": "146588425",
-      "title": "TELL ME WHAT I DID",
-      "artists": [
-        "Tiffany Day"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
-      "albumTitle": "HALO",
-      "albumId": 40436467,
-      "durationMs": 153800
-    },
-    {
-      "id": "149941251",
-      "title": "STORM II",
-      "artists": [
-        "Gener8ion",
-        "Yung Lean"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/20840698/d3cf0411.a.42534838-2/200x200",
-      "albumTitle": "Love & Tears",
-      "albumId": 42534838,
-      "durationMs": 173380
     }
   ],
-  "likedTracksCount": 1398,
-  "totalLikedTracks": 1151
+  "likedTracksCount": 1400,
+  "totalLikedTracks": 1153
 }
