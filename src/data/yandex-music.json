@@ -1,12 +1,46 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-28T05:32:13.730Z",
+  "fetchedAt": "2026-07-29T05:37:30.799Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "136299079",
+      "title": "You and me",
+      "artists": [
+        "ONL",
+        "mercxry"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14707562/aa279b29.a.35482454-1/200x200",
+      "albumTitle": "You and me",
+      "albumId": 35482454,
+      "durationMs": 200060
+    },
+    {
+      "id": "130544146",
+      "title": "miss you",
+      "artists": [
+        "grcz"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14299670/a12909d1.a.33054289-1/200x200",
+      "albumTitle": "miss you",
+      "albumId": 33054289,
+      "durationMs": 168180
+    },
+    {
+      "id": "153541917",
+      "title": "Come and Go",
+      "artists": [
+        "1nonly"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20113429/e7059725.a.43018303-1/200x200",
+      "albumTitle": "Come and Go",
+      "albumId": 43018303,
+      "durationMs": 180700
+    },
     {
       "id": "152770714",
       "title": "flowers",
@@ -1111,42 +1145,8 @@
       "albumTitle": "Ne Isteisiń?",
       "albumId": 30878256,
       "durationMs": 166280
-    },
-    {
-      "id": "81234232",
-      "title": "En",
-      "artists": [
-        "Orynkhan"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16334817/302dac75.a.14998032-2/200x200",
-      "albumTitle": "Tau",
-      "albumId": 14998032,
-      "durationMs": 179000
-    },
-    {
-      "id": "56550765",
-      "title": "Borders",
-      "artists": [
-        "SAINt JHN",
-        "Lenny Kravitz"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10139807/54a6a600.a.29610112-1/200x200",
-      "albumTitle": "Ghetto Lenny's Love Songs",
-      "albumId": 29610112,
-      "durationMs": 233240
-    },
-    {
-      "id": "146299365",
-      "title": "losted notes",
-      "artists": [
-        "yukidead"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16496077/5745f74a.a.39785386-1/200x200",
-      "albumTitle": "haunted, lost",
-      "albumId": 39785386,
-      "durationMs": 198660
     }
   ],
-  "likedTracksCount": 1400,
-  "totalLikedTracks": 1153
+  "likedTracksCount": 1403,
+  "totalLikedTracks": 1155
 }
