@@ -1,12 +1,56 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-30T05:24:39.831Z",
+  "fetchedAt": "2026-07-31T05:50:41.227Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "147742117",
+      "title": "Pleasure’s Mine",
+      "artists": [
+        "Don Toliver"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/15406468/169bf298.a.40455540-1/200x200",
+      "albumTitle": "OCTANE",
+      "albumId": 40455540,
+      "durationMs": 177460
+    },
+    {
+      "id": "31233137",
+      "title": "Reflex",
+      "artists": [
+        "SAINt JHN"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/143117/928e0d1e.a.5222993-1/200x200",
+      "albumTitle": "Collection One",
+      "albumId": 5222993,
+      "durationMs": 241840
+    },
+    {
+      "id": "132073723",
+      "title": "can’t sleep at night",
+      "artists": [
+        "Burgos"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/9837520/867a66a1.a.33663971-1/200x200",
+      "albumTitle": "can’t sleep at night",
+      "albumId": 33663971,
+      "durationMs": 131550
+    },
+    {
+      "id": "146322813",
+      "title": "Shadows",
+      "artists": [
+        "blindheart"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17649213/40204095.a.39798341-1/200x200",
+      "albumTitle": "Shadows",
+      "albumId": 39798341,
+      "durationMs": 163110
+    },
     {
       "id": "136299079",
       "title": "You and me",
@@ -1101,52 +1145,8 @@
       "albumTitle": "MAID OF HONOUR",
       "albumId": 42095264,
       "durationMs": 193740
-    },
-    {
-      "id": "49905576",
-      "title": "Әсем жұлдыз",
-      "artists": [
-        "Дос-Мұқасан"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16508792/1e31412c.a.6864005-2/200x200",
-      "albumTitle": "Бізге 40",
-      "albumId": 6864005,
-      "durationMs": 232800
-    },
-    {
-      "id": "49905622",
-      "title": "Куә бол",
-      "artists": [
-        "Дос-Мұқасан"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16154377/8d70774e.a.6864008-2/200x200",
-      "albumTitle": "Жыр жазамын жүрегімнен",
-      "albumId": 6864008,
-      "durationMs": 250980
-    },
-    {
-      "id": "47445929",
-      "title": "Жайлаукөл кештері",
-      "artists": [
-        "МузАрт"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/16450533/d116df56.a.6443968-2/200x200",
-      "albumTitle": "Избранное",
-      "albumId": 6443968,
-      "durationMs": 172610
-    },
-    {
-      "id": "125212385",
-      "title": "Ne Isteisiń?",
-      "artists": [
-        "Yenlik"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/10918712/34cd14d8.a.30878256-1/200x200",
-      "albumTitle": "Ne Isteisiń?",
-      "albumId": 30878256,
-      "durationMs": 166280
     }
   ],
-  "likedTracksCount": 1403,
-  "totalLikedTracks": 1155
+  "likedTracksCount": 1407,
+  "totalLikedTracks": 1158
 }
