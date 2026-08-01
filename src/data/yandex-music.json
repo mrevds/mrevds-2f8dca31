@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-31T05:50:41.227Z",
+  "fetchedAt": "2026-08-01T05:41:21.886Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -859,7 +859,7 @@
       "id": "139888220",
       "title": "all eyes on me",
       "artists": [
-        "Echstacy"
+        "echstacy"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/14439424/f899d541.a.36938481-1/200x200",
       "albumTitle": "ill intent",
