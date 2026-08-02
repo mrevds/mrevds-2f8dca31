@@ -1,12 +1,34 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-01T05:41:21.886Z",
+  "fetchedAt": "2026-08-02T05:41:41.406Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "138376800",
+      "title": "Gris",
+      "artists": [
+        "Wale the Sage"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14183125/b6c5d8ff.a.36298079-1/200x200",
+      "albumTitle": "Sage & The Black Suit",
+      "albumId": 36298079,
+      "durationMs": 166000
+    },
+    {
+      "id": "72735175",
+      "title": "Sucks To Be You",
+      "artists": [
+        "SAINt JHN"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/2424959/d57baf58.a.12944209-1/200x200",
+      "albumTitle": "While The World Was Burning",
+      "albumId": 12944209,
+      "durationMs": 222220
+    },
     {
       "id": "147742117",
       "title": "Pleasure’s Mine",
@@ -158,7 +180,7 @@
       "title": "Cool For The Summer",
       "artists": [
         "HARDSTYLE CVNT",
-        "EZO CASSIDY",
+        "Ezo Cassidy",
         "Ashtion Bakes",
         "deprezz"
       ],
@@ -1123,30 +1145,8 @@
       "albumTitle": "Әндер Жинағы",
       "albumId": 21600651,
       "durationMs": 274500
-    },
-    {
-      "id": "112906086",
-      "title": "Анашым",
-      "artists": [
-        "Нұрлан Өнербаев"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/7852894/24a71615.a.25471455-1/200x200",
-      "albumTitle": "Ауылым",
-      "albumId": 25471455,
-      "durationMs": 221480
-    },
-    {
-      "id": "151403166",
-      "title": "Princess",
-      "artists": [
-        "Drake"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17722696/057e329e.a.42095264-1/200x200",
-      "albumTitle": "MAID OF HONOUR",
-      "albumId": 42095264,
-      "durationMs": 193740
     }
   ],
-  "likedTracksCount": 1407,
-  "totalLikedTracks": 1158
+  "likedTracksCount": 1409,
+  "totalLikedTracks": 1160
 }
