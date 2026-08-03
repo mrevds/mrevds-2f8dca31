@@ -1,12 +1,23 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-02T05:41:41.406Z",
+  "fetchedAt": "2026-08-03T05:57:52.837Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "148488182",
+      "title": "butterflies.",
+      "artists": [
+        "Brent Faiyaz"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16485602/1e529810.a.40786269-1/200x200",
+      "albumTitle": "Icon",
+      "albumId": 40786269,
+      "durationMs": 248340
+    },
     {
       "id": "138376800",
       "title": "Gris",
@@ -1134,19 +1145,8 @@
       "albumTitle": "Magic Lantern",
       "albumId": 42862956,
       "durationMs": 255310
-    },
-    {
-      "id": "102044174",
-      "title": "Жан сырым (Аяулым)",
-      "artists": [
-        "Qurmash Makhan"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/5412783/5c5f7e63.a.21600651-1/200x200",
-      "albumTitle": "Әндер Жинағы",
-      "albumId": 21600651,
-      "durationMs": 274500
     }
   ],
-  "likedTracksCount": 1409,
-  "totalLikedTracks": 1160
+  "likedTracksCount": 1410,
+  "totalLikedTracks": 1161
 }
