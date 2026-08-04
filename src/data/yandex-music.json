@@ -1,12 +1,46 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-03T05:57:52.837Z",
+  "fetchedAt": "2026-08-04T05:32:21.761Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "150701968",
+      "title": "So Tired",
+      "artists": [
+        "supwel",
+        "WHY.WAVE"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17655650/53f1383d.a.41775387-1/200x200",
+      "albumTitle": "So Tired",
+      "albumId": 41775387,
+      "durationMs": 174000
+    },
+    {
+      "id": "153448524",
+      "title": "dancingwiththestars",
+      "artists": [
+        "Gunnr"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/19999910/2207c979.a.42977943-1/200x200",
+      "albumTitle": "silk in shadows",
+      "albumId": 42977943,
+      "durationMs": 188040
+    },
+    {
+      "id": "148137681",
+      "title": "Headache",
+      "artists": [
+        "ASAL"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16496077/f940813c.a.40626362-1/200x200",
+      "albumTitle": "Missing Something",
+      "albumId": 40626362,
+      "durationMs": 184060
+    },
     {
       "id": "148488182",
       "title": "butterflies.",
@@ -1112,41 +1146,8 @@
       "albumTitle": "Freedom.",
       "albumId": 14687280,
       "durationMs": 165340
-    },
-    {
-      "id": "129038907",
-      "title": "every night i lose you",
-      "artists": [
-        "Funeral"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9837520/edd67255.a.32446990-1/200x200",
-      "albumTitle": "remorse",
-      "albumId": 32446990,
-      "durationMs": 182110
-    },
-    {
-      "id": "71360610",
-      "title": "fucked up",
-      "artists": [
-        "Lil Peep"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/2789402/1befc39d.a.12148880-1/200x200",
-      "albumTitle": "HELLBOY",
-      "albumId": 12148880,
-      "durationMs": 156460
-    },
-    {
-      "id": "89219938",
-      "title": "The Old Man and the Sea",
-      "artists": [
-        "Yorushika"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/19752797/4802a9e5.a.42862956-2/200x200",
-      "albumTitle": "Magic Lantern",
-      "albumId": 42862956,
-      "durationMs": 255310
     }
   ],
-  "likedTracksCount": 1410,
-  "totalLikedTracks": 1161
+  "likedTracksCount": 1413,
+  "totalLikedTracks": 1164
 }
