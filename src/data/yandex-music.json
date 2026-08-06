@@ -1,12 +1,85 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-05T05:31:12.542Z",
+  "fetchedAt": "2026-08-06T05:33:51.707Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "72797851",
+      "title": "TR666",
+      "artists": [
+        "Trippie Redd",
+        "Swae Lee"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/5412783/30b6c1d8.a.27740559-1/200x200",
+      "albumTitle": "Pegasus: Neon Shark vs Pegasus Presented By Travis Barker",
+      "albumId": 27740559,
+      "durationMs": 180020
+    },
+    {
+      "id": "141086673",
+      "title": "Crazy",
+      "artists": [
+        "Myles Lloyd",
+        "BUNT."
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/15042045/ae733127.a.37449383-1/200x200",
+      "albumTitle": "Crazy",
+      "albumId": 37449383,
+      "durationMs": 162880
+    },
+    {
+      "id": "140951710",
+      "title": "DAISIES",
+      "artists": [
+        "Justin Bieber"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/13043189/599224ae.a.38100481-1/200x200",
+      "albumTitle": "SWAG II",
+      "albumId": 38100481,
+      "durationMs": 176450
+    },
+    {
+      "id": "130676168",
+      "title": "backseat",
+      "artists": [
+        "Fred again..",
+        "The Japanese House",
+        "Scott Hardkiss"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/14183125/86d8b5ac.a.33109510-1/200x200",
+      "albumTitle": "ten days",
+      "albumId": 33109510,
+      "durationMs": 314000
+    },
+    {
+      "id": "127591782",
+      "title": "BACKSTREETS",
+      "artists": [
+        "Don Toliver",
+        "Teezo Touchdown"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/10099790/3739517a.a.31875047-1/200x200",
+      "albumTitle": "HARDSTONE PSYCHO",
+      "albumId": 31875047,
+      "durationMs": 197660
+    },
+    {
+      "id": "125725374",
+      "title": "ATTITUDE",
+      "artists": [
+        "Don Toliver",
+        "Charlie Wilson",
+        "Cash Cobain"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/10099790/fb74e898.a.31715333-1/200x200",
+      "albumTitle": "HARDSTONE PSYCHO",
+      "albumId": 31715333,
+      "durationMs": 161050
+    },
     {
       "id": "150701968",
       "title": "So Tired",
@@ -1077,77 +1150,8 @@
       "albumTitle": "The Best Part of Life",
       "albumId": 20010182,
       "durationMs": 196870
-    },
-    {
-      "id": "130590821",
-      "title": "Circadian Rhythm",
-      "artists": [
-        "Drake"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/13911897/8f1b3221.a.33073845-2/200x200",
-      "albumTitle": "100 GIGS",
-      "albumId": 33073845,
-      "durationMs": 126350
-    },
-    {
-      "id": "147872699",
-      "title": "Queen St",
-      "artists": [
-        "twenty3ee"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/17696724/98398b12.a.40512013-1/200x200",
-      "albumTitle": "Queen St",
-      "albumId": 40512013,
-      "durationMs": 128660
-    },
-    {
-      "id": "62479885",
-      "title": "Intentions",
-      "artists": [
-        "Justin Bieber",
-        "Quavo"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/2358262/4ee2cc9f.a.9918986-1/200x200",
-      "albumTitle": "Changes",
-      "albumId": 9918986,
-      "durationMs": 212860
-    },
-    {
-      "id": "30965033",
-      "title": "My Favorite Part",
-      "artists": [
-        "Mac Miller",
-        "Ariana Grande"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/42108/24c2e77c.a.3758728-1/200x200",
-      "albumTitle": "The Divine Feminine",
-      "albumId": 3758728,
-      "durationMs": 216000
-    },
-    {
-      "id": "120876930",
-      "title": "BMBT",
-      "artists": [
-        "beysenbi"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9838169/34d9c375.a.28922214-1/200x200",
-      "albumTitle": "BMBT",
-      "albumId": 28922214,
-      "durationMs": 202020
-    },
-    {
-      "id": "80277503",
-      "title": "Freedom",
-      "artists": [
-        "Justin Bieber",
-        "Beam"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/4404215/c97d9d52.a.14687280-1/200x200",
-      "albumTitle": "Freedom.",
-      "albumId": 14687280,
-      "durationMs": 165340
     }
   ],
-  "likedTracksCount": 1413,
-  "totalLikedTracks": 1164
+  "likedTracksCount": 1422,
+  "totalLikedTracks": 1170
 }
