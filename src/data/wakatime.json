@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-06T04:56:48.211Z",
+  "fetchedAt": "2026-08-07T04:19:28.891Z",
   "range": "last_7_days",
   "humanReadableTotal": "16 hrs 21 mins",
   "humanReadableDailyAverage": "2 hrs 43 mins",
@@ -96,7 +96,7 @@
       "text": "6 hrs 1 min"
     }
   ],
-  "allTime": "944 hrs 35 mins",
+  "allTime": "944 hrs 22 mins",
   "allTimeLanguages": [
     {
       "name": "Go",
