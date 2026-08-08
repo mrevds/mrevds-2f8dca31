@@ -1,12 +1,34 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-07T04:36:59.241Z",
+  "fetchedAt": "2026-08-08T03:51:50.319Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "151546486",
+      "title": "DEEP IN YOUR SOUL",
+      "artists": [
+        "alan vuong"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20113429/cd9459bd.a.42154659-1/200x200",
+      "albumTitle": "DEEP IN YOUR SOUL",
+      "albumId": 42154659,
+      "durationMs": 191560
+    },
+    {
+      "id": "153067477",
+      "title": "DAISIES",
+      "artists": [
+        "Justin Bieber"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/18172800/1f567c37.a.42816510-1/200x200",
+      "albumTitle": "SWAG LIVE FROM COACHELLA (Weekend I)",
+      "albumId": 42816510,
+      "durationMs": 257970
+    },
     {
       "id": "58179525",
       "title": "Won't Let You",
@@ -1128,30 +1150,8 @@
       "albumTitle": "Eternal Atake  - LUV vs. The World 2",
       "albumId": 10152182,
       "durationMs": 211880
-    },
-    {
-      "id": "72298512",
-      "title": "眩しくて",
-      "artists": [
-        "クレナズム"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/2355477/f6b06008.a.12419695-1/200x200",
-      "albumTitle": "eyes on you",
-      "albumId": 12419695,
-      "durationMs": 253790
-    },
-    {
-      "id": "40226348",
-      "title": "Selfish",
-      "artists": [
-        "SAINt JHN"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/143117/928e0d1e.a.5222993-1/200x200",
-      "albumTitle": "Collection One",
-      "albumId": 5222993,
-      "durationMs": 234970
     }
   ],
-  "likedTracksCount": 1423,
-  "totalLikedTracks": 1171
+  "likedTracksCount": 1425,
+  "totalLikedTracks": 1173
 }
