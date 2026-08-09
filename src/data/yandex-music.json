@@ -1,12 +1,23 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-08T03:51:50.319Z",
+  "fetchedAt": "2026-08-09T04:00:42.191Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "146421221",
+      "title": "Tell Me",
+      "artists": [
+        "Wale the Sage"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/16406615/b0c5dcd9.a.39842992-1/200x200",
+      "albumTitle": "HUG ME AS IF WE WERE TO DIE TOMORROW",
+      "albumId": 39842992,
+      "durationMs": 144620
+    },
     {
       "id": "151546486",
       "title": "DEEP IN YOUR SOUL",
@@ -829,7 +840,7 @@
       "title": "На бумере",
       "artists": [
         "Aarne",
-        "Платина"
+        "Пл��тина"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/19999910/6c6b8bd6.a.42806725-1/200x200",
       "albumTitle": "На бумере",
@@ -1139,19 +1150,8 @@
       "albumTitle": "Может быть",
       "albumId": 41782011,
       "durationMs": 113200
-    },
-    {
-      "id": "63437709",
-      "title": "I'm Sorry",
-      "artists": [
-        "Lil Uzi Vert"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14304155/a593554c.a.10152182-6/200x200",
-      "albumTitle": "Eternal Atake  - LUV vs. The World 2",
-      "albumId": 10152182,
-      "durationMs": 211880
     }
   ],
-  "likedTracksCount": 1425,
-  "totalLikedTracks": 1173
+  "likedTracksCount": 1426,
+  "totalLikedTracks": 1174
 }
