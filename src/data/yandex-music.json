@@ -1,12 +1,23 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-10T04:14:44.847Z",
+  "fetchedAt": "2026-08-11T04:02:50.887Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "151403098",
+      "title": "Road Trips",
+      "artists": [
+        "Drake"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/17722696/057e329e.a.42095264-1/200x200",
+      "albumTitle": "MAID OF HONOUR",
+      "albumId": 42095264,
+      "durationMs": 243230
+    },
     {
       "id": "146421221",
       "title": "Tell Me",
@@ -840,7 +851,7 @@
       "title": "На бумере",
       "artists": [
         "Aarne",
-        "П��атина"
+        "Платина"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/19999910/6c6b8bd6.a.42806725-1/200x200",
       "albumTitle": "На бумере",
@@ -1139,19 +1150,8 @@
       "albumTitle": "Saint Michael V2",
       "albumId": 31325033,
       "durationMs": 112550
-    },
-    {
-      "id": "150721333",
-      "title": "Может быть",
-      "artists": [
-        "Dima Roux"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/18172800/3375d0f9.a.41782011-1/200x200",
-      "albumTitle": "Может быть",
-      "albumId": 41782011,
-      "durationMs": 113200
     }
   ],
-  "likedTracksCount": 1426,
-  "totalLikedTracks": 1174
+  "likedTracksCount": 1427,
+  "totalLikedTracks": 1175
 }
