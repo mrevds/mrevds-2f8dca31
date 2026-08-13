@@ -1,56 +1,56 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-12T03:55:21.486Z",
+  "fetchedAt": "2026-08-13T04:00:40.673Z",
   "range": "last_7_days",
-  "humanReadableTotal": "20 hrs 22 mins",
-  "humanReadableDailyAverage": "3 hrs 23 mins",
-  "totalSeconds": 73338.561,
-  "dailyAverage": 12223,
+  "humanReadableTotal": "17 hrs 49 mins",
+  "humanReadableDailyAverage": "2 hrs 58 mins",
+  "totalSeconds": 64144.093,
+  "dailyAverage": 10691,
   "languages": [
     {
       "name": "Go",
-      "percent": 54.15,
-      "text": "11 hrs 13 mins"
+      "percent": 59.97,
+      "text": "10 hrs 53 mins"
     },
     {
       "name": "SQL",
-      "percent": 23.05,
-      "text": "4 hrs 46 mins"
+      "percent": 19.41,
+      "text": "3 hrs 31 mins"
     },
     {
       "name": "Bash",
-      "percent": 14.05,
-      "text": "2 hrs 54 mins"
-    },
-    {
-      "name": "Env File",
-      "percent": 3.12,
-      "text": "38 mins"
+      "percent": 12.21,
+      "text": "2 hrs 13 mins"
     },
     {
       "name": "YAML",
-      "percent": 2.75,
+      "percent": 3.14,
       "text": "34 mins"
     },
     {
       "name": "Other",
-      "percent": 1.66,
+      "percent": 1.89,
       "text": "20 mins"
     },
     {
+      "name": "Env File",
+      "percent": 1.66,
+      "text": "18 mins"
+    },
+    {
       "name": "Makefile",
-      "percent": 0.97,
+      "percent": 1.1,
       "text": "12 mins"
     },
     {
-      "name": "Text",
-      "percent": 0.2,
-      "text": "2 mins"
+      "name": "Markdown",
+      "percent": 0.36,
+      "text": "3 mins"
     },
     {
-      "name": "Markdown",
-      "percent": 0.03,
-      "text": "0 secs"
+      "name": "Text",
+      "percent": 0.23,
+      "text": "2 mins"
     },
     {
       "name": "CSV/TSV",
@@ -61,22 +61,22 @@
   "editors": [
     {
       "name": "GoLand",
-      "percent": 61.44,
-      "text": "12 hrs 43 mins"
+      "percent": 62.28,
+      "text": "11 hrs 18 mins"
     },
     {
       "name": "CLI",
-      "percent": 20.39,
-      "text": "4 hrs 13 mins"
+      "percent": 24.15,
+      "text": "4 hrs 23 mins"
     },
     {
       "name": "DataGrip",
-      "percent": 15.54,
-      "text": "3 hrs 13 mins"
+      "percent": 10.57,
+      "text": "1 hr 55 mins"
     },
     {
       "name": "VS Code",
-      "percent": 2.63,
+      "percent": 3,
       "text": "32 mins"
     }
   ],
@@ -84,107 +84,107 @@
     {
       "name": "Linux",
       "percent": 100,
-      "text": "20 hrs 42 mins"
+      "text": "18 hrs 9 mins"
     }
   ],
   "projects": [
     {
       "name": "cbs-backend",
-      "percent": 76,
-      "text": "15 hrs 44 mins"
+      "percent": 80.55,
+      "text": "14 hrs 37 mins"
     },
     {
       "name": "renesans",
-      "percent": 16.54,
-      "text": "3 hrs 25 mins"
+      "percent": 12.03,
+      "text": "2 hrs 11 mins"
     },
     {
       "name": "new-rene",
-      "percent": 7.24,
-      "text": "1 hr 30 mins"
+      "percent": 7.17,
+      "text": "1 hr 18 mins"
     },
     {
       "name": "console.sql",
-      "percent": 0.22,
+      "percent": 0.26,
       "text": "2 mins"
     }
   ],
   "categories": [
     {
       "name": "Coding",
-      "percent": 60.95,
-      "text": "12 hrs 37 mins"
+      "percent": 56.49,
+      "text": "10 hrs 15 mins"
     },
     {
       "name": "AI Coding",
-      "percent": 39.01,
-      "text": "8 hrs 4 mins"
+      "percent": 43.11,
+      "text": "7 hrs 49 mins"
     },
     {
       "name": "Writing Docs",
-      "percent": 0.03,
-      "text": "0 secs"
+      "percent": 0.36,
+      "text": "3 mins"
     },
     {
       "name": "Writing Tests",
-      "percent": 0.01,
+      "percent": 0.04,
       "text": "0 secs"
     }
   ],
-  "allTime": "960 hrs 18 mins",
+  "allTime": "962 hrs 32 mins",
   "allTimeLanguages": [
     {
       "name": "Go",
-      "percent": 61.13,
-      "text": "587 hrs 4 mins"
+      "percent": 61.21,
+      "text": "589 hrs 9 mins"
     },
     {
       "name": "TypeScript",
-      "percent": 11.04,
+      "percent": 11.02,
       "text": "106 hrs 1 min"
     },
     {
       "name": "SQL",
-      "percent": 5.22,
-      "text": "50 hrs 5 mins"
+      "percent": 5.21,
+      "text": "50 hrs 8 mins"
     },
     {
       "name": "PHP",
-      "percent": 5.01,
+      "percent": 5,
       "text": "48 hrs 7 mins"
     },
     {
       "name": "Bash",
       "percent": 3.26,
-      "text": "31 hrs 20 mins"
+      "text": "31 hrs 22 mins"
     }
   ],
   "allTimeEditors": [
     {
       "name": "GoLand",
-      "percent": 45.45,
-      "text": "436 hrs 25 mins"
+      "percent": 45.55,
+      "text": "438 hrs 26 mins"
     },
     {
       "name": "VS Code",
-      "percent": 32.56,
+      "percent": 32.49,
       "text": "312 hrs 42 mins"
     },
     {
       "name": "Claude Code",
-      "percent": 5.64,
+      "percent": 5.63,
       "text": "54 hrs 9 mins"
     }
   ],
   "allTimeOS": [
     {
       "name": "Linux",
-      "percent": 80.24,
-      "text": "770 hrs 33 mins"
+      "percent": 80.29,
+      "text": "772 hrs 46 mins"
     },
     {
       "name": "Windows",
-      "percent": 19.75,
+      "percent": 19.7,
       "text": "189 hrs 39 mins"
     },
     {
@@ -193,5 +193,5 @@
       "text": "6 mins"
     }
   ],
-  "allTimeTotalSeconds": 3387291.931
+  "allTimeTotalSeconds": 3395307.369
 }
