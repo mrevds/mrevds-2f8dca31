@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-13T04:26:55.597Z",
+  "fetchedAt": "2026-08-14T04:24:08.027Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -197,10 +197,10 @@
       "artists": [
         "SAINt JHN"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/2424959/d57baf58.a.12944209-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/19999910/d57baf58.a.12944209-2/200x200",
       "albumTitle": "While The World Was Burning",
       "albumId": 12944209,
-      "durationMs": 222220
+      "durationMs": 222240
     },
     {
       "id": "147742117",
@@ -219,7 +219,7 @@
       "artists": [
         "SAINt JHN"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/143117/928e0d1e.a.5222993-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/18132539/928e0d1e.a.5222993-3/200x200",
       "albumTitle": "Collection One",
       "albumId": 5222993,
       "durationMs": 241840
@@ -818,7 +818,7 @@
       "artists": [
         "Gapto Fobia"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/13911897/33a322f9.a.34042089-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/17659240/33a322f9.a.34042089-2/200x200",
       "albumTitle": "VA 002",
       "albumId": 34042089,
       "durationMs": 165330
