@@ -1,137 +1,137 @@
 {
   "ok": true,
-  "fetchedAt": "2026-08-31T07:54:23.062Z",
+  "fetchedAt": "2026-09-01T06:59:42.756Z",
   "range": "last_7_days",
-  "humanReadableTotal": "7 hrs 56 mins",
-  "humanReadableDailyAverage": "1 hr 59 mins",
-  "totalSeconds": 28576.743,
-  "dailyAverage": 7144,
+  "humanReadableTotal": "7 hrs 19 mins",
+  "humanReadableDailyAverage": "1 hr 13 mins",
+  "totalSeconds": 26345.154,
+  "dailyAverage": 4391,
   "languages": [
     {
-      "name": "Bash",
-      "percent": 28.08,
-      "text": "2 hrs 27 mins"
-    },
-    {
       "name": "Go",
-      "percent": 27.45,
-      "text": "2 hrs 24 mins"
+      "percent": 26.52,
+      "text": "2 hrs 9 mins"
     },
     {
       "name": "JavaScript",
-      "percent": 13.16,
-      "text": "1 hr 9 mins"
+      "percent": 23.47,
+      "text": "1 hr 54 mins"
+    },
+    {
+      "name": "Bash",
+      "percent": 13.59,
+      "text": "1 hr 6 mins"
     },
     {
       "name": "SQL",
-      "percent": 13.05,
-      "text": "1 hr 8 mins"
+      "percent": 12.5,
+      "text": "1 hr 1 min"
     },
     {
       "name": "Other",
-      "percent": 9.55,
+      "percent": 10.25,
       "text": "50 mins"
     },
     {
       "name": "CSS",
-      "percent": 5.06,
-      "text": "26 mins"
+      "percent": 9.73,
+      "text": "47 mins"
     },
     {
       "name": "TypeScript",
-      "percent": 1.33,
-      "text": "6 mins"
+      "percent": 1.45,
+      "text": "7 mins"
     },
     {
       "name": "shell script",
-      "percent": 1.18,
+      "percent": 1.27,
       "text": "6 mins"
     },
     {
       "name": "YAML",
-      "percent": 0.77,
+      "percent": 0.83,
       "text": "4 mins"
     },
     {
       "name": "JSON",
-      "percent": 0.25,
+      "percent": 0.27,
       "text": "1 min"
     }
   ],
   "editors": [
     {
       "name": "Codex CLI",
-      "percent": 62.42,
-      "text": "5 hrs 28 mins"
+      "percent": 74.51,
+      "text": "6 hrs 4 mins"
     },
     {
       "name": "VS Code",
-      "percent": 25.02,
-      "text": "2 hrs 11 mins"
+      "percent": 15.39,
+      "text": "1 hr 15 mins"
     },
     {
       "name": "DataGrip",
-      "percent": 9.65,
-      "text": "50 mins"
+      "percent": 8.84,
+      "text": "43 mins"
     },
     {
-      "name": "GoLand",
-      "percent": 1.56,
-      "text": "8 mins"
+      "name": "Zed",
+      "percent": 1.27,
+      "text": "6 mins"
     }
   ],
   "operatingSystems": [
     {
       "name": "Linux",
       "percent": 100,
-      "text": "8 hrs 46 mins"
+      "text": "8 hrs 9 mins"
     }
   ],
   "projects": [
     {
-      "name": "cbs-backend",
-      "percent": 37.05,
-      "text": "3 hrs 15 mins"
+      "name": "vocab-ielts",
+      "percent": 52.81,
+      "text": "4 hrs 18 mins"
     },
     {
-      "name": "vocab-ielts",
-      "percent": 36.44,
-      "text": "3 hrs 11 mins"
+      "name": "cbs-backend",
+      "percent": 19.32,
+      "text": "1 hr 34 mins"
     },
     {
       "name": "new-rene",
-      "percent": 15.07,
-      "text": "1 hr 19 mins"
+      "percent": 17.1,
+      "text": "1 hr 23 mins"
     },
     {
       "name": "renesans",
-      "percent": 9.65,
-      "text": "50 mins"
+      "percent": 8.84,
+      "text": "43 mins"
     },
     {
       "name": "kilo-test",
-      "percent": 1.79,
+      "percent": 1.93,
       "text": "9 mins"
     }
   ],
   "categories": [
     {
       "name": "AI Coding",
-      "percent": 67.61,
-      "text": "5 hrs 56 mins"
+      "percent": 80.44,
+      "text": "6 hrs 33 mins"
     },
     {
       "name": "Coding",
-      "percent": 32.39,
-      "text": "2 hrs 50 mins"
+      "percent": 19.56,
+      "text": "1 hr 35 mins"
     }
   ],
-  "allTime": "1,017 hrs 8 mins",
+  "allTime": "1,017 hrs 21 mins",
   "allTimeLanguages": [
     {
       "name": "Go",
       "percent": 61.03,
-      "text": "620 hrs 45 mins"
+      "text": "620 hrs 49 mins"
     },
     {
       "name": "TypeScript",
@@ -163,7 +163,7 @@
     {
       "name": "VS Code",
       "percent": 31.12,
-      "text": "316 hrs 30 mins"
+      "text": "316 hrs 34 mins"
     },
     {
       "name": "Claude Code",
@@ -174,12 +174,12 @@
   "allTimeOS": [
     {
       "name": "Linux",
-      "percent": 81.34,
-      "text": "827 hrs 23 mins"
+      "percent": 81.35,
+      "text": "827 hrs 27 mins"
     },
     {
       "name": "Windows",
-      "percent": 18.65,
+      "percent": 18.64,
       "text": "189 hrs 39 mins"
     },
     {
@@ -188,5 +188,5 @@
       "text": "6 mins"
     }
   ],
-  "allTimeTotalSeconds": 3585118.64
+  "allTimeTotalSeconds": 3585371.386
 }
