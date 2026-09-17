@@ -1,12 +1,24 @@
 {
   "ok": true,
-  "fetchedAt": "2026-09-16T07:52:15.892Z",
+  "fetchedAt": "2026-09-17T07:56:41.664Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
     "displayName": "Denis Muratbaev"
   },
   "likedTracks": [
+    {
+      "id": "151348211",
+      "title": "alone with you",
+      "artists": [
+        "LONOWN",
+        "Baby Jane"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/20322863/1ba03ff8.a.42143119-2/200x200",
+      "albumTitle": "captivation",
+      "albumId": 42143119,
+      "durationMs": 250660
+    },
     {
       "id": "151403098",
       "title": "Road Trips",
@@ -1139,19 +1151,8 @@
       "albumTitle": "DIXXTAPE",
       "albumId": 42231800,
       "durationMs": 155000
-    },
-    {
-      "id": "119063398",
-      "title": "7am in Ohio",
-      "artists": [
-        "Trippie Redd"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/9837520/44ec6e15.a.31325033-1/200x200",
-      "albumTitle": "Saint Michael V2",
-      "albumId": 31325033,
-      "durationMs": 112550
     }
   ],
-  "likedTracksCount": 1427,
-  "totalLikedTracks": 1177
+  "likedTracksCount": 1428,
+  "totalLikedTracks": 1179
 }
