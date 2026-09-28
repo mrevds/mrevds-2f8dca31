@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-09-27T08:30:05.233Z",
+  "fetchedAt": "2026-09-28T08:54:36.914Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -716,7 +716,7 @@
       "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
       "albumTitle": "HALO",
       "albumId": 40436467,
-      "durationMs": 188930
+      "durationMs": 188960
     },
     {
       "id": "149905673",
@@ -763,7 +763,7 @@
       "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
       "albumTitle": "HALO",
       "albumId": 40436467,
-      "durationMs": 176360
+      "durationMs": 176400
     },
     {
       "id": "146188309",
@@ -924,7 +924,7 @@
       "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
       "albumTitle": "HALO",
       "albumId": 40436467,
-      "durationMs": 170380
+      "durationMs": 170420
     },
     {
       "id": "152357964",
