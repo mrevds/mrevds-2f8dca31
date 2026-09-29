@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-09-28T08:54:36.914Z",
+  "fetchedAt": "2026-09-29T08:57:06.418Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -713,10 +713,10 @@
       "artists": [
         "Tiffany Day"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/21049049/3b907970.a.40502738-2/200x200",
       "albumTitle": "HALO",
-      "albumId": 40436467,
-      "durationMs": 188960
+      "albumId": 40502738,
+      "durationMs": 188930
     },
     {
       "id": "149905673",
@@ -760,10 +760,10 @@
       "artists": [
         "Tiffany Day"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/21049049/3b907970.a.40502738-2/200x200",
       "albumTitle": "HALO",
-      "albumId": 40436467,
-      "durationMs": 176400
+      "albumId": 40502738,
+      "durationMs": 176360
     },
     {
       "id": "146188309",
@@ -921,10 +921,10 @@
       "artists": [
         "Tiffany Day"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/16485602/1237c987.a.40436467-1/200x200",
+      "cover": "https://avatars.yandex.net/get-music-content/21049049/3b907970.a.40502738-2/200x200",
       "albumTitle": "HALO",
-      "albumId": 40436467,
-      "durationMs": 170420
+      "albumId": 40502738,
+      "durationMs": 170380
     },
     {
       "id": "152357964",
@@ -1154,5 +1154,5 @@
     }
   ],
   "likedTracksCount": 1429,
-  "totalLikedTracks": 1175
+  "totalLikedTracks": 1176
 }
