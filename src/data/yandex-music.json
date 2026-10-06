@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-10-05T09:33:34.048Z",
+  "fetchedAt": "2026-10-06T09:19:53.813Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -396,19 +396,6 @@
       "albumTitle": "A dizzying dance",
       "albumId": 39368587,
       "durationMs": 113640
-    },
-    {
-      "id": "139750373",
-      "title": "Last Friday Night",
-      "artists": [
-        "HoodTrapJerk",
-        "ecentral",
-        "fvvk"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14350511/e276445e.a.37629968-1/200x200",
-      "albumTitle": "Last Friday Night (Hoodtrap / Jerk)",
-      "albumId": 37629968,
-      "durationMs": 174370
     },
     {
       "id": "137976410",
@@ -1151,8 +1138,19 @@
       "albumTitle": "DIXXTAPE",
       "albumId": 42231800,
       "durationMs": 155000
+    },
+    {
+      "id": "119063398",
+      "title": "7am in Ohio",
+      "artists": [
+        "Trippie Redd"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/9837520/44ec6e15.a.31325033-1/200x200",
+      "albumTitle": "Saint Michael V2",
+      "albumId": 31325033,
+      "durationMs": 112550
     }
   ],
   "likedTracksCount": 1429,
-  "totalLikedTracks": 1166
+  "totalLikedTracks": 1165
 }
