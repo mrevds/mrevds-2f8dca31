@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-10-07T09:09:59.750Z",
+  "fetchedAt": "2026-10-08T09:23:59.058Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -1152,5 +1152,5 @@
     }
   ],
   "likedTracksCount": 1429,
-  "totalLikedTracks": 1165
+  "totalLikedTracks": 1163
 }
