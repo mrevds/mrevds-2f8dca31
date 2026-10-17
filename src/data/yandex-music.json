@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-10-16T07:29:08.676Z",
+  "fetchedAt": "2026-10-17T07:10:07.464Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -590,19 +590,6 @@
       "durationMs": 259860
     },
     {
-      "id": "138499802",
-      "title": "emphasis",
-      "artists": [
-        "onexice",
-        "fatalshears",
-        "Silecut"
-      ],
-      "cover": "https://avatars.yandex.net/get-music-content/14304155/41c9875e.a.36348032-1/200x200",
-      "albumTitle": "emphasis",
-      "albumId": 36348032,
-      "durationMs": 165640
-    },
-    {
       "id": "138805875",
       "title": "Era of us",
       "artists": [
@@ -949,7 +936,7 @@
     },
     {
       "id": "129259409",
-      "title": "��ура",
+      "title": "дура",
       "artists": [
         "Fandape"
       ],
@@ -1149,8 +1136,19 @@
       "albumTitle": "Saint Michael V2",
       "albumId": 31325033,
       "durationMs": 112550
+    },
+    {
+      "id": "150721333",
+      "title": "Может быть",
+      "artists": [
+        "Dima Roux"
+      ],
+      "cover": "https://avatars.yandex.net/get-music-content/18172800/3375d0f9.a.41782011-1/200x200",
+      "albumTitle": "Может быть",
+      "albumId": 41782011,
+      "durationMs": 113200
     }
   ],
   "likedTracksCount": 1429,
-  "totalLikedTracks": 1160
+  "totalLikedTracks": 1159
 }
