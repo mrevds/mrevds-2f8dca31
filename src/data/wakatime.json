@@ -1,82 +1,82 @@
 {
   "ok": true,
-  "fetchedAt": "2026-10-18T06:49:28.904Z",
+  "fetchedAt": "2026-10-19T07:08:22.394Z",
   "range": "last_7_days",
-  "humanReadableTotal": "38 hrs 42 mins",
-  "humanReadableDailyAverage": "5 hrs 31 mins",
-  "totalSeconds": 139352.91,
-  "dailyAverage": 19908,
+  "humanReadableTotal": "29 hrs 22 mins",
+  "humanReadableDailyAverage": "4 hrs 53 mins",
+  "totalSeconds": 105745.845,
+  "dailyAverage": 17624,
   "languages": [
     {
       "name": "Go",
-      "percent": 50.09,
-      "text": "21 hrs 23 mins"
-    },
-    {
-      "name": "JavaScript",
-      "percent": 11.49,
-      "text": "4 hrs 54 mins"
+      "percent": 52.69,
+      "text": "17 hrs 12 mins"
     },
     {
       "name": "Markdown",
-      "percent": 9.67,
-      "text": "4 hrs 7 mins"
+      "percent": 10.22,
+      "text": "3 hrs 20 mins"
     },
     {
       "name": "Other",
-      "percent": 9.39,
-      "text": "4 hrs"
+      "percent": 10.06,
+      "text": "3 hrs 17 mins"
     },
     {
-      "name": "SQL",
-      "percent": 8.55,
-      "text": "3 hrs 39 mins"
+      "name": "JavaScript",
+      "percent": 8.51,
+      "text": "2 hrs 46 mins"
     },
     {
       "name": "Bash",
-      "percent": 5.47,
+      "percent": 7.16,
       "text": "2 hrs 20 mins"
     },
     {
+      "name": "SQL",
+      "percent": 6.7,
+      "text": "2 hrs 11 mins"
+    },
+    {
       "name": "Text",
-      "percent": 1.55,
+      "percent": 2.03,
       "text": "39 mins"
     },
     {
-      "name": "Protocol Buffer",
-      "percent": 0.99,
-      "text": "25 mins"
-    },
-    {
-      "name": "TypeScript",
-      "percent": 0.89,
-      "text": "22 mins"
-    },
-    {
       "name": "Env File",
-      "percent": 0.43,
+      "percent": 0.56,
       "text": "10 mins"
+    },
+    {
+      "name": "Makefile",
+      "percent": 0.51,
+      "text": "9 mins"
+    },
+    {
+      "name": "YAML",
+      "percent": 0.39,
+      "text": "7 mins"
     }
   ],
   "editors": [
     {
       "name": "Claude Code",
-      "percent": 71.99,
-      "text": "30 hrs 45 mins"
+      "percent": 73.79,
+      "text": "24 hrs 5 mins"
     },
     {
       "name": "Codex Vscode",
-      "percent": 15.12,
-      "text": "6 hrs 27 mins"
+      "percent": 10.41,
+      "text": "3 hrs 23 mins"
     },
     {
       "name": "GoLand",
-      "percent": 6.05,
-      "text": "2 hrs 35 mins"
+      "percent": 7.53,
+      "text": "2 hrs 27 mins"
     },
     {
       "name": "Zed",
-      "percent": 3.86,
+      "percent": 5.05,
       "text": "1 hr 38 mins"
     }
   ],
@@ -84,59 +84,59 @@
     {
       "name": "Linux",
       "percent": 100,
-      "text": "42 hrs 43 mins"
+      "text": "32 hrs 39 mins"
     }
   ],
   "projects": [
     {
       "name": "cbs-backend",
-      "percent": 58.62,
-      "text": "25 hrs 2 mins"
+      "percent": 66.02,
+      "text": "21 hrs 33 mins"
     },
     {
       "name": "vocab",
-      "percent": 33.27,
-      "text": "14 hrs 12 mins"
+      "percent": 25.26,
+      "text": "8 hrs 15 mins"
     },
     {
       "name": "renesans",
-      "percent": 2.13,
+      "percent": 2.78,
       "text": "54 mins"
     },
     {
       "name": "packets",
-      "percent": 1.71,
+      "percent": 2.24,
       "text": "43 mins"
     },
     {
       "name": "scratchpad",
-      "percent": 1.27,
-      "text": "32 mins"
+      "percent": 1.53,
+      "text": "30 mins"
     }
   ],
   "categories": [
     {
       "name": "AI Coding",
-      "percent": 92.2,
-      "text": "39 hrs 23 mins"
+      "percent": 90.4,
+      "text": "29 hrs 31 mins"
     },
     {
       "name": "Coding",
-      "percent": 7.1,
-      "text": "3 hrs 1 min"
+      "percent": 8.69,
+      "text": "2 hrs 50 mins"
     },
     {
       "name": "Writing Tests",
-      "percent": 0.65,
+      "percent": 0.85,
       "text": "16 mins"
     },
     {
       "name": "Writing Docs",
-      "percent": 0.05,
+      "percent": 0.06,
       "text": "1 min"
     }
   ],
-  "allTime": "1,265 hrs 23 mins",
+  "allTime": "1,265 hrs 36 mins",
   "allTimeLanguages": [
     {
       "name": "Go",
