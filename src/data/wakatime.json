@@ -1,138 +1,118 @@
 {
   "ok": true,
-  "fetchedAt": "2026-10-23T06:46:14.898Z",
+  "fetchedAt": "2026-10-24T06:40:41.908Z",
   "range": "last_7_days",
-  "humanReadableTotal": "5 hrs 14 mins",
-  "humanReadableDailyAverage": "1 hr 44 mins",
-  "totalSeconds": 18881.806,
-  "dailyAverage": 6294,
+  "humanReadableTotal": "1 hr 6 mins",
+  "humanReadableDailyAverage": "33 mins",
+  "totalSeconds": 3978.249,
+  "dailyAverage": 1989,
   "languages": [
     {
-      "name": "Go",
-      "percent": 38.49,
-      "text": "2 hrs 31 mins"
-    },
-    {
       "name": "Other",
-      "percent": 20.06,
-      "text": "1 hr 18 mins"
+      "percent": 51.7,
+      "text": "1 hr 10 mins"
     },
     {
-      "name": "Bash",
-      "percent": 15.43,
-      "text": "1 hr"
-    },
-    {
-      "name": "SQL",
-      "percent": 10.35,
-      "text": "40 mins"
-    },
-    {
-      "name": "JavaScript",
-      "percent": 8.79,
-      "text": "34 mins"
+      "name": "Go",
+      "percent": 42.89,
+      "text": "58 mins"
     },
     {
       "name": "Markdown",
-      "percent": 2.92,
-      "text": "11 mins"
-    },
-    {
-      "name": "Env File",
-      "percent": 1.97,
-      "text": "7 mins"
-    },
-    {
-      "name": "Text",
-      "percent": 1.02,
-      "text": "4 mins"
+      "percent": 4.97,
+      "text": "6 mins"
     },
     {
       "name": "JSON",
-      "percent": 0.89,
-      "text": "3 mins"
+      "percent": 0.16,
+      "text": "0 secs"
+    },
+    {
+      "name": "Bash",
+      "percent": 0.13,
+      "text": "0 secs"
+    },
+    {
+      "name": "SQL",
+      "percent": 0.11,
+      "text": "0 secs"
     },
     {
       "name": "YAML",
-      "percent": 0.06,
+      "percent": 0.04,
       "text": "0 secs"
     }
   ],
   "editors": [
     {
       "name": "Claude Code",
-      "percent": 77.03,
-      "text": "5 hrs 3 mins"
-    },
-    {
-      "name": "Zed",
-      "percent": 7.55,
-      "text": "29 mins"
-    },
-    {
-      "name": "GoLand",
-      "percent": 6.49,
-      "text": "25 mins"
+      "percent": 69.9,
+      "text": "1 hr 35 mins"
     },
     {
       "name": "VS Code",
-      "percent": 4.81,
+      "percent": 13.8,
       "text": "18 mins"
+    },
+    {
+      "name": "Zed",
+      "percent": 11.38,
+      "text": "15 mins"
+    },
+    {
+      "name": "OpenCode",
+      "percent": 4.81,
+      "text": "6 mins"
     }
   ],
   "operatingSystems": [
     {
       "name": "Linux",
       "percent": 100,
-      "text": "6 hrs 33 mins"
+      "text": "2 hrs 17 mins"
     }
   ],
   "projects": [
     {
       "name": "cbs-backend",
-      "percent": 57.04,
-      "text": "3 hrs 44 mins"
+      "percent": 43.74,
+      "text": "1 hr"
     },
     {
       "name": "scratch-2026-10-19-316307",
-      "percent": 13.97,
+      "percent": 40.06,
       "text": "54 mins"
     },
     {
-      "name": "packets",
-      "percent": 11.13,
-      "text": "43 mins"
-    },
-    {
-      "name": "vocab",
-      "percent": 8.53,
-      "text": "33 mins"
-    },
-    {
       "name": "maman-advakat-backend",
-      "percent": 3.85,
+      "percent": 11.03,
       "text": "15 mins"
+    },
+    {
+      "name": "scratch-2026-10-18-d374e7",
+      "percent": 5.06,
+      "text": "6 mins"
+    },
+    {
+      "name": "renesans",
+      "percent": 0.11,
+      "text": "0 secs"
     }
   ],
   "categories": [
     {
       "name": "AI Coding",
-      "percent": 87.33,
-      "text": "5 hrs 43 mins"
+      "percent": 86.04,
+      "text": "1 hr 58 mins"
     },
     {
       "name": "Coding",
-      "percent": 12.54,
-      "text": "49 mins"
+      "percent": 13.8,
+      "text": "18 mins"
     },
     {
       "name": "Writing Docs",
-      "percent": 0.11,
-      "text": "0 secs"
-    },
-    {
-      "name": "Writing Tests",
-      "percent": 0.02,
+      "percent": 0.16,
       "text": "0 secs"
     }
   ],
