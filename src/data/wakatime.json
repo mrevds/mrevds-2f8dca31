@@ -1,101 +1,16 @@
 {
   "ok": true,
-  "fetchedAt": "2026-10-26T07:13:41.040Z",
+  "fetchedAt": "2026-10-27T07:02:54.612Z",
   "range": "last_7_days",
-  "humanReadableTotal": "17 mins",
-  "humanReadableDailyAverage": "17 mins",
-  "totalSeconds": 1025.728,
-  "dailyAverage": 1026,
-  "languages": [
-    {
-      "name": "Other",
-      "percent": 78.37,
-      "text": "1 hr 1 min"
-    },
-    {
-      "name": "Go",
-      "percent": 13.17,
-      "text": "10 mins"
-    },
-    {
-      "name": "Markdown",
-      "percent": 8.36,
-      "text": "6 mins"
-    },
-    {
-      "name": "SQL",
-      "percent": 0.1,
-      "text": "0 secs"
-    }
-  ],
-  "editors": [
-    {
-      "name": "Claude Code",
-      "percent": 78.37,
-      "text": "1 hr 1 min"
-    },
-    {
-      "name": "VS Code",
-      "percent": 13.17,
-      "text": "10 mins"
-    },
-    {
-      "name": "OpenCode",
-      "percent": 8.36,
-      "text": "6 mins"
-    },
-    {
-      "name": "DataGrip",
-      "percent": 0.1,
-      "text": "0 secs"
-    }
-  ],
-  "operatingSystems": [
-    {
-      "name": "Linux",
-      "percent": 100,
-      "text": "1 hr 19 mins"
-    }
-  ],
-  "projects": [
-    {
-      "name": "scratch-2026-10-19-316307",
-      "percent": 69.59,
-      "text": "54 mins"
-    },
-    {
-      "name": "cbs-backend",
-      "percent": 13.17,
-      "text": "10 mins"
-    },
-    {
-      "name": "scratch-2026-10-18-d374e7",
-      "percent": 8.78,
-      "text": "6 mins"
-    },
-    {
-      "name": "maman-advakat-backend",
-      "percent": 8.36,
-      "text": "6 mins"
-    },
-    {
-      "name": "renesans",
-      "percent": 0.1,
-      "text": "0 secs"
-    }
-  ],
-  "categories": [
-    {
-      "name": "AI Coding",
-      "percent": 91.06,
-      "text": "1 hr 11 mins"
-    },
-    {
-      "name": "Coding",
-      "percent": 8.94,
-      "text": "7 mins"
-    }
-  ],
+  "humanReadableTotal": "0 secs",
+  "humanReadableDailyAverage": "0 secs",
+  "totalSeconds": 0,
+  "dailyAverage": 0,
+  "languages": [],
+  "editors": [],
+  "operatingSystems": [],
+  "projects": [],
+  "categories": [],
   "allTime": "1,266 hrs 42 mins",
   "allTimeLanguages": [
     {
