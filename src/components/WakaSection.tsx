@@ -1,195 +1,50 @@
-import {
-  SiGo, SiPostgresql, SiTypescript, SiLinux, SiVsco,
-  SiMarkdown, SiGnubash, SiNeovim, SiApple,
-} from "react-icons/si";
-import waka from "@/data/wakatime.json";
-import MochiFace from "./MochiFace";
+import Chapter from "./Chapter";
+import { PlateClock } from "./Drawings";
+import { waka, wakaView, formatDate } from "@/lib/data";
 
-type WakaItem = { name: string; percent: number; text: string; color?: string };
-type WakaData = {
-  ok: boolean;
-  fetchedAt: string | null;
-  humanReadableTotal?: string;
-  humanReadableDailyAverage?: string;
-  languages?: WakaItem[];
-  editors?: WakaItem[];
-  operatingSystems?: WakaItem[];
-  projects?: WakaItem[];
-  categories?: WakaItem[];
-  allTime?: string | null;
-  allTimeLanguages?: WakaItem[];
-  allTimeEditors?: WakaItem[];
-  allTimeOS?: WakaItem[];
-  allTimeTotalSeconds?: number;
-};
-
-const data = waka as WakaData;
-
-const langIcon: Record<string, React.ReactNode> = {
-  Go: <SiGo />, TypeScript: <SiTypescript />, SQL: <SiPostgresql />,
-  Bash: <SiGnubash />, Markdown: <SiMarkdown />,
-};
-
-const ranks = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"];
-
-const editorPics: Record<string, React.ReactNode> = {
-  "VS Code": <SiVsco />, GoLand: <SiGo />, Neovim: <SiNeovim />,
-};
-
-const osPics: Record<string, React.ReactNode> = {
-  Linux: <SiLinux />, macOS: <SiApple />, Mac: <SiApple />,
-};
-
+/* Chapter 03: WakaTime numbers printed as a receipt, with a short essay beside it */
 const WakaSection = () => {
-  if (!data.ok || !data.languages?.length) return null;
+  const v = wakaView();
+  if (!waka.ok || !v.languages.length) return null;
 
-  const aiCat = data.categories?.find(c => c.name === "AI Coding");
+  const langs = v.languages.slice(0, 4);
+  const lead = langs[0];
+  const max = lead.percent;
+  const total = v.recentTotal ?? v.allTime;
 
   return (
-    <section className="block reveal" id="waka">
-      <div className="eyebrow"><span className="num">03</span> · what i actually write · じっせきデータ</div>
-      <h2>
-        What I <span className="accent">actually</span> write
-        <span className="jp">てを うごかすデータ</span>
-      </h2>
-
-      <div className="waka-duo">
-        {/* ── left card: stats + all-time + meta ── */}
-        <div className="waka-card waka-card-left">
-          <div className="waka-bar-accent" />
-
-          <div className="waka-blob-grid">
-            {data.humanReadableTotal && (
-              <div className="waka-blob">
-                <span className="waka-blob-label">14d</span>
-                <span className="waka-blob-val">{data.humanReadableTotal}</span>
-              </div>
-            )}
-            {data.allTime && (
-              <div className="waka-blob">
-                <span className="waka-blob-label">all time</span>
-                <span className="waka-blob-val">{data.allTime}</span>
-              </div>
-            )}
-            {data.humanReadableDailyAverage && (
-              <div className="waka-blob">
-                <span className="waka-blob-label">&nbsp;/ day</span>
-                <span className="waka-blob-val">{data.humanReadableDailyAverage}</span>
-              </div>
-            )}
-            {aiCat && (
-              <div className="waka-blob">
-                <span className="waka-blob-label">ai · {aiCat.text}</span>
-                <span className="waka-blob-val">{aiCat.percent.toFixed(1)}%</span>
-              </div>
-            )}
-          </div>
-
-          <div className="waka-all-section">
-            <div className="waka-all-head">
-              <span className="waka-all-title">all-time languages</span>
-              <span className="waka-all-jp">ぜんきろく</span>
+    <section id="hours">
+      <Chapter
+        n={3}
+        title="The hours"
+        sub={`Measured by WakaTime · ${v.period}`}
+        genre="a printed receipt"
+        plate="var(--sage)"
+        drawing={<PlateClock />}
+      />
+      <div className="chapter-body two">
+        <div className="receipt">
+          <div className="row"><b>GET /denis/hours</b><span className="ok">200 OK</span></div>
+          <hr />
+          <div className="row"><span className="muted">total</span><span>{total}</span></div>
+          <hr />
+          {langs.map((l, i) => (
+            <div key={l.name}>
+              <div className="row"><span>{l.name}</span><span>{l.percent.toFixed(1)}%</span></div>
+              <div className={`bar${i === 0 ? " lead" : ""}`}><i style={{ width: `${(l.percent / max) * 100}%` }} /></div>
             </div>
-            {data.allTimeLanguages?.length ? (
-              <ul className="waka-all-bars">
-                {(data.allTimeLanguages ?? []).slice(0, 5).map((lang, i) => (
-                  <li key={lang.name} className="waka-all-row">
-                    <span className="waka-all-label">
-                      <span className="waka-bar-emoji">{langIcon[lang.name] || "◈"}</span>
-                      {lang.name}
-                    </span>
-                    <span className="waka-all-track">
-                      <span className="waka-all-fill" style={{
-                        width: `${Math.max(lang.percent, 3)}%`,
-                      }} />
-                    </span>
-                    <span className="waka-all-pct">{lang.percent.toFixed(1)}%</span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <ul className="waka-all-bars">
-                {data.languages.slice(0, 5).map((lang, i) => (
-                  <li key={lang.name} className="waka-all-row">
-                    <span className="waka-all-label">
-                      <span className="waka-bar-emoji">{langIcon[lang.name] || "◈"}</span>
-                      {lang.name}
-                    </span>
-                    <span className="waka-all-track">
-                      <span className="waka-all-fill" style={{
-                        width: `${Math.max(lang.percent, 3)}%`,
-                      }} />
-                    </span>
-                    <span className="waka-all-pct">{lang.percent.toFixed(1)}%</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          <div className="waka-stamp-row">
-            {data.editors?.[0] && (
-              <span className="waka-stamp">
-                {editorPics[data.editors[0].name] || "✏️"}
-                {data.editors[0].name}
-                <span className="waka-stamp-text">{data.editors[0].text}</span>
-              </span>
-            )}
-            {data.operatingSystems?.[0] && (
-              <span className="waka-stamp">
-                {osPics[data.operatingSystems[0].name] || "🖥️"}
-                {data.operatingSystems[0].name}
-                <span className="waka-stamp-text">{data.operatingSystems[0].text}</span>
-              </span>
-            )}
-            {data.projects?.[0] && (
-              <span className="waka-stamp">
-                📦
-                {data.projects[0].name}
-                <span className="waka-stamp-text">{data.projects[0].text}</span>
-              </span>
-            )}
-          </div>
+          ))}
+          <hr />
+          {v.editors[0] && <div className="row"><span className="muted">editor</span><span>{v.editors[0].name} {Math.round(v.editors[0].percent)}%</span></div>}
+          {v.os[0] && <div className="row"><span className="muted">os</span><span>{v.os[0].name} {Math.round(v.os[0].percent)}%</span></div>}
+          <hr />
+          <div className="row muted"><span>synced {formatDate(waka.fetchedAt)}</span><span>デニス</span></div>
         </div>
-
-        {/* ── right card: 7d languages ── */}
-        <div className="waka-card waka-card-right">
-          <div className="waka-bar-accent" />
-          <div className="waka-langs-head">
-            <span className="waka-langs-title">top languages</span>
-            <span className="waka-langs-jp">ことば</span>
-          </div>
-          <ul className="waka-bars">
-            {data.languages.slice(0, 10).map((lang, i) => (
-              <li key={lang.name} className="waka-bar-row" style={{ animationDelay: `${i * 0.06}s` }}>
-                <span className="waka-bar-rank">{ranks[i]}</span>
-                <span className="waka-bar-label">
-                  <span className="waka-bar-emoji">{langIcon[lang.name] || "◈"}</span>
-                  {lang.name}
-                </span>
-                <span className="waka-bar-track">
-                  <span className="waka-bar-fill"
-                    style={{
-                      width: `${Math.max(lang.percent, 3)}%`,
-                      animationDelay: `${i * 0.06}s`,
-                    }}
-                  />
-                </span>
-                <span className="waka-bar-pct">{lang.percent.toFixed(1)}%</span>
-              </li>
-            ))}
-          </ul>
-          <div className="waka-mochi-corner">
-            <MochiFace mood="genki" size={40} blink antenna={false} />
-          </div>
+        <div className="essay">
+          <p>Most of {total} went into {lead.name}: handlers, repositories, services that stay boring.</p>
+          <p className="small">The rest is SQL, some TypeScript and Bash. Updated daily.</p>
         </div>
       </div>
-
-      {data.fetchedAt && (
-        <div className="waka-foot">
-          // synced from wakatime · {new Date(data.fetchedAt).toLocaleDateString("en-GB")}
-        </div>
-      )}
     </section>
   );
 };

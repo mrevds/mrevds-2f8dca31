@@ -1,129 +1,75 @@
 import { useState } from "react";
-import ym from "@/data/yandex-music.json";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { ArrowUpRight, Play } from "lucide-react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import Chapter from "./Chapter";
+import { PlateMoon } from "./Drawings";
+import NightRoom from "./NightRoom";
+import { ym, formatDuration, type LikedTrack } from "@/lib/data";
 
-type LikedTrack = {
-  id: string;
-  title: string;
-  artists: string[];
-  cover: string | null;
-  albumTitle: string | null;
-  albumId: number | null;
-  durationMs: number;
-};
-
-type YMData = {
-  ok: boolean;
-  fetchedAt: string | null;
-  user: { uid: number; login: string; displayName: string } | null;
-  likedTracks: LikedTrack[];
-  likedTracksCount: number | null;
-  totalLikedTracks: number;
-};
-
-const data = ym as YMData;
-
-function formatDuration(ms: number) {
-  const s = Math.floor(ms / 1000);
-  const m = Math.floor(s / 60);
-  const sec = s % 60;
-  return `${m}:${String(sec).padStart(2, "0")}`;
-}
-
+/* Chapter 05: a lo-fi room at night, the liked tracks on the side */
 const YandexMusicSection = () => {
   const [playing, setPlaying] = useState<LikedTrack | null>(null);
 
-  if (!data.ok || !data.likedTracks.length) return null;
+  if (!ym.ok || !ym.likedTracks.length) return null;
 
   return (
-    <section className="block reveal" id="music">
-      <div className="eyebrow">
-        <span className="num">04</span> · my tunes · おんがく
-      </div>
-      <h2>
-        What I <span className="accent">listen</span> to
-        <span className="jp">きいてる おんがく</span>
-      </h2>
-
-      <div className="ym-stats">
-        <div className="ym-stat" style={{ background: "var(--sakura)" }}>
-          <div className="ym-stat-num">{data.likedTracks.length}+</div>
-          <div className="ym-stat-label">recently liked</div>
+    <section id="music">
+      <Chapter
+        n={5}
+        title="Night shift"
+        sub="What plays while tests run"
+        genre="a lo-fi room"
+        plate="var(--night)"
+        dark
+        drawing={<PlateMoon />}
+      />
+      <div className="chapter-body">
+        <div className="night">
+          <NightRoom track={{ title: ym.likedTracks[0].title, artist: ym.likedTracks[0].artists.join(", ") }} />
+          <div className="night-list">
+            <div className="ch-no">Side A · {ym.totalLikedTracks.toLocaleString("en-US")} liked tracks</div>
+            <h3>On repeat</h3>
+            <ul>
+              {ym.likedTracks.slice(0, 8).map((t) => (
+                <li key={t.id}>
+                  <button onClick={() => setPlaying(t)}>
+                    {t.cover ? <img src={t.cover} alt="" width={40} height={40} loading="lazy" /> : <span className="no-cover" />}
+                    <span className="t">
+                      {t.title}
+                      <span>{t.artists.join(", ")}</span>
+                    </span>
+                    <span className="dur">{formatDuration(t.durationMs)}</span>
+                    <Play className="play" size={14} strokeWidth={1.5} fill="currentColor" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="ym-stat" style={{ background: "var(--taro)" }}>
-          <div className="ym-stat-num">{data.totalLikedTracks}</div>
-          <div className="ym-stat-label">total liked</div>
-        </div>
-      </div>
-
-      <div className="ym-section-head">
-        <span className="ym-section-title">liked tracks</span>
-        <span className="ym-section-jp">すきな きょく</span>
-      </div>
-
-      <div className="ym-like-scroll">
-        {data.likedTracks.map((t) => (
-          <button
-            className="ym-like-card"
-            key={t.id}
-            onClick={() => setPlaying(t)}
-          >
-            {t.cover ? (
-              <img className="ym-like-cover" src={t.cover} alt="" loading="lazy" />
-            ) : (
-              <div className="ym-like-cover ym-like-cover-fallback">♪</div>
-            )}
-            <div className="ym-like-play-overlay">▶</div>
-            <div className="ym-like-body">
-              <div className="ym-like-title">{t.title}</div>
-              <div className="ym-like-artists">{t.artists.join(", ")}</div>
-              <div className="ym-like-meta">
-                {t.albumTitle && <span>{t.albumTitle}</span>}
-                <span className="ym-like-dur">{formatDuration(t.durationMs)}</span>
-              </div>
-            </div>
-            <div className="ym-like-heart">♡</div>
-          </button>
-        ))}
       </div>
 
       <Dialog open={!!playing} onOpenChange={(o) => !o && setPlaying(null)}>
         {playing && (
-          <DialogContent className="ym-player-dialog">
-            <div className="ym-player-info">
-              {playing.cover && (
-                <img className="ym-player-cover-sm" src={playing.cover} alt="" />
-              )}
+          <DialogContent className="player">
+            <div className="player-head">
+              {playing.cover && <img src={playing.cover} alt="" width={48} height={48} />}
               <div>
-                <div className="ym-player-title">{playing.title}</div>
-                <div className="ym-player-artists">{playing.artists.join(" · ")}</div>
+                <DialogTitle className="player-title">{playing.title}</DialogTitle>
+                <div className="player-artist">{playing.artists.join(", ")}</div>
               </div>
             </div>
             <iframe
-              className="ym-player-iframe"
+              className="player-frame"
               src={`https://music.yandex.ru/iframe/#track/${playing.id}/${playing.albumId || ""}`}
               allow="autoplay *; encrypted-media *; fullscreen *"
-              title="Yandex Music Player"
+              title="Yandex Music player"
             />
-            <div className="ym-player-foot">
-              <a
-                href={`https://music.yandex.ru/track/${playing.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                открыть в яндекс музыке ↗
-              </a>
-            </div>
+            <a className="player-link" href={`https://music.yandex.ru/track/${playing.id}`} target="_blank" rel="noopener noreferrer">
+              Open in Yandex Music <ArrowUpRight size={14} strokeWidth={1.5} />
+            </a>
           </DialogContent>
         )}
       </Dialog>
-
-      {data.fetchedAt && (
-        <div className="ym-foot">
-          // {data.totalLikedTracks} liked tracks · synced from yandex music ·{" "}
-          {new Date(data.fetchedAt).toLocaleDateString("en-GB")}
-        </div>
-      )}
     </section>
   );
 };

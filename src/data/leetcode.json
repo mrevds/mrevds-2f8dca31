@@ -1,0 +1,132 @@
+{
+  "ok": true,
+  "fetchedAt": "2026-11-02T13:59:53.516Z",
+  "username": "mrevds",
+  "ranking": 591589,
+  "solved": {
+    "all": 273,
+    "easy": 173,
+    "medium": 93,
+    "hard": 7
+  },
+  "total": {
+    "all": 4100,
+    "easy": 975,
+    "medium": 2138,
+    "hard": 987
+  },
+  "languages": [
+    {
+      "name": "Go",
+      "solved": 237
+    },
+    {
+      "name": "PostgreSQL",
+      "solved": 32
+    },
+    {
+      "name": "JavaScript",
+      "solved": 10
+    },
+    {
+      "name": "Java",
+      "solved": 1
+    },
+    {
+      "name": "Python3",
+      "solved": 1
+    },
+    {
+      "name": "PHP",
+      "solved": 1
+    }
+  ],
+  "tags": [
+    {
+      "name": "Array",
+      "solved": 127
+    },
+    {
+      "name": "Hash Table",
+      "solved": 62
+    },
+    {
+      "name": "Two Pointers",
+      "solved": 59
+    },
+    {
+      "name": "String",
+      "solved": 58
+    },
+    {
+      "name": "Sorting",
+      "solved": 42
+    },
+    {
+      "name": "Database",
+      "solved": 32
+    },
+    {
+      "name": "Math",
+      "solved": 29
+    },
+    {
+      "name": "Binary Search",
+      "solved": 28
+    }
+  ],
+  "streak": 3,
+  "activeDays": 7,
+  "calendar": {
+    "1764028800": 1,
+    "1771977600": 13,
+    "1772150400": 39,
+    "1772236800": 14,
+    "1772323200": 8,
+    "1774569600": 8,
+    "1782864000": 4
+  },
+  "contest": {
+    "rating": 1414.272,
+    "attendedContestsCount": 1,
+    "topPercentage": 77.52
+  },
+  "recent": [
+    {
+      "title": "Two Sum",
+      "slug": "two-sum",
+      "at": 1782908626,
+      "lang": "java"
+    },
+    {
+      "title": "Container With Most Water",
+      "slug": "container-with-most-water",
+      "at": 1774601924,
+      "lang": "golang"
+    },
+    {
+      "title": "Longest Palindromic Substring",
+      "slug": "longest-palindromic-substring",
+      "at": 1774600930,
+      "lang": "golang"
+    },
+    {
+      "title": "Employees Whose Manager Left the Company",
+      "slug": "employees-whose-manager-left-the-company",
+      "at": 1772357021,
+      "lang": "postgresql"
+    },
+    {
+      "title": "Daily Leads and Partners",
+      "slug": "daily-leads-and-partners",
+      "at": 1772355935,
+      "lang": "postgresql"
+    },
+    {
+      "title": "User Activity for the Past 30 Days I",
+      "slug": "user-activity-for-the-past-30-days-i",
+      "at": 1772352496,
+      "lang": "postgresql"
+    }
+  ]
+}

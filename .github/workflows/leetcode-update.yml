@@ -1,0 +1,36 @@
+name: Update LeetCode Data
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Every day at 03:00 UTC (after wakatime and yandex music)
+  workflow_dispatch:
+
+jobs:
+  update-leetcode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run LeetCode fetch script
+        run: node scripts/fetch-leetcode.mjs
+
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet src/data/leetcode.json; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/leetcode.json
+          git commit -m "chore: update LeetCode data ($(date -u +'%Y-%m-%d %H:%M:%S UTC'))"
+          git push
