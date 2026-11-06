@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-05T09:46:11.150Z",
+  "fetchedAt": "2026-11-06T09:44:42.046Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -251,7 +251,7 @@
       "id": "146322813",
       "title": "Shadows",
       "artists": [
-        "blindheart"
+        "blindheart "
       ],
       "cover": "https://avatars.yandex.net/get-music-content/17649213/40204095.a.39798341-1/200x200",
       "albumTitle": "Shadows",
@@ -965,7 +965,7 @@
         "TEY DI"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/17659805/8b1f5739.a.40449733-1/200x200",
-      "albumTitle": "Привет, спишь?",
+      "albumTitle": "При��ет, спишь?",
       "albumId": 40449733,
       "durationMs": 105360
     },
