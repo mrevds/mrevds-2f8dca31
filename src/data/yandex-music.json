@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-07T09:07:49.031Z",
+  "fetchedAt": "2026-11-08T09:24:10.271Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -251,7 +251,7 @@
       "id": "146322813",
       "title": "Shadows",
       "artists": [
-        "blindheart "
+        "blindheart"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/17649213/40204095.a.39798341-1/200x200",
       "albumTitle": "Shadows",
@@ -1144,7 +1144,7 @@
         "Dima Roux"
       ],
       "cover": "https://avatars.yandex.net/get-music-content/18172800/3375d0f9.a.41782011-1/200x200",
-      "albumTitle": "Может быть",
+      "albumTitle": "М��жет быть",
       "albumId": 41782011,
       "durationMs": 113200
     }
