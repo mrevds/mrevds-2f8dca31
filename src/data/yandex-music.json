@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-10T10:16:41.889Z",
+  "fetchedAt": "2026-11-11T09:46:27.011Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -36,9 +36,9 @@
       "artists": [
         "Wale the Sage"
       ],
-      "cover": "https://avatars.yandex.net/get-music-content/16406615/b0c5dcd9.a.39842992-1/200x200",
-      "albumTitle": "HUG ME AS IF WE WERE TO DIE TOMORROW",
-      "albumId": 39842992,
+      "cover": "https://avatars.yandex.net/get-music-content/20974004/a6f8c68d.a.44830035-1/200x200",
+      "albumTitle": "HUG ME FOREVER",
+      "albumId": 44830035,
       "durationMs": 144620
     },
     {
@@ -1150,5 +1150,5 @@
     }
   ],
   "likedTracksCount": 1429,
-  "totalLikedTracks": 1162
+  "totalLikedTracks": 1160
 }
