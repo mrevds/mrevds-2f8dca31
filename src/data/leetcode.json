@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-12T10:30:36.297Z",
+  "fetchedAt": "2026-11-13T10:24:50.860Z",
   "username": "mrevds",
-  "ranking": 594018,
+  "ranking": 594264,
   "solved": {
     "all": 273,
     "easy": 173,
@@ -89,7 +89,7 @@
   "contest": {
     "rating": 1414.272,
     "attendedContestsCount": 1,
-    "topPercentage": 77.5
+    "topPercentage": 77.48
   },
   "recent": [
     {
