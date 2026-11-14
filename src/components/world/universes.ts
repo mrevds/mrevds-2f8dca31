@@ -83,13 +83,13 @@ export const UNIVERSES: Universe[] = [
   },
   {
     id: "lake", kind: "star", title: "The Lake of Stars", jp: "星の湖", genres: "soundtracks, classical & ambient", thing: "stars",
-    match: /classical|soundtrack|film|tvseries|animated|ambient|newage|instrumental|meditation|piano|score/,
+    match: /classical|soundtrack|film|tvseries|animated|ambient|newage|instrumental|meditation|piano|score|modern/,
     text: "Someone engraved the whole sky in gold and it turns, very slowly. These songs are pinned on it as constellations, and the water remembers each one.",
     Bg: StarLakeBg,
   },
   {
     id: "lanterns", kind: "lantern", title: "The Lantern Path", jp: "提灯の道", genres: "folk, world & estrada", thing: "lanterns",
-    match: /folk|world|ethnic|bard|estrada|shanson|local|country|reggae|latin|african|eastern|uzbek|asian/,
+    match: /folk|world|ethnic|bard|estrada|shanson|local|country|reggae|latin|african|eastern|uzbek|asian|tarab|arab/,
     text: "A path through a field of red spider lilies, and someone has hung a paper lantern for every song that sounds like somewhere.",
     Bg: LanternPathBg, grain: true,
   },
