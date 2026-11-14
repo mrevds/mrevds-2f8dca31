@@ -2,8 +2,9 @@ import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, 
 import { ArrowDown, ArrowUp, ArrowUpRight, Play, Shuffle } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import NightRoom from "@/components/NightRoom";
-import { rng } from "@/components/world/scenes";
+import { rng } from "@/components/world/kit";
 import { PortalView } from "@/components/world/scenes2";
+import { Car, ThingArt } from "@/components/world/things";
 import { placeTracks, type Kind, type Universe } from "@/components/world/universes";
 import { ym, formatDuration, type LikedTrack } from "@/lib/data";
 
@@ -106,7 +107,7 @@ const layout = (kind: Kind, n: number, portrait: boolean, K: number): Layout => 
     }
     case "taillight": {
       const lanes = n > 16 ? (portrait ? [-40, -14, 14, 40] : [-30, -10, 10, 30]) : portrait ? [-30, 30] : [-16, 16];
-      const vy = portrait ? 33 : 47;
+      const vy = 48; // the horizon of HighwayBg
       const perLane = Math.ceil(n / lanes.length);
       const r = rng(17);
       const pts = Array.from({ length: n }, (_, i) => {
@@ -141,6 +142,7 @@ const PALETTE: Partial<Record<Kind, string[]>> = {
   balloon: ["#f7a8c4", "#fbe3a8", "#a8e0c8", "#a8c8f5", "#d4b8f2", "#ffb8a0"],
   window: ["#ffcf7a", "#ffd9a0", "#9fc4ff", "#ffb36b", "#ffcf7a"],
   jelly: ["#8fe8ff", "#ff9ad5", "#b9a8ff"],
+  taillight: ["#2c3140", "#b9b4ab", "#7d1d2a", "#24496b", "#e3ddd1", "#46405e", "#9a6b2f"],
 };
 
 const usePortrait = () => {
@@ -206,6 +208,24 @@ const Threshold = ({ worlds }: { worlds: number }) => {
   );
 };
 
+/* ── the road moving: lamp posts and cat's eyes rush past, now and then a car overtakes you ──
+   Each runner slides from the vanishing point along a straight line in % of the scene, and grows as it comes;
+   both run on the same accelerating curve, so it stays on the line. */
+const RoadFx = ({ vy, edge, lane }: { vy: number; edge: number; lane: number }) => {
+  const run = (dx: number, delay: number, cls: string, child: ReactNode, key: string) => (
+    <span key={key} className={`run ${cls}`} style={{ "--dx": dx, "--dy": 100 - vy, "--dl": `${delay}s` } as CSSProperties}>
+      <i style={{ top: `${vy}%` }}>{child}</i>
+    </span>
+  );
+  return (
+    <div className="road-fx" aria-hidden="true">
+      {[-1, 1].flatMap((side) => [0, 1, 2, 3].map((k) => run(side * (edge + 3), -k * 0.9 - (side > 0 ? 0.45 : 0), `run-pole${side < 0 ? " left" : ""}`, null, `p${side}${k}`)))}
+      {[-1, 1].flatMap((side) => [0, 1, 2, 3, 4, 5].map((k) => run(side * (edge - 1), -k * 0.6, "run-eye", null, `e${side}${k}`)))}
+      {run(lane * 0.9, 0, "run-car", <Car v={1} />, "car")}
+    </div>
+  );
+};
+
 /* ── one song as a thing in the world ── */
 const Thing = ({ kind, t, p, i, on, onPlay }: { kind: Kind; t: LikedTrack; p: Pt; i: number; on: boolean; onPlay: (t: LikedTrack) => void }) => {
   const side = p.x < 22 ? " tip-l" : p.x > 78 ? " tip-r" : "";
@@ -213,12 +233,13 @@ const Thing = ({ kind, t, p, i, on, onPlay }: { kind: Kind; t: LikedTrack; p: Pt
   const colors = PALETTE[kind];
   const style = {
     left: `${p.x}%`, top: `${p.y}%`, "--drop": `${p.drop ?? 0}px`, "--delay": `${p.delay.toFixed(2)}s`, "--s": p.s ?? 1,
-    "--c": colors ? colors[i % colors.length] : undefined,
+    "--c": colors ? colors[(i * 3 + Math.floor(i / colors.length)) % colors.length] : undefined,
+    zIndex: kind === "taillight" ? Math.round(p.y) : undefined,
   } as CSSProperties;
   return (
     <button id={`t-${t.id}`} className={`thing thing-${kind} v${i % 3}${on ? " on" : ""}`} style={style} onClick={() => onPlay(t)}
       aria-label={`Play ${t.title} by ${t.artists.join(", ")}`}>
-      <span className="thing-shape" aria-hidden="true" />
+      <span className="thing-shape" aria-hidden="true"><ThingArt kind={kind} i={i} /></span>
       <span className={`tip${side}${below}`} aria-hidden="true">
         {t.cover ? <img src={t.cover} alt="" width={44} height={44} loading="lazy" /> : <span className="tip-nocover" />}
         <span className="tip-text">
@@ -240,7 +261,7 @@ const Land = ({ u, index, tracks, byGenre, current, onPlay, portrait, children }
   const { Bg } = u;
   const id = `world-${u.id}`;
   return (
-    <section className={`land land-${u.kind}${tall ? " tall" : ""}`} id={id} aria-labelledby={`${id}-title`} style={{ "--k": K } as CSSProperties}>
+    <section className={`land land-${u.kind}${tall ? " tall" : ""}${u.light ? " land-light" : ""}${u.grain ? " grain" : ""}`} id={id} aria-labelledby={`${id}-title`} style={{ "--k": K } as CSSProperties}>
       <div className="land-sky"><Bg /></div>
 
       {(ropes || buildings || road || u.kind === "star") && (
@@ -271,6 +292,7 @@ const Land = ({ u, index, tracks, byGenre, current, onPlay, portrait, children }
           {u.kind === "star" && constellations(pts).map((g, i) => <polyline key={i} className="sky-line" points={g.map((p) => `${p.x},${p.y}`).join(" ")} />)}
         </svg>
       )}
+      {road && <RoadFx vy={road.vy} edge={Math.max(...road.lanes.map(Math.abs)) + 10} lane={road.lanes[road.lanes.length - 1]} />}
       {u.kind === "star" && !tall && pts.map((p, i) => {
         const y = 2 * (portrait ? 60 : 62) - p.y;
         return y < 97 ? <span key={i} className="star-echo" style={{ left: `${p.x}%`, top: `${y}%`, animationDelay: `${p.delay}s` }} aria-hidden="true" /> : null;

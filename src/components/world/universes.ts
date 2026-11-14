@@ -20,20 +20,24 @@ export type Universe = {
   text: string;
   match: RegExp | null;
   Bg: () => JSX.Element;
+  /* light paper: the caption is printed in dark ink */
+  light?: boolean;
+  /* paper grain over the scene */
+  grain?: boolean;
 };
 
 export const UNIVERSES: Universe[] = [
   {
-    id: "highway", kind: "taillight", title: "Midnight Highway", jp: "真夜中の高速", genres: "phonk & trap", thing: "tail lights",
+    id: "highway", kind: "taillight", title: "Midnight Highway", jp: "真夜中の高速", genres: "phonk & trap", thing: "cars",
     match: /phonk|trap|drift/,
-    text: "An empty road at three in the morning, cowbell in the speakers. Every pair of red lights ahead is a song you can catch up with.",
+    text: "An empty road at three in the morning, cowbell in the speakers. Every car ahead of you is a song you can catch up with.",
     Bg: HighwayBg,
   },
   {
     id: "blocks", kind: "window", title: "Panel Blocks", jp: "団地", genres: "Russian rap", thing: "lit windows",
     match: /rusrap|ruhiphop/,
-    text: "Nine-storey blocks under a winter sky. Behind every lit window someone plays a track too loud for the thin walls.",
-    Bg: PanelBlocksBg,
+    text: "Nine-storey blocks, a winter yard, a man walking his dog. Behind every lit window someone plays a track too loud for the thin walls.",
+    Bg: PanelBlocksBg, grain: true,
   },
   {
     id: "neon", kind: "neon", title: "Neon Avenue", jp: "ネオン通り", genres: "hip-hop & foreign rap", thing: "neon signs",
@@ -56,13 +60,13 @@ export const UNIVERSES: Universe[] = [
   {
     id: "ember", kind: "ember", title: "Ember Mountains", jp: "火の山", genres: "rock & metal", thing: "embers",
     match: /metal|rock|punk|core|grunge|emo/,
-    text: "Black peaks cut in wood, fire underneath. The songs fly up out of the crater as sparks: loud, bright and over too soon.",
-    Bg: EmberMountainsBg,
+    text: "Black peaks cut in lino, fire underneath. The songs fly up out of the crater as sparks: loud, bright and over too soon.",
+    Bg: EmberMountainsBg, light: true, grain: true,
   },
   {
     id: "forest", kind: "firefly", title: "The Firefly Forest", jp: "蛍の森", genres: "indie & alternative", thing: "fireflies",
     match: /indie|alternative|shoegaze|dream/,
-    text: "Under the cedars the songs won’t stay still. They drift between the trunks like fireflies. Catch one and it plays.",
+    text: "Under the firs the songs won’t stay still. They drift between the trunks like fireflies. Catch one and it plays.",
     Bg: FireflyForestBg,
   },
   {
@@ -74,32 +78,32 @@ export const UNIVERSES: Universe[] = [
   {
     id: "clouds", kind: "skylantern", title: "The Sea of Clouds", jp: "雲の海", genres: "lo-fi & chill", thing: "sky lanterns",
     match: /lo.?fi|chill|downtempo|trip|relax/,
-    text: "Above the clouds a whale swims slowly west. The songs rise past it as sky lanterns, lighter than the night.",
+    text: "Above the clouds, at sunset, a whale swims slowly west. The songs rise past it as sky lanterns, lighter than air.",
     Bg: CloudSeaBg,
   },
   {
     id: "lake", kind: "star", title: "The Lake of Stars", jp: "星の湖", genres: "soundtracks, classical & ambient", thing: "stars",
     match: /classical|soundtrack|film|tvseries|animated|ambient|newage|instrumental|meditation|piano|score/,
-    text: "The lake is so calm it keeps a second sky. These songs are pinned up there as constellations, and the water remembers each one.",
+    text: "Someone engraved the whole sky in gold and it turns, very slowly. These songs are pinned on it as constellations, and the water remembers each one.",
     Bg: StarLakeBg,
   },
   {
     id: "lanterns", kind: "lantern", title: "The Lantern Path", jp: "提灯の道", genres: "folk, world & estrada", thing: "lanterns",
     match: /folk|world|ethnic|bard|estrada|shanson|local|country|reggae|latin|african|eastern|uzbek|asian/,
     text: "A path through a field of red spider lilies, and someone has hung a paper lantern for every song that sounds like somewhere.",
-    Bg: LanternPathBg,
+    Bg: LanternPathBg, grain: true,
   },
   {
     id: "candy", kind: "balloon", title: "Candy Sky", jp: "綿菓子の空", genres: "pop", thing: "balloons",
     match: /pop|kids|disney/,
-    text: "A sky cut out of pastel paper. The songs float up as balloons; pull a string and one comes down to play.",
-    Bg: CandySkyBg,
+    text: "A sunny sky cut out of paper. The songs float up as balloons; pull a string and one comes down to play.",
+    Bg: CandySkyBg, light: true, grain: true,
   },
   {
     id: "lighthouse", kind: "bottle", title: "The Lighthouse", jp: "灯台", genres: "everything else", thing: "bottles",
     match: null,
     text: "At the end of the world a lighthouse keeper collects every song that fits nowhere else. The tide brings them back in bottles, and the light at home stays on.",
-    Bg: LighthouseBg,
+    Bg: LighthouseBg, grain: true,
   },
 ];
 

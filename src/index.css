@@ -564,14 +564,9 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .thing-bottle .thing-shape::after { content: ""; position: absolute; left: 3px; top: 9px; width: 5px; height: 13px; background: #efe0c2; border-radius: 2px; transform: rotate(8deg); }
 
 /* neon signs: tubes of light in a few shapes, buzzing */
-.thing-neon .thing-shape {
-  width: 24px; height: 24px; border: 2.5px solid var(--c); border-radius: 50%;
-  box-shadow: 0 0 8px var(--c), 0 0 18px var(--c), inset 0 0 8px var(--c);
-  animation: neon-buzz 4.2s steps(1) infinite; animation-delay: var(--delay);
-}
-.thing-neon.v1 .thing-shape { width: 30px; height: 16px; border-radius: 8px; }
-.thing-neon.v2 .thing-shape { width: 18px; height: 18px; border-radius: 3px; transform: rotate(45deg); }
-.thing-neon.v2:hover .thing-shape { transform: rotate(45deg) scale(1.25); }
+.thing-neon .thing-shape { width: 34px; height: 34px; animation: neon-buzz 4.2s steps(1) infinite; animation-delay: var(--delay); }
+.neon { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 2px var(--c)) drop-shadow(0 0 7px var(--c)); }
+.neon path { fill: none; stroke: var(--c); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
 /* panel-block windows: warm or TV-blue, now and then someone walks past */
 .thing-window .thing-shape {
@@ -581,12 +576,23 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 }
 .thing-window.v2 .thing-shape { animation: tv 1.6s steps(3) infinite; }
 
-/* tail lights: a pair of red lamps, smaller the further down the road */
-.thing-taillight .thing-shape {
-  width: calc(30px * var(--s)); height: calc(8px * var(--s)); position: relative;
-  background: radial-gradient(circle at 15% 50%, #ff3b3b 0 30%, transparent 32%), radial-gradient(circle at 85% 50%, #ff3b3b 0 30%, transparent 32%);
-  filter: drop-shadow(0 0 calc(8px * var(--s)) rgba(255, 50, 50, .9)); animation: brake 3s ease-in-out infinite; animation-delay: var(--delay);
+/* cars seen from behind, smaller the further up the road; they weave a little and brake now and then */
+.thing-taillight .thing-shape { width: calc(70px * var(--s)); height: calc(48px * var(--s)); position: relative; }
+.car { position: relative; display: block; width: 100%; height: 100%; overflow: visible; animation: car-weave 6s ease-in-out infinite alternate; animation-delay: var(--delay); }
+.car-body { fill: var(--c, #2c3140); }
+.car-cabin { fill: color-mix(in srgb, var(--c, #2c3140) 72%, #000); }
+.car-glass { fill: #121726; }
+.car-lamp { fill: #b3161b; animation: brake 4.6s ease-in-out infinite; animation-delay: var(--delay); }
+.thing-taillight .thing-shape::after {
+  content: ""; position: absolute; left: -30%; right: -30%; top: 20%; height: 70%; pointer-events: none; mix-blend-mode: screen;
+  background: radial-gradient(closest-side at 22% 50%, rgba(255, 40, 40, .55), transparent), radial-gradient(closest-side at 78% 50%, rgba(255, 40, 40, .55), transparent);
+  animation: brake-glow 4.6s ease-in-out infinite; animation-delay: var(--delay);
 }
+.thing-taillight .thing-shape::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 92%; height: 70%; pointer-events: none; mix-blend-mode: screen;
+  background: radial-gradient(closest-side, rgba(255, 40, 40, .28), transparent);
+}
+.thing-taillight:hover, .thing-taillight:focus-visible { z-index: 120 !important; }
 
 /* pixel coins, spinning on the spot */
 .thing-coin .thing-shape {
@@ -605,12 +611,9 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .thing-balloon .thing-shape::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 26px; background: rgba(255, 255, 255, .55); }
 
 /* embers: hot, flickering sparks */
-.thing-ember .thing-shape {
-  width: 8px; height: 8px; border-radius: 50%; background: #ffd27a;
-  box-shadow: 0 0 6px 2px #ff8a3c, 0 0 18px 6px rgba(226, 64, 31, .5);
-  animation: ember 2.4s ease-in-out infinite; animation-delay: var(--delay);
-}
-.thing-ember.v1 .thing-shape { width: 6px; height: 10px; border-radius: 50% 50% 40% 40%; }
+.thing-ember .thing-shape { width: 20px; height: 28px; animation: ember 2.4s ease-in-out infinite; animation-delay: var(--delay); }
+.thing-ember.v1 .thing-shape { width: 15px; height: 21px; }
+.flame { display: block; width: 100%; height: 100%; overflow: visible; transform-origin: 50% 100%; animation: flame .5s ease-in-out infinite alternate; animation-delay: var(--delay); }
 
 /* records on the wall, turning slowly */
 .thing-vinyl .thing-shape {
@@ -622,16 +625,10 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .thing-vinyl .thing-shape::after { content: ""; position: absolute; }
 
 /* jellyfish, pulsing */
-.thing-jelly .thing-shape {
-  width: 24px; height: 18px; position: relative; border-radius: 50% 50% 30% 30% / 80% 80% 20% 20%;
-  background: radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, .7), color-mix(in srgb, var(--c) 70%, transparent) 60%);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--c) 70%, transparent); animation: jelly 3.4s ease-in-out infinite; animation-delay: var(--delay);
-}
-.thing-jelly .thing-shape::after {
-  content: ""; position: absolute; left: 3px; right: 3px; top: 100%; height: 16px;
-  background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--c) 70%, transparent) 0 1.5px, transparent 1.5px 4px);
-  mask: linear-gradient(#000, transparent);
-}
+.thing-jelly .thing-shape { width: 30px; height: 42px; margin-top: 14px; animation: jelly 3.4s ease-in-out infinite, rise-float 9s ease-in-out infinite; animation-delay: var(--delay); }
+.jelly { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 8px color-mix(in srgb, var(--c) 70%, transparent)); }
+.jbell { fill: color-mix(in srgb, var(--c) 55%, transparent); stroke: var(--c); stroke-width: 1.2; }
+.jt { fill: none; stroke: color-mix(in srgb, var(--c) 80%, transparent); stroke-width: 1.3; stroke-linecap: round; transform-box: fill-box; transform-origin: 50% 0; animation: tentacle 1.7s ease-in-out infinite alternate; }
 
 /* the card that names the song */
 .tip {
@@ -678,7 +675,6 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .land .shimmer { animation: shimmer 2.8s ease-in-out infinite; }
 .land .bob { animation: boat 4s ease-in-out infinite alternate; }
 .land .aurora { animation: aurora 16s ease-in-out infinite alternate; }
-.land .whale { animation: whale 14s ease-in-out infinite alternate; }
 .land .float { animation: boat 6s ease-in-out infinite alternate; }
 .land .drift-a { animation: drift 22s ease-in-out infinite alternate; }
 .land .drift-b { animation: drift 30s ease-in-out infinite alternate-reverse; }
@@ -689,6 +685,105 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .land .rays { animation: shimmer 6s ease-in-out infinite; }
 .land .kelp { transform-box: fill-box; transform-origin: 50% 100%; animation: lily 6s ease-in-out infinite; }
 .land .bubbles { animation: bubbles 12s linear infinite; }
+/* the toolkit the scenes use: each class takes its numbers from style variables (see world/kit.tsx) */
+.land .a-fly { animation: a-fly var(--d, 40s) linear infinite; animation-delay: var(--dl, 0s); }
+.land .a-pixfly { animation: a-fly var(--d, 40s) steps(180) infinite; animation-delay: var(--dl, 0s); }
+.land .a-fall { animation: a-fall var(--d, 12s) linear infinite; animation-delay: var(--dl, 0s); }
+.land .a-rise { transform-box: fill-box; transform-origin: center; animation: a-rise var(--d, 8s) ease-out infinite; animation-delay: var(--dl, 0s); }
+.land .a-throw { transform-box: fill-box; transform-origin: center; animation: a-throw var(--d, 6s) infinite; animation-delay: var(--dl, 0s); }
+.land .a-sway { transform-box: fill-box; transform-origin: var(--o, 50% 100%); animation: a-sway var(--d, 5s) ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+.land .a-swing { animation: a-sway var(--d, 5s) ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+.land .a-bob { animation: a-bob var(--d, 4s) ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+.land .a-rock { transform-box: fill-box; transform-origin: 50% 80%; animation: a-rock var(--d, 4s) ease-in-out infinite alternate; }
+.land .a-spin { transform-box: fill-box; transform-origin: center; animation: spin var(--d, 20s) linear infinite; }
+.land .a-turn { transform-box: view-box; transform-origin: var(--ox) var(--oy); animation: spin var(--d, 120s) linear infinite; }
+.land .a-blink { animation: a-blink var(--d, 7s) steps(1) infinite; animation-delay: var(--dl, 0s); }
+.land .a-frame { animation: a-frame var(--d, .5s) steps(1) infinite; animation-delay: var(--dl, 0s); }
+.land .a-flicker { animation: neon-buzz var(--d, 4s) steps(1) infinite; animation-delay: var(--dl, 0s); }
+.land .a-pulse { animation: a-pulse var(--d, 3s) ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+.land .a-flap { transform-box: fill-box; transform-origin: center; animation: a-flap var(--d, .5s) ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+.land .a-wink { transform-box: fill-box; transform-origin: center; animation: a-wink var(--d, 5s) infinite; animation-delay: var(--dl, 0s); }
+.land .a-dash { animation: a-dash var(--d, 3s) linear infinite; }
+.land .a-scroll { animation: a-scroll var(--d, 6s) linear infinite; }
+.land .a-wander { animation: a-wander var(--d, 7s) ease-in-out infinite; animation-delay: var(--dl, 0s); }
+.land .a-shoot { animation: a-shoot var(--d, 9s) linear infinite; animation-delay: var(--dl, 0s); }
+.land .a-ripple { transform-box: fill-box; transform-origin: center; animation: a-ripple var(--d, 6s) ease-out infinite; animation-delay: var(--dl, 0s); }
+.land .a-snow { animation: a-snow var(--d, 14s) linear infinite; }
+.land .a-wobble { animation: a-wobble var(--d, 6s) ease-in-out infinite alternate; }
+.land .a-grid { animation: a-grid var(--d, 4s) cubic-bezier(.55, 0, 1, .45) infinite; animation-delay: var(--dl, 0s); }
+@keyframes a-fly { from { transform: translateX(var(--x0, 0px)); } to { transform: translateX(var(--x1, -1800px)); } }
+@keyframes a-fall { from { transform: translate(0, var(--y0, -40px)); } to { transform: translate(var(--fx, 0px), var(--y1, 940px)); } }
+@keyframes a-rise {
+  0% { transform: translate(0, 0) scale(var(--s0, .6)); opacity: 0; }
+  15% { opacity: var(--o, .8); }
+  100% { transform: translate(var(--rx, 0px), var(--ry, -300px)) scale(var(--s1, 1.4)); opacity: 0; }
+}
+@keyframes a-throw {
+  0% { transform: translate(0, 0) scale(.3); opacity: 0; animation-timing-function: cubic-bezier(.2, .7, .4, 1); }
+  6% { opacity: 1; }
+  45% { transform: translate(calc(var(--rx) * .6), var(--ry)) scale(1); animation-timing-function: cubic-bezier(.6, 0, .9, .5); }
+  90% { opacity: 1; }
+  100% { transform: translate(var(--rx), calc(var(--ry) * -.5)) scale(.8); opacity: 0; }
+}
+@keyframes a-sway { from { transform: rotate(calc(var(--a, 3deg) * -1)); } to { transform: rotate(var(--a, 3deg)); } }
+@keyframes a-bob { from { transform: translate(0, 0); } to { transform: translate(var(--bx, 0px), var(--by, 8px)); } }
+@keyframes a-rock { from { transform: rotate(-3deg) translateY(0); } to { transform: rotate(3deg) translateY(5px); } }
+@keyframes a-blink { 0%, 100% { opacity: 1; } 50% { opacity: var(--off, 0); } }
+@keyframes a-frame { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes a-pulse { from { opacity: var(--o0, .35); } to { opacity: var(--o1, 1); } }
+@keyframes a-flap { to { transform: scaleY(-.5); } }
+@keyframes a-wink { 0%, 90%, 100% { transform: scaleY(1); } 94% { transform: scaleY(.1); } }
+@keyframes a-dash { to { stroke-dashoffset: var(--do, -100px); } }
+@keyframes a-scroll { to { transform: translateX(var(--dx, -100px)); } }
+@keyframes a-wander {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(calc(var(--w, 20) * 1px), calc(var(--w, 20) * -.6px)); }
+  50% { transform: translate(calc(var(--w, 20) * -.3px), calc(var(--w, 20) * -1px)); }
+  75% { transform: translate(calc(var(--w, 20) * -.8px), calc(var(--w, 20) * .3px)); }
+}
+@keyframes a-shoot { 0% { stroke-dashoffset: var(--from, 120px); opacity: 1; } 9% { stroke-dashoffset: var(--to, -360px); opacity: 1; } 9.1%, 100% { stroke-dashoffset: var(--to, -360px); opacity: 0; } }
+@keyframes a-ripple { 0% { transform: scale(.2); opacity: 0; } 8% { opacity: 1; } 55% { transform: scale(2.2); opacity: 0; } 100% { transform: scale(2.2); opacity: 0; } }
+@keyframes a-snow { from { transform: translateY(0); } to { transform: translateY(900px); } }
+@keyframes a-wobble { from { transform: translateX(-24px); } to { transform: translateX(24px); } }
+@keyframes a-grid { from { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } to { transform: translateY(300px); opacity: 1; } }
+
+/* the road running at you (Midnight Highway) */
+.road-fx { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.road-fx .run { position: absolute; inset: 0; animation: run 3.6s cubic-bezier(.75, 0, 1, .55) infinite; animation-delay: var(--dl); }
+.road-fx .run > i { position: absolute; left: 50%; transform-origin: 50% 100%; animation: run-grow 3.6s cubic-bezier(.75, 0, 1, .55) infinite; animation-delay: var(--dl); }
+.road-fx .run-pole > i { width: 5px; height: 34svh; background: #1d1726; }
+.road-fx .run-pole > i::before { content: ""; position: absolute; top: 0; right: 0; width: 46px; height: 4px; background: #1d1726; }
+.road-fx .run-pole.left > i::before { right: auto; left: 0; }
+.road-fx .run-pole > i::after {
+  content: ""; position: absolute; top: -26px; right: 18px; width: 56px; height: 56px; border-radius: 50%;
+  background: radial-gradient(closest-side, #ffe2a8 0 14%, rgba(255, 190, 110, .45) 26%, transparent);
+}
+.road-fx .run-pole.left > i::after { right: auto; left: 18px; }
+.road-fx .run-eye > i { width: 10px; height: 4px; border-radius: 2px; background: #ffcf5a; box-shadow: 0 0 6px #ffcf5a; }
+.road-fx .run-car { --c: #1d2030; --s: 1; animation-duration: 11s; animation-direction: reverse; animation-delay: -4s; }
+.road-fx .run-car > i { width: 92px; height: 63px; animation-duration: 11s; animation-direction: reverse; animation-delay: -4s; }
+.road-fx .run-car .car-lamp { fill: #ff3030; }
+@keyframes run { from { transform: translate(0, 0); } to { transform: translate(calc(var(--dx) * 1.35%), calc(var(--dy) * 1.35%)); } }
+@keyframes run-grow { 0% { transform: translate(-50%, -100%) scale(.02); opacity: 0; } 12% { opacity: 1; } 100% { transform: translate(-50%, -100%) scale(1.35); opacity: 1; } }
+
+/* paper grain over a print, and captions in dark ink on light paper */
+.land.grain .land-sky::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .15 0 0 0 0 .1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.land-light .story-cap h2 { color: #1b1512; text-shadow: none; }
+.land-light .story-cap p { color: #3a302a; text-shadow: none; }
+.land-light .story-cap .ch-no { color: #6a5a50; }
+.land-light .story-jp { color: rgba(27, 21, 18, .45); }
+.land-lantern .land-lines polyline { stroke: rgba(42, 36, 32, .75); }
+.land-lantern .thing-lantern::before { background: rgba(42, 36, 32, .75); }
+.land-lantern .thing-lantern .thing-shape { background: repeating-linear-gradient(0deg, rgba(42, 36, 32, .35) 0 1.5px, transparent 1.5px 6px), #d2452f; box-shadow: 0 0 0 2px #2a2420, 0 0 18px 3px rgba(255, 140, 90, .35); }
+.land-star .land-lines .sky-line { stroke: rgba(211, 181, 109, .5); }
+.land-window .land-lines .block rect { fill: #3a4672; stroke: none; }
+.land-window .land-lines .block .block-roof { fill: #e9eef6; }
+.land-bottle .thing-bottle .thing-shape { border-color: #2f4fb8; background: rgba(241, 232, 214, .8); box-shadow: 3px 3px 0 rgba(255, 92, 138, .7); }
+.land-bottle .thing-bottle .thing-shape::after { background: #ff5c8a; }
+
 .door-view .portal-swirl { transform-box: view-box; transform-origin: 150px 300px; animation: spin 40s linear infinite; }
 .door-view .twinkle { animation: twinkle 3.6s ease-in-out infinite; }
 @keyframes snow { from { transform: translateY(-900px); } to { transform: translateY(0); } }
@@ -698,7 +793,11 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 @keyframes neon-buzz { 0%, 61%, 64%, 100% { opacity: 1; } 62% { opacity: .25; } 63% { opacity: .8; } 88% { opacity: .5; } 89% { opacity: 1; } }
 @keyframes window-life { 0%, 70%, 100% { filter: none; } 72% { filter: brightness(.55); } 78% { filter: none; } }
 @keyframes tv { 0% { background-color: #9fc4ff; } 33% { background-color: #c9dcff; } 66% { background-color: #7fa6e8; } }
-@keyframes brake { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+@keyframes brake { 0%, 62%, 100% { fill: #b3161b; } 66%, 86% { fill: #ff3030; } }
+@keyframes brake-glow { 0%, 62%, 100% { opacity: .45; } 66%, 86% { opacity: 1; } }
+@keyframes car-weave { 0% { transform: translate(calc(-3px * var(--s)), 0); } 30% { transform: translate(0, calc(-1px * var(--s))); } 100% { transform: translate(calc(4px * var(--s)), 0); } }
+@keyframes flame { from { transform: scale(1, 1) skewX(-4deg); } to { transform: scale(.9, 1.12) skewX(5deg); } }
+@keyframes tentacle { from { transform: skewX(-12deg); } to { transform: skewX(12deg); } }
 @keyframes coin-spin { 0% { transform: scaleX(1); } 25% { transform: scaleX(.55); } 50% { transform: scaleX(.15); } 75% { transform: scaleX(.55); } }
 @keyframes ember { 0%, 100% { transform: translate(0, 0); opacity: 1; } 30% { transform: translate(3px, -6px); opacity: .7; } 60% { transform: translate(-2px, -10px); opacity: 1; } 80% { opacity: .5; } }
 @keyframes jelly { 0%, 100% { transform: scale(1, 1) translateY(0); } 40% { transform: scale(1.12, .82) translateY(2px); } 70% { transform: scale(.94, 1.08) translateY(-6px); } }
@@ -708,7 +807,6 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 @keyframes shimmer { 0%, 100% { opacity: .15; } 50% { opacity: .5; } }
 @keyframes boat { to { transform: translateY(6px); } }
 @keyframes aurora { to { transform: translateX(-60px) skewX(-4deg); } }
-@keyframes whale { from { transform: translate(40px, 0); } to { transform: translate(-60px, 14px); } }
 @keyframes drift { to { transform: translateX(-70px); } }
 @keyframes lantern-sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
 @keyframes firefly { 0%, 100% { transform: translate(0, 0); } 25% { transform: translate(14px, -10px); } 50% { transform: translate(-6px, -18px); } 75% { transform: translate(-14px, 4px); } }
@@ -718,9 +816,12 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 @keyframes ring { from { transform: scale(.8); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
 
 @media (min-width: 1240px) and (min-aspect-ratio: 4/5) { .story-jp { display: block; } }
-.land .whale-body { transform-box: view-box; transform-origin: 875px 320px; }
+.land .whale-size { transform-box: view-box; transform-origin: 875px 320px; }
 @media (max-aspect-ratio: 4/5) {
-  .land .whale-body { transform: scale(.4); }
+  .land .whale-size { transform: scale(.5); }
+  /* on a tall screen the caption sits over the middle of the scene: give it a soft backing */
+  .story-cap::before { content: ""; position: absolute; z-index: -1; inset: -14px -14px -16px; border-radius: 16px; background: rgba(11, 10, 20, .5); backdrop-filter: blur(6px); }
+  .land-light .story-cap::before { background: rgba(244, 236, 220, .62); }
   .story-cap { top: 96px; }
 }
 @media (max-width: 900px) {
