@@ -488,11 +488,21 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .door-mat { position: absolute; bottom: calc(18svh - 8svh); padding: 4px 16px; border-radius: 4px; background: #3a2a2a; color: #c9a88a; font-family: var(--mincho); font-size: 12px; letter-spacing: .3em; }
 
 /* a land: one story, one scene, a handful of songs */
-.land { position: relative; height: max(100svh, 680px); overflow: hidden; background: #0b0a14; }
+.land {
+  --k: 1; position: relative; height: calc(var(--k) * max(100svh, 680px)); overflow: clip; background: #0b0a14;
+  content-visibility: auto; contain-intrinsic-size: auto 100svh;
+}
+.land-sky { position: absolute; inset: 0; }
+.land.tall .land-sky { position: sticky; top: 0; height: max(100svh, 680px); }
 .land-bg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .land-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .land-lines polyline { fill: none; stroke: rgba(239, 231, 218, .45); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
-.land-lines-sky polyline { stroke: rgba(200, 215, 255, .28); stroke-dasharray: 3 5; }
+.land-lines .sky-line { stroke: rgba(200, 215, 255, .28); stroke-dasharray: 3 5; }
+.land-lines .block rect { fill: #1d2538; stroke: #3a4560; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.land-lines .block .block-roof { fill: #4a5674; stroke: none; }
+.land-lines .road polygon { fill: #120d19; }
+.land-lines .road-edge { stroke: rgba(255, 226, 190, .4); stroke-width: 2; }
+.land-lines .road-dash { stroke: rgba(255, 214, 140, .55); stroke-width: 2; stroke-dasharray: 10 16; animation: road 1.2s linear infinite; }
 .story-cap {
   position: absolute; z-index: 2; top: max(104px, 12svh); left: max(24px, calc((100vw - 1160px) / 2 + 40px));
   width: min(440px, calc(100vw - 48px));
@@ -553,6 +563,76 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .thing-bottle .thing-shape::before { content: ""; position: absolute; left: 3px; top: -7px; width: 5px; height: 6px; background: #c79a6a; border-radius: 1px; }
 .thing-bottle .thing-shape::after { content: ""; position: absolute; left: 3px; top: 9px; width: 5px; height: 13px; background: #efe0c2; border-radius: 2px; transform: rotate(8deg); }
 
+/* neon signs: tubes of light in a few shapes, buzzing */
+.thing-neon .thing-shape {
+  width: 24px; height: 24px; border: 2.5px solid var(--c); border-radius: 50%;
+  box-shadow: 0 0 8px var(--c), 0 0 18px var(--c), inset 0 0 8px var(--c);
+  animation: neon-buzz 4.2s steps(1) infinite; animation-delay: var(--delay);
+}
+.thing-neon.v1 .thing-shape { width: 30px; height: 16px; border-radius: 8px; }
+.thing-neon.v2 .thing-shape { width: 18px; height: 18px; border-radius: 3px; transform: rotate(45deg); }
+.thing-neon.v2:hover .thing-shape { transform: rotate(45deg) scale(1.25); }
+
+/* panel-block windows: warm or TV-blue, now and then someone walks past */
+.thing-window .thing-shape {
+  width: 18px; height: 22px; background: var(--c); box-shadow: 0 0 14px color-mix(in srgb, var(--c) 60%, transparent);
+  background-image: linear-gradient(90deg, transparent 46%, rgba(30, 36, 54, .55) 46% 54%, transparent 54%), linear-gradient(transparent 40%, rgba(30, 36, 54, .45) 40% 46%, transparent 46%);
+  animation: window-life 9s steps(1) infinite; animation-delay: var(--delay);
+}
+.thing-window.v2 .thing-shape { animation: tv 1.6s steps(3) infinite; }
+
+/* tail lights: a pair of red lamps, smaller the further down the road */
+.thing-taillight .thing-shape {
+  width: calc(30px * var(--s)); height: calc(8px * var(--s)); position: relative;
+  background: radial-gradient(circle at 15% 50%, #ff3b3b 0 30%, transparent 32%), radial-gradient(circle at 85% 50%, #ff3b3b 0 30%, transparent 32%);
+  filter: drop-shadow(0 0 calc(8px * var(--s)) rgba(255, 50, 50, .9)); animation: brake 3s ease-in-out infinite; animation-delay: var(--delay);
+}
+
+/* pixel coins, spinning on the spot */
+.thing-coin .thing-shape {
+  width: 18px; height: 22px; background: #ffcd75; image-rendering: pixelated;
+  box-shadow: inset -4px 0 0 #ef7d57, inset 4px 0 0 #fff2c4, 0 0 0 2px #1a1c2c;
+  clip-path: polygon(25% 0, 75% 0, 75% 10%, 100% 10%, 100% 90%, 75% 90%, 75% 100%, 25% 100%, 25% 90%, 0 90%, 0 10%, 25% 10%);
+  animation: coin-spin 1.2s steps(4) infinite; animation-delay: var(--delay);
+}
+
+/* balloons on strings */
+.thing-balloon .thing-shape {
+  width: 24px; height: 30px; border-radius: 50% 50% 48% 48% / 56% 56% 44% 44%; position: relative;
+  background: radial-gradient(circle at 34% 30%, rgba(255, 255, 255, .7) 0 12%, transparent 14%), var(--c);
+  box-shadow: 0 6px 10px rgba(43, 26, 64, .3); animation: rise-float 5s ease-in-out infinite; animation-delay: var(--delay);
+}
+.thing-balloon .thing-shape::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 26px; background: rgba(255, 255, 255, .55); }
+
+/* embers: hot, flickering sparks */
+.thing-ember .thing-shape {
+  width: 8px; height: 8px; border-radius: 50%; background: #ffd27a;
+  box-shadow: 0 0 6px 2px #ff8a3c, 0 0 18px 6px rgba(226, 64, 31, .5);
+  animation: ember 2.4s ease-in-out infinite; animation-delay: var(--delay);
+}
+.thing-ember.v1 .thing-shape { width: 6px; height: 10px; border-radius: 50% 50% 40% 40%; }
+
+/* records on the wall, turning slowly */
+.thing-vinyl .thing-shape {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: radial-gradient(circle, #1a0509 0 8%, #c9a45c 9% 26%, #120306 27%), repeating-radial-gradient(circle, #120306 0 2px, #26090f 2px 3px);
+  background-blend-mode: normal, normal; box-shadow: 0 0 0 1px rgba(201, 164, 92, .5), 0 6px 14px rgba(0, 0, 0, .5);
+  animation: spin 6s linear infinite; animation-delay: var(--delay);
+}
+.thing-vinyl .thing-shape::after { content: ""; position: absolute; }
+
+/* jellyfish, pulsing */
+.thing-jelly .thing-shape {
+  width: 24px; height: 18px; position: relative; border-radius: 50% 50% 30% 30% / 80% 80% 20% 20%;
+  background: radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, .7), color-mix(in srgb, var(--c) 70%, transparent) 60%);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--c) 70%, transparent); animation: jelly 3.4s ease-in-out infinite; animation-delay: var(--delay);
+}
+.thing-jelly .thing-shape::after {
+  content: ""; position: absolute; left: 3px; right: 3px; top: 100%; height: 16px;
+  background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--c) 70%, transparent) 0 1.5px, transparent 1.5px 4px);
+  mask: linear-gradient(#000, transparent);
+}
+
 /* the card that names the song */
 .tip {
   position: absolute; z-index: 3; bottom: calc(100% + 10px); left: 50%; transform: translate(-50%, 4px);
@@ -604,6 +684,24 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .land .drift-b { animation: drift 30s ease-in-out infinite alternate-reverse; }
 .land .beam { transform-box: view-box; transform-origin: 860px 340px; animation: spin 12s linear infinite; }
 .land .lamp { animation: glow 3s ease-in-out infinite; }
+.land .snow { animation: snow 14s linear infinite; }
+.land .smoke { animation: smoke 9s ease-in-out infinite alternate; }
+.land .rays { animation: shimmer 6s ease-in-out infinite; }
+.land .kelp { transform-box: fill-box; transform-origin: 50% 100%; animation: lily 6s ease-in-out infinite; }
+.land .bubbles { animation: bubbles 12s linear infinite; }
+.door-view .portal-swirl { transform-box: view-box; transform-origin: 150px 300px; animation: spin 40s linear infinite; }
+.door-view .twinkle { animation: twinkle 3.6s ease-in-out infinite; }
+@keyframes snow { from { transform: translateY(-900px); } to { transform: translateY(0); } }
+@keyframes smoke { to { transform: translate(30px, -20px) scale(1.05); } }
+@keyframes bubbles { to { transform: translateY(-120px); } }
+@keyframes road { to { stroke-dashoffset: -26; } }
+@keyframes neon-buzz { 0%, 61%, 64%, 100% { opacity: 1; } 62% { opacity: .25; } 63% { opacity: .8; } 88% { opacity: .5; } 89% { opacity: 1; } }
+@keyframes window-life { 0%, 70%, 100% { filter: none; } 72% { filter: brightness(.55); } 78% { filter: none; } }
+@keyframes tv { 0% { background-color: #9fc4ff; } 33% { background-color: #c9dcff; } 66% { background-color: #7fa6e8; } }
+@keyframes brake { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+@keyframes coin-spin { 0% { transform: scaleX(1); } 25% { transform: scaleX(.55); } 50% { transform: scaleX(.15); } 75% { transform: scaleX(.55); } }
+@keyframes ember { 0%, 100% { transform: translate(0, 0); opacity: 1; } 30% { transform: translate(3px, -6px); opacity: .7; } 60% { transform: translate(-2px, -10px); opacity: 1; } 80% { opacity: .5; } }
+@keyframes jelly { 0%, 100% { transform: scale(1, 1) translateY(0); } 40% { transform: scale(1.12, .82) translateY(2px); } 70% { transform: scale(.94, 1.08) translateY(-6px); } }
 @keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 @keyframes lily { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
 @keyframes mist { to { transform: translateX(80px); } }
@@ -622,7 +720,6 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 @media (min-width: 1240px) and (min-aspect-ratio: 4/5) { .story-jp { display: block; } }
 .land .whale-body { transform-box: view-box; transform-origin: 875px 320px; }
 @media (max-aspect-ratio: 4/5) {
-  .land { height: max(150svh, 900px); }
   .land .whale-body { transform: scale(.4); }
   .story-cap { top: 96px; }
 }

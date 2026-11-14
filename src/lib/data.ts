@@ -24,6 +24,9 @@ export type LikedTrack = {
   cover: string | null;
   albumTitle: string | null;
   albumId: number | null;
+  /** Yandex genre id of the album, e.g. "rusrap", "indie"; missing in data fetched before Nov 2026 */
+  genre?: string | null;
+  likedAt?: string | null;
   durationMs: number;
 };
 

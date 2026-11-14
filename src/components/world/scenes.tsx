@@ -311,33 +311,3 @@ export const LighthouseBg = () => (
     </g>
   </Bg>
 );
-
-/* what shows through the door before you step out: the lantern path, small and far away */
-export const DoorView = () => {
-  const r = rng(61);
-  return (
-    <svg className="door-view-svg" viewBox="0 0 300 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="dv-sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#1a1030" /><stop offset=".5" stopColor="#64284a" /><stop offset=".72" stopColor="#ea9460" />
-        </linearGradient>
-      </defs>
-      <rect width="300" height="600" fill="url(#dv-sky)" />
-      {Array.from({ length: 30 }, (_, i) => <circle key={i} cx={r() * 300} cy={r() * 260} r={0.5 + r()} fill="#f6e7c8" opacity={0.3 + r() * 0.5} />)}
-      <path d="M0 440 L60 400 L110 420 L170 380 L230 425 L300 395 V600 H0 Z" fill="#3c1a3c" />
-      <path d="M0 470 C80 450 200 480 300 460 V600 H0 Z" fill="#1d0d1f" />
-      <path d="M140 470 C135 520 110 560 90 600 H210 C190 560 165 520 160 470 Z" fill="#c2685a" opacity=".55" />
-      <path d="M10 330 Q150 370 290 330" stroke="#efe7da" strokeWidth="1" fill="none" opacity=".4" />
-      {[40, 80, 120, 160, 200, 240].map((x, i) => (
-        <g key={x}>
-          <circle cx={x + 10} cy={346 + Math.sin((i / 5) * Math.PI) * 14} r="6" fill="#ff9a62" />
-          <circle cx={x + 10} cy={346 + Math.sin((i / 5) * Math.PI) * 14} r="14" fill="#ff9a62" opacity=".25" />
-        </g>
-      ))}
-      {Array.from({ length: 40 }, (_, i) => {
-        const y = 480 + r() * 120;
-        return <circle key={`l${i}`} cx={r() * 300} cy={y} r={1 + (y - 480) / 60} fill="#c8263a" />;
-      })}
-    </svg>
-  );
-};

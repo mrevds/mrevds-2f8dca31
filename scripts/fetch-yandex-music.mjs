@@ -126,13 +126,15 @@ const login = status.account.login || "";
 const displayName = status.account.displayName || status.account.secondName || login;
 console.log(`[yandex-music] authenticated as ${displayName} (uid: ${uid})`);
 
-// 2. Get liked tracks (up to 50 most recent)
+// 2. Get liked tracks (ids and like dates, newest first)
 const likes = await get(`/users/${uid}/likes/tracks`);
 const likedShort = likes?.library?.tracks || [];
 console.log(`[yandex-music] found ${likedShort.length} liked tracks`);
 
-// 3. Fetch full track details for liked tracks (first 100)
-const likedTrackIds = likedShort.slice(0, 100).map((t) => String(t.id));
+// 3. Fetch full track details for the 200 most recent likes (the music page sorts them by genre)
+const LIMIT = 200;
+const likedAt = new Map(likedShort.map((t) => [String(t.id), t.timestamp || null]));
+const likedTrackIds = likedShort.slice(0, LIMIT).map((t) => String(t.id));
 let likedTracks = [];
 if (likedTrackIds.length > 0) {
   let trackDetails = [];
@@ -152,6 +154,8 @@ if (likedTrackIds.length > 0) {
       cover: coverUrl(t.coverUri),
       albumTitle: t.albums?.[0]?.title || null,
       albumId: t.albums?.[0]?.id || null,
+      genre: t.albums?.find((a) => a.genre)?.genre || null,
+      likedAt: likedAt.get(String(t.id)) || null,
       durationMs: t.durationMs,
     }));
   }
