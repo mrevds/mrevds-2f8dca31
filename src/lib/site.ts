@@ -32,7 +32,16 @@ export const mainHref = (path: string) => {
   return root ? `${root}${path}` : path;
 };
 
+/* Subdomains that already have a DNS record and a Vercel domain. A page not listed here stays at
+   mrevds.online/<page> in production until its record exists; add it here once it does. */
+const LIVE: readonly Sub[] = ["stack", "projects"];
+
+const isProduction = () => host() === ROOT || host().endsWith(`.${ROOT}`);
+
 /** link to a page with its own subdomain; /<page> on hosts that have none (previews) */
-export const pageHref = (sub: Sub) => origin(sub) ?? `/${sub}`;
+export const pageHref = (sub: Sub) => {
+  if (isProduction() && !LIVE.includes(sub)) return mainHref(`/${sub}`);
+  return origin(sub) ?? `/${sub}`;
+};
 
 export const isAbsolute = (href: string) => /^https?:\/\//.test(href);
