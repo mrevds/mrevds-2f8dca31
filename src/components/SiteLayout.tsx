@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import SiteLink from "./SiteLink";
-import { currentSub, isAbsolute, mainHref, projectsHref } from "@/lib/site";
+import { currentSub, isAbsolute, mainHref, pageHref, type Sub } from "@/lib/site";
 import Kamon from "./Kamon";
 import ClaudeMark from "./ClaudeMark";
 
-const onProjects = () => currentSub() === "projects";
-
-const NavItem = ({ to, label }: { to: string; label: string }) =>
-  isAbsolute(to) ? (
-    <a href={to} aria-current={label === "Projects" && onProjects() ? "page" : undefined}>{label}</a>
+const NavItem = ({ sub, label }: { sub: Sub; label: string }) => {
+  const to = pageHref(sub);
+  return isAbsolute(to) ? (
+    <a href={to} aria-current={currentSub() === sub ? "page" : undefined}>{label}</a>
   ) : (
     <NavLink to={to}>{label}</NavLink>
   );
+};
 
 /* Frame shared by every page: the wobble filter, the nav, the footer */
 const SiteLayout = () => {
@@ -43,9 +43,9 @@ const SiteLayout = () => {
             <span>Denis Muratbaev</span>
           </SiteLink>
           <ul>
-            <li><NavItem to={mainHref("/stack")} label="Stack" /></li>
-            <li><NavItem to={projectsHref()} label="Projects" /></li>
-            <li><NavItem to={mainHref("/music")} label="Music" /></li>
+            <li><NavItem sub="stack" label="Stack" /></li>
+            <li><NavItem sub="projects" label="Projects" /></li>
+            <li><NavItem sub="music" label="Music" /></li>
             <li><SiteLink to={mainHref("/#contact")}>Contact</SiteLink></li>
           </ul>
           <SiteLink className="btn btn-ink btn-small" to={mainHref("/#contact")}>Say hi</SiteLink>

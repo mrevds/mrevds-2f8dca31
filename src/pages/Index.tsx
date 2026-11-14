@@ -1,13 +1,13 @@
 import SiteLink from "@/components/SiteLink";
-import { projectsHref } from "@/lib/site";
+import { pageHref } from "@/lib/site";
 import WindKamon from "@/components/WindKamon";
 import Chapter from "@/components/Chapter";
 import { PlateFace, PlatePath } from "@/components/Drawings";
 
 const pages = (): [string, string, string][] => [
-  ["Stack", "/stack", "and practice"],
-  ["Projects", projectsHref(), "built on my own"],
-  ["Music", "/music", "night shift"],
+  ["Stack", pageHref("stack"), "and practice"],
+  ["Projects", pageHref("projects"), "built on my own"],
+  ["Music", pageHref("music"), "night shift"],
   ["Say hi", "#contact", "contacts"],
 ];
 
@@ -36,7 +36,7 @@ const Index = () => (
           I’m Denis. I build Go services at Renesans: APIs, data and the infrastructure between them.
         </p>
         <div className="actions">
-          <SiteLink className="btn btn-ink" to={projectsHref()}>See my projects</SiteLink>
+          <SiteLink className="btn btn-ink" to={pageHref("projects")}>See my projects</SiteLink>
           <a className="btn btn-line" href="https://t.me/mrevds" target="_blank" rel="noopener noreferrer">
             Telegram @mrevds
           </a>

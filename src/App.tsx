@@ -8,35 +8,45 @@ import Projects from "./pages/Projects";
 import Stack from "./pages/Stack";
 import Music from "./pages/Music";
 import SiteLayout from "./components/SiteLayout";
-import { currentSub, isAbsolute, projectsHref } from "@/lib/site";
+import type { ReactNode } from "react";
+import { currentSub, isAbsolute, pageHref, SUBS, type Sub } from "@/lib/site";
 import NotFound from "./pages/NotFound";
 import { Analytics } from "@vercel/analytics/react";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 const queryClient = new QueryClient();
 
-/* the old /projects address hands over to the subdomain when there is one */
-const ProjectsMoved = () => {
-  const href = projectsHref();
+/* the old /stack, /projects and /music paths hand over to their subdomain when there is one */
+const Moved = ({ sub, children }: { sub: Sub; children: ReactNode }) => {
+  const href = pageHref(sub);
   if (isAbsolute(href)) {
     window.location.replace(href);
     return null;
   }
-  return <Projects />;
+  return <>{children}</>;
 };
 
-const App = () => (
+const subPages: Record<Sub, ReactNode> = {
+  stack: <Stack />,
+  projects: <Projects />,
+  music: <Music />,
+};
+
+const App = () => {
+  const current = currentSub();
+  const sub = SUBS.find((name) => name === current);
+  return (
   <LanguageProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          {currentSub() === "projects" ? (
-            /* projects.mrevds.online: the projects page is the whole site */
+          {sub ? (
+            /* stack. / projects. / music.mrevds.online: that page is the whole site */
             <Routes>
               <Route element={<SiteLayout />}>
-                <Route path="/" element={<Projects />} />
+                <Route path="/" element={subPages[sub]} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
@@ -44,9 +54,9 @@ const App = () => (
             <Routes>
               <Route element={<SiteLayout />}>
                 <Route path="/" element={<Index />} />
-                <Route path="/stack" element={<Stack />} />
-                <Route path="/projects" element={<ProjectsMoved />} />
-                <Route path="/music" element={<Music />} />
+                {SUBS.map((name) => (
+                  <Route key={name} path={`/${name}`} element={<Moved sub={name}>{subPages[name]}</Moved>} />
+                ))}
               </Route>
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
@@ -57,6 +67,7 @@ const App = () => (
       </TooltipProvider>
     </QueryClientProvider>
   </LanguageProvider>
-);
+  );
+};
 
 export default App;

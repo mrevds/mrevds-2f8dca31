@@ -1,5 +1,7 @@
-/* One app serves every address: mrevds.online is the story, projects.mrevds.online is the projects page.
-   Locally the same split works on localhost:8080 and projects.localhost:8080. */
+/* One app serves every address: mrevds.online is the home page, and stack., projects. and music.
+   are pages of their own. Locally the same split works on localhost:8080 and stack.localhost:8080. */
+export const SUBS = ["stack", "projects", "music"] as const;
+export type Sub = (typeof SUBS)[number];
 const ROOT = "mrevds.online";
 
 const host = () => window.location.hostname;
@@ -30,10 +32,7 @@ export const mainHref = (path: string) => {
   return root ? `${root}${path}` : path;
 };
 
-/** link to the projects page: its own subdomain when there is one, /projects otherwise */
-export const projectsHref = () => {
-  const sub = origin("projects");
-  return sub ?? "/projects";
-};
+/** link to a page with its own subdomain; /<page> on hosts that have none (previews) */
+export const pageHref = (sub: Sub) => origin(sub) ?? `/${sub}`;
 
 export const isAbsolute = (href: string) => /^https?:\/\//.test(href);
