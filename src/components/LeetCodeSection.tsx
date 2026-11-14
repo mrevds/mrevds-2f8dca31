@@ -9,14 +9,14 @@ const LEVELS = [
   { key: "hard", label: "Hard" },
 ] as const;
 
-/* Chapter 04: LeetCode progress as a quiet practice log */
+/* Practice: LeetCode progress as a quiet practice log */
 const LeetCodeSection = () => {
   if (!lc.ok) return null;
   const profile = `https://leetcode.com/u/${lc.username}/`;
 
   return (
     <section id="practice">
-      <Chapter n={4} title="Practice" sub={`LeetCode · @${lc.username}`} genre="a practice log" plate="var(--rose)" drawing={<PlateChecks />} />
+      <Chapter label="Practice" title="Practice" sub={`LeetCode · @${lc.username}`} genre="a practice log" plate="var(--rose)" drawing={<PlateChecks />} />
       <div className="chapter-body lc">
         <div className="lc-main">
           <div className="lc-total">

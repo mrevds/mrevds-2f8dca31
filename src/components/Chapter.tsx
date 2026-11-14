@@ -1,6 +1,6 @@
 /* Chapter title page: a drawing on a colored plate, the number, the title and how it is told */
 type Props = {
-  n: number;
+  label: string;
   title: string;
   sub: string;
   genre: string;
@@ -9,13 +9,13 @@ type Props = {
   dark?: boolean;
 };
 
-const Chapter = ({ n, title, sub, genre, plate, drawing, dark }: Props) => (
+const Chapter = ({ label, title, sub, genre, plate, drawing, dark }: Props) => (
   <header className="divider">
     <div className={`plate${dark ? " plate-dark" : ""}`} style={{ background: plate }}>
       {drawing}
     </div>
     <div>
-      <div className="ch-no">Chapter {String(n).padStart(2, "0")}</div>
+      <div className="ch-no">{label}</div>
       <h2>{title}</h2>
       <p className="ch-sub">{sub}</p>
     </div>

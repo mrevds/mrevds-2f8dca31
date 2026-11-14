@@ -2,7 +2,7 @@ import Chapter from "./Chapter";
 import { PlateClock } from "./Drawings";
 import { waka, wakaView, formatDate } from "@/lib/data";
 
-/* Chapter 03: WakaTime numbers printed as a receipt, with a short essay beside it */
+/* Hours: WakaTime numbers printed as a receipt, with a short essay beside it */
 const WakaSection = () => {
   const v = wakaView();
   if (!waka.ok || !v.languages.length) return null;
@@ -15,7 +15,7 @@ const WakaSection = () => {
   return (
     <section id="hours">
       <Chapter
-        n={3}
+        label="Hours"
         title="The hours"
         sub={`Measured by WakaTime · ${v.period}`}
         genre="a printed receipt"

@@ -52,6 +52,30 @@ export const PlatePath = () => (
 );
 
 /* the request path through a typical service, with packets running on the wires */
+export const PlateShelf = () => (
+  <Line>
+    <path d="M16 96 H104 M16 60 H104" />
+    <rect x="24" y="30" width="16" height="30" rx="2" />
+    <rect x="46" y="22" width="14" height="38" rx="2" />
+    <rect x="68" y="34" width="22" height="26" rx="2" />
+    <rect x="26" y="68" width="24" height="28" rx="2" />
+    <path d="M62 96 L70 68 L92 72 L88 96" />
+  </Line>
+);
+export const PlateClip = () => (
+  <Line>
+    <rect x="30" y="26" width="60" height="76" rx="8" />
+    <rect x="46" y="18" width="28" height="16" rx="5" />
+    <path d="M42 58 H78 M42 72 H78 M42 86 H64" />
+  </Line>
+);
+export const PlateWindow = () => (
+  <Line>
+    <rect x="14" y="24" width="92" height="74" rx="8" />
+    <path d="M14 42 H106 M34 24 V42" />
+    <path d="M60 58 C60 58 72 74 72 82 C72 89 66 94 60 94 C54 94 48 89 48 82 C48 74 60 58 60 58 Z" />
+  </Line>
+);
 export const Schematic = () => (
   <svg className="schematic-svg" viewBox="0 0 1060 340" aria-hidden="true">
     <g className="wires">
