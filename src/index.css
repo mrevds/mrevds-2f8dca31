@@ -409,6 +409,12 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
   .footer { gap: 10px; padding-bottom: 36px; }
   .footer-right { margin-left: 0; width: 100%; line-height: 1.5; }
 }
+/* a phone on its side: there is room for the nav in one row, and two rows would take a fifth of the height */
+@media (min-width: 640px) and (max-width: 900px) and (max-height: 500px) {
+  .nav { flex-wrap: nowrap; height: 56px; min-height: 56px; }
+  .nav .brand { height: auto; }
+  .nav ul { order: 0; flex-basis: auto; padding: 0; overflow: visible; }
+}
 
 /* ════════════════════════════════════════════════════════════════════
    Music: the room, the door, and the world behind it
@@ -417,7 +423,8 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .theme-night .nav {
   position: fixed; left: 0; right: 0; margin: 0;
   padding-inline: max(24px, calc((100vw - 1160px) / 2 + 40px));
-  background: linear-gradient(rgba(11, 10, 20, .85), rgba(11, 10, 20, 0)); backdrop-filter: none;
+  /* a frosted bar, not a fade: the worlds below include light paper ones, where a fade leaves the links unreadable */
+  background: rgba(11, 10, 20, .82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(239, 231, 218, .06);
 }
 .theme-night .brand, .theme-night .nav ul { color: #efe7da; }
 .theme-night .nav ul a[aria-current="page"], .theme-night .nav ul a:hover { color: #ff8a7a; }
@@ -519,7 +526,9 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 }
 .thing:focus-visible { outline: 2px solid #ff8a7a; outline-offset: 2px; }
 .thing-shape { display: block; transition: transform 200ms var(--ease), filter 200ms var(--ease); }
-.thing:hover .thing-shape, .thing:focus-visible .thing-shape { transform: scale(1.25); filter: brightness(1.25); }
+.thing:focus-visible .thing-shape { transform: scale(1.25); filter: brightness(1.25); }
+/* only a real pointer hovers: on a touch screen a tap plays the song, and a hover left behind would stick */
+@media (hover: hover) { .thing:hover .thing-shape { transform: scale(1.25); filter: brightness(1.25); } }
 .thing.on .thing-shape { filter: brightness(1.35) drop-shadow(0 0 10px rgba(255, 138, 122, .9)); }
 .thing.on::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 1px solid rgba(255, 138, 122, .7); animation: ring 2.4s ease-out infinite; pointer-events: none; }
 
@@ -592,7 +601,8 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
   content: ""; position: absolute; left: 0; right: 0; top: 92%; height: 70%; pointer-events: none; mix-blend-mode: screen;
   background: radial-gradient(closest-side, rgba(255, 40, 40, .28), transparent);
 }
-.thing-taillight:hover, .thing-taillight:focus-visible { z-index: 120 !important; }
+.thing-taillight:focus-visible { z-index: 120 !important; }
+@media (hover: hover) { .thing-taillight:hover { z-index: 120 !important; } }
 
 /* pixel coins, spinning on the spot */
 .thing-coin .thing-shape {
@@ -640,8 +650,12 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .tip-l { left: 0; transform: translate(0, 4px); }
 .tip-r { left: auto; right: 0; transform: translate(0, 4px); }
 .tip-below { bottom: auto; top: calc(100% + 10px); }
-.thing:hover .tip, .thing:focus-visible .tip { opacity: 1; transform: translate(-50%, 0); }
-.thing:hover .tip-l, .thing:focus-visible .tip-l, .thing:hover .tip-r, .thing:focus-visible .tip-r { transform: translate(0, 0); }
+.thing:focus-visible .tip { opacity: 1; transform: translate(-50%, 0); }
+.thing:focus-visible .tip-l, .thing:focus-visible .tip-r { transform: translate(0, 0); }
+@media (hover: hover) {
+  .thing:hover .tip { opacity: 1; transform: translate(-50%, 0); }
+  .thing:hover .tip-l, .thing:hover .tip-r { transform: translate(0, 0); }
+}
 .thing-lantern .tip { bottom: auto; top: calc(100% + 10px); }
 .tip img, .tip-nocover { flex: none; width: 44px; height: 44px; border-radius: 6px; object-fit: cover; background: #2a2631; }
 .tip-text { min-width: 0; }
@@ -817,15 +831,23 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 
 @media (min-width: 1240px) and (min-aspect-ratio: 4/5) { .story-jp { display: block; } }
 .land .whale-size { transform-box: view-box; transform-origin: 875px 320px; }
+/* on anything narrower than 3:2 (tablets either way up, phones) the scene is cropped at the sides,
+   so its middle — suns, moons, smoke — comes in under the caption: give the caption a soft backing */
+.story-cap::before { content: ""; position: absolute; z-index: -1; inset: -14px -14px -16px; border-radius: 16px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.land-light .story-cap::before { background: rgba(244, 236, 220, .62); } /* light paper worlds: the sun reaches the text even on a wide screen */
+@media (max-aspect-ratio: 3/2), (max-height: 500px) {
+  .story-cap::before { background: rgba(11, 10, 20, .5); }
+  .land-light .story-cap::before { background: rgba(244, 236, 220, .62); }
+}
+@media (min-aspect-ratio: 3/2) and (min-height: 501px) { .land:not(.land-light) .story-cap::before { display: none; } }
 @media (max-aspect-ratio: 4/5) {
   .land .whale-size { transform: scale(.5); }
-  /* on a tall screen the caption sits over the middle of the scene: give it a soft backing */
-  .story-cap::before { content: ""; position: absolute; z-index: -1; inset: -14px -14px -16px; border-radius: 16px; background: rgba(11, 10, 20, .5); backdrop-filter: blur(6px); }
-  .land-light .story-cap::before { background: rgba(244, 236, 220, .62); }
   .story-cap { top: 96px; }
+  /* the room is cropped to a strip: centre it on the window (TV tower, cat, rain) rather than the bare wall */
+  .world-room .room { inset: 0 auto 0 50%; width: auto; height: 100%; aspect-ratio: 1200 / 640; transform: translateX(-73%); }
 }
 @media (max-width: 900px) {
-  .theme-night .nav { padding-inline: 24px; background: linear-gradient(rgba(11, 10, 20, .95), rgba(11, 10, 20, .6) 70%, rgba(11, 10, 20, 0)); }
+  .theme-night .nav { padding-inline: 24px; }
 }
 @media (max-width: 560px) {
   .theme-night .nav { padding-inline: 16px; }
@@ -835,8 +857,22 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
   .story-cap { left: 16px; width: calc(100vw - 32px); top: 112px; }
   .story-cap h2 { font-size: 36px; }
   .way-home { right: auto; left: 16px; top: auto; bottom: 96px; }
-  .hud { bottom: 10px; gap: 10px; padding: 8px 8px 8px 12px; }
+  .hud { bottom: max(10px, env(safe-area-inset-bottom)); gap: 10px; padding: 8px 8px 8px 12px; }
   .door-frame { height: min(50svh, 440px); }
+}
+/* a phone on its side: the room fits the screen, the caption gets compact and the deck moves to the right
+   so it does not sit on the text */
+@media (orientation: landscape) and (max-height: 500px) {
+  .world-room { min-height: 0; }
+  .world-room::after { background: linear-gradient(90deg, rgba(11, 10, 20, .92) 0%, rgba(11, 10, 20, .75) 42%, rgba(11, 10, 20, 0) 62%), linear-gradient(rgba(11, 10, 20, 0) 55%, rgba(11, 10, 20, .7) 100%); }
+  .room-cap { bottom: 20px; width: min(440px, 50vw); }
+  .room-cap .kicker { margin-bottom: 6px; }
+  .room-cap h1 { font-size: 40px; margin-bottom: 8px; }
+  .room-cap .lede { font-size: 14px; line-height: 1.5; margin-bottom: 12px; }
+  .room-cap .btn { height: 40px; }
+  .hud { left: auto; right: max(16px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); transform: none; width: min(380px, 44vw); }
+  .story-cap { top: 76px; }
+  .way-home { top: 76px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

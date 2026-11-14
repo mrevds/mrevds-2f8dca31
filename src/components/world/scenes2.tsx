@@ -304,7 +304,7 @@ export const PixelArcadeBg = () => {
       <g className="a-blink" style={sv({ "--d": "1.4s" })} fill="#f4f4f4">
         <text x="800" y="866" fontSize="26" textAnchor="middle" style={{ fontFamily: "var(--mono)", fontWeight: 700, letterSpacing: "4px" }}>INSERT COIN</text>
       </g>
-      <text x="1500" y="120" fontSize="20" textAnchor="end" fill="#f4f4f4" style={{ fontFamily: "var(--mono)", fontWeight: 700 }}>HI 013370</text>
+      <text x="1330" y="120" fontSize="20" textAnchor="end" fill="#f4f4f4" style={{ fontFamily: "var(--mono)", fontWeight: 700 }}>HI 013370</text>
       <rect width={W} height={H} fill="url(#pa-scan)" />
     </Bg>
   );
