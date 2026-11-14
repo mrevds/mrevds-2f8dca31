@@ -273,7 +273,7 @@ const Music = () => {
       <section className="world-room" aria-labelledby="music-title">
         <NightRoom track={{ title: current.title, artist: current.artists.join(", ") }} />
         <div className="room-cap">
-          <p className="kicker">Music · {ym.totalLikedTracks.toLocaleString("en-US")} liked tracks · 19:05, Tashkent</p>
+          <p className="kicker">Music · {ym.totalLikedTracks.toLocaleString("en-US")} liked tracks · Tashkent, after dark</p>
           <h1 id="music-title">Night <em>shift</em></h1>
           <p className="lede">My room, late. Rain on the window, Go on the screen, a tape in the deck. Behind the door there is a whole world, and every song I liked lives somewhere in it.</p>
           <a className="btn btn-paper" href="#threshold">Step outside <ArrowDown size={16} strokeWidth={1.5} /></a>

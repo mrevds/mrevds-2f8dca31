@@ -1,4 +1,4 @@
-/* Chapter 05 scene: a room in Tashkent at 19:05 — rain on the window, the TV tower on the skyline,
+/* The music room: Tashkent at 19:05 (the wall clock glitches to 20:07 and back) — rain on the window, the TV tower on the skyline,
    someone in headphones at the desk, Go on the monitor, the cat on the sill
    and the current track in the cassette deck.
    The desk is drawn as a surface in perspective (back edge y 440, front edge y 528)
@@ -70,7 +70,7 @@ type Props = { track?: { title: string; artist: string } };
 
 const NightRoom = ({ track }: Props) => (
   <svg className="room" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" role="img"
-    aria-label="A room at 19:05: rain on the window, the Tashkent TV tower on the skyline, a cat on the sill, and someone in headphones at a desk with a monitor, a lamp and a cassette deck">
+    aria-label="A room at 19:05, or is it 20:07: rain on the window, the Tashkent TV tower on the skyline, a cat on the sill, and someone in headphones at a desk with a monitor, a lamp and a cassette deck">
     <defs>
       <linearGradient id="nr-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1b1823" /><stop offset="1" stopColor="#15121b" /></linearGradient>
       <linearGradient id="nr-sky" x1="0" y1="0" x2="0" y2="1">
@@ -128,6 +128,27 @@ const NightRoom = ({ track }: Props) => (
       <text x="48" y="78" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="7.5" fill="#8a93ad">build · ship · sleep</text>
       <rect x="-6" y="-4" width="18" height="8" fill="#e9dcc4" opacity=".55" transform="rotate(-35 3 0)" />
       <rect x="84" y="-4" width="18" height="8" fill="#e9dcc4" opacity=".55" transform="rotate(35 93 0)" />
+    </g>
+
+    {/* wall clock: 19:05, then a glitch, then 20:07, and back again every three seconds */}
+    <g transform="translate(440 128)" className="wall-clock">
+      <circle cy="-46" r="2" fill="#6b6375" />
+      <path d="M0 -46 L-44 -20 M0 -46 L44 -20" stroke="#4a4252" strokeWidth="1" />
+      <ellipse cy="40" rx="90" ry="40" fill="#ff5a3c" opacity=".05" />
+      <rect x="-53" y="-17" width="112" height="44" rx="7" fill="#000" opacity=".3" />
+      <rect x="-56" y="-20" width="112" height="44" rx="7" fill="#1d1a22" />
+      <rect x="-56" y="-20" width="112" height="4" rx="2" fill="#2c2733" />
+      <rect x="-46" y="-12" width="92" height="28" rx="3" fill="#0d0b10" />
+      <clipPath id="nr-clock"><rect x="-46" y="-12" width="92" height="28" rx="3" /></clipPath>
+      <g clipPath="url(#nr-clock)" fontFamily="JetBrains Mono, monospace" fontSize="22" textAnchor="middle" fontWeight="500">
+        <text className="clock-split clock-split-c" x="-2" y="10" fill="#3ce0ff">20:07</text>
+        <text className="clock-split clock-split-r" x="3" y="10" fill="#ff2a6a">19:05</text>
+        <text className="clock-a" y="10" fill="#ff5a3c">19:05</text>
+        <text className="clock-b" y="10" fill="#ff5a3c">20:07</text>
+        <rect className="clock-scan" x="-46" y="-12" width="92" height="5" fill="#ff5a3c" opacity="0" />
+      </g>
+      <rect x="-46" y="-12" width="92" height="28" rx="3" fill="#ff5a3c" opacity=".06" />
+      <circle cx="47" cy="17" r="1.6" fill="#ff5a3c" opacity=".7" />
     </g>
 
     {/* pothos hanging from the ceiling on three cords */}
@@ -366,15 +387,6 @@ const NightRoom = ({ track }: Props) => (
       <rect x="10" y="-18" width="4" height="10" fill="#8a3a3a" />
     </g>
 
-    {/* digital clock: always 19:05 */}
-    <g transform="translate(104 466)">
-      <ellipse cx="34" cy="30" rx="44" ry="6" fill="url(#nr-shadow)" />
-      <path d="M0 30 L6 0 H62 L68 30 Z" fill="#1d1a22" />
-      <path d="M6 0 H62 L63 4 H5 Z" fill="#2c2733" />
-      <rect x="12" y="7" width="44" height="17" rx="2" fill="#0d0b10" />
-      <text x="34" y="21" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="14" fill="#ff5a3c">19:05</text>
-      <rect x="12" y="7" width="44" height="17" rx="2" fill="#ff5a3c" opacity=".06" />
-    </g>
 
     {/* architect lamp: weighted base, two arm segments with a spring, cone shade */}
     <g>

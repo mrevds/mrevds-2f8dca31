@@ -233,6 +233,58 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .room .bob { animation: bob .8s ease-in-out infinite alternate; }
 .room .sway { transform-box: view-box; transform-origin: 548px 0; animation: sway 6s ease-in-out infinite; }
 .room .note { transform-box: fill-box; animation: note 4.8s ease-out infinite; opacity: 0; }
+/* the wall clock: three seconds of 19:05, a glitch, three seconds of 20:07, a glitch */
+.room .clock-b, .room .clock-split { opacity: 0; }
+.room .clock-a, .room .clock-b, .room .clock-split, .room .clock-scan { transform-box: fill-box; }
+.room .clock-a { animation: clock-a 6s steps(1) infinite; }
+.room .clock-b { animation: clock-b 6s steps(1) infinite; }
+.room .clock-split { animation: clock-split 6s steps(1) infinite; }
+.room .clock-split-r { animation-delay: -.04s; }
+.room .clock-scan { animation: clock-scan 6s linear infinite; }
+@keyframes clock-a {
+  0%, 44% { opacity: 1; transform: none; }
+  45% { opacity: .3; transform: translateX(3px); }
+  46% { opacity: 1; transform: translateX(-4px) skewX(-14deg); }
+  47% { opacity: 0; }
+  48% { opacity: .8; transform: translateX(2px) scaleY(.8); }
+  49%, 95% { opacity: 0; transform: none; }
+  96% { opacity: .6; transform: translateX(-3px); }
+  97% { opacity: 0; }
+  98% { opacity: 1; transform: translateX(3px) skewX(12deg); }
+  99%, 100% { opacity: 1; transform: none; }
+}
+@keyframes clock-b {
+  0%, 44% { opacity: 0; transform: none; }
+  45% { opacity: .6; transform: translateX(-3px) skewX(10deg); }
+  46% { opacity: 0; }
+  47% { opacity: 1; transform: translateX(4px); }
+  48% { opacity: 0; }
+  49%, 95% { opacity: 1; transform: none; }
+  96% { opacity: .3; transform: translateX(3px) skewX(-12deg); }
+  97% { opacity: 1; transform: translateX(-2px) scaleY(.85); }
+  98%, 100% { opacity: 0; transform: none; }
+}
+@keyframes clock-split {
+  0%, 44% { opacity: 0; transform: none; }
+  45% { opacity: .75; transform: translateX(-3px); }
+  46% { opacity: .4; transform: translateX(5px) skewX(-10deg); }
+  47% { opacity: .8; transform: translateX(-2px); }
+  48% { opacity: .5; transform: translateX(3px); }
+  49%, 95% { opacity: 0; transform: none; }
+  96% { opacity: .7; transform: translateX(4px); }
+  97% { opacity: .4; transform: translateX(-5px) skewX(8deg); }
+  98% { opacity: .8; transform: translateX(2px); }
+  99%, 100% { opacity: 0; transform: none; }
+}
+@keyframes clock-scan {
+  0%, 44% { opacity: 0; transform: translateY(0); }
+  45% { opacity: .35; transform: translateY(0); }
+  48% { opacity: .35; transform: translateY(24px); }
+  49%, 95% { opacity: 0; transform: translateY(0); }
+  96% { opacity: .35; transform: translateY(0); }
+  99% { opacity: .35; transform: translateY(24px); }
+  100% { opacity: 0; }
+}
 .room .tail { transform-box: fill-box; transform-origin: 100% 0; animation: tail 4.5s ease-in-out infinite; }
 @keyframes rain { from { transform: translate(0, 0); } to { transform: translate(-40px, 380px); } }
 @keyframes flicker { 0%, 100% { opacity: .75; } 46% { opacity: .1; } 52% { opacity: .75; } }
@@ -389,8 +441,8 @@ h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5vw, 64
 .world-room .room { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; }
 .world-room::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, rgba(11, 10, 20, .82) 0%, rgba(11, 10, 20, .55) 38%, rgba(11, 10, 20, 0) 62%),
-    linear-gradient(rgba(11, 10, 20, 0) 50%, rgba(11, 10, 20, .85) 92%);
+  background: radial-gradient(ellipse 65% 70% at 0% 100%, rgba(11, 10, 20, .88) 0%, rgba(11, 10, 20, .6) 45%, rgba(11, 10, 20, 0) 75%),
+    linear-gradient(rgba(11, 10, 20, 0) 55%, rgba(11, 10, 20, .8) 95%);
 }
 .room-cap {
   position: absolute; z-index: 1; bottom: 112px; left: max(24px, calc((100vw - 1160px) / 2 + 40px));
