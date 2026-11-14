@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-02T13:59:53.516Z",
+  "fetchedAt": "2026-11-14T09:41:09.725Z",
   "username": "mrevds",
-  "ranking": 591589,
+  "ranking": 594504,
   "solved": {
     "all": 273,
     "easy": 173,
@@ -10,10 +10,10 @@
     "hard": 7
   },
   "total": {
-    "all": 4100,
+    "all": 4110,
     "easy": 975,
-    "medium": 2138,
-    "hard": 987
+    "medium": 2146,
+    "hard": 989
   },
   "languages": [
     {
@@ -89,7 +89,7 @@
   "contest": {
     "rating": 1414.272,
     "attendedContestsCount": 1,
-    "topPercentage": 77.52
+    "topPercentage": 77.48
   },
   "recent": [
     {
