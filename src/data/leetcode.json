@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-21T10:30:29.904Z",
+  "fetchedAt": "2026-11-22T10:35:30.453Z",
   "username": "mrevds",
-  "ranking": 596263,
+  "ranking": 596473,
   "solved": {
     "all": 273,
     "easy": 173,
@@ -10,10 +10,10 @@
     "hard": 7
   },
   "total": {
-    "all": 4115,
-    "easy": 976,
-    "medium": 2148,
-    "hard": 991
+    "all": 4123,
+    "easy": 978,
+    "medium": 2152,
+    "hard": 993
   },
   "languages": [
     {
