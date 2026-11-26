@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-25T11:56:57.280Z",
+  "fetchedAt": "2026-11-26T11:45:53.621Z",
   "username": "mrevds",
-  "ranking": 597433,
+  "ranking": 597662,
   "solved": {
     "all": 273,
     "easy": 173,
@@ -76,9 +76,8 @@
     }
   ],
   "streak": 3,
-  "activeDays": 7,
+  "activeDays": 6,
   "calendar": {
-    "1764028800": 1,
     "1771977600": 13,
     "1772150400": 39,
     "1772236800": 14,
@@ -89,7 +88,7 @@
   "contest": {
     "rating": 1414.272,
     "attendedContestsCount": 1,
-    "topPercentage": 77.46
+    "topPercentage": 77.44
   },
   "recent": [
     {
