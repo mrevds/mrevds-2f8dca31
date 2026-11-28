@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-11-27T11:17:28.856Z",
+  "fetchedAt": "2026-11-28T10:46:25.238Z",
   "user": {
     "uid": 1560555065,
     "login": "muratbaev.den",
@@ -414,7 +414,7 @@
       "title": "Cool For The Summer",
       "artists": [
         "HARDSTYLE CVNT",
-        "EZO CASSIDY",
+        "Ezo Cassidy",
         "Ashtion Bakes",
         "deprezz"
       ],
@@ -1278,7 +1278,7 @@
       "cover": "https://music-avatars.music.yandex.net/get-music-content/20031403/154f1250.a.40620769-1/200x200",
       "albumTitle": "Не Люблю Любить",
       "albumId": 40620769,
-      "genre": "rap",
+      "genre": "rusrap",
       "likedAt": "2026-06-11T04:44:10+00:00",
       "durationMs": 132850
     },
@@ -1999,7 +1999,7 @@
       "id": "36833885",
       "title": "Сдавайся",
       "artists": [
-        "Сергей Лазарев"
+        "Серг��й Лазарев"
       ],
       "cover": "https://music-avatars.music.yandex.net/get-music-content/192707/7e78e64f.a.4647697-1/200x200",
       "albumTitle": "Сдавайся",
